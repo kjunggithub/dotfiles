@@ -147,7 +147,7 @@ alias tmux="tmux -2"
 # alias tmux="TERM=screen-256color-bce tmux -2"
 
 # unix
-alias systemup="brew update && brew cleanup && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl"
+alias systemup="brew update && brew upgrade && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
 alias permrepair="diskutil repairPermissions /"
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
@@ -164,7 +164,6 @@ alias slowoff='sudo ipfw delete 1'
 alias dupes='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder'
 alias ff="open -a firefox $*"
 alias c="clear"
-alias ..="cd .."
 alias ping="ping -c 5" # ping 5 times ‘by default’
 alias grep="grep --color=auto"
 alias stfu="osascript -e 'set volume output muted true'"
@@ -205,9 +204,12 @@ alias .....="cd ../../../.."
 # git
 git config --global --add color.ui true
 
-alias gitl='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --abbrev-commit'
-alias gitl5='git log -n 5 --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --abbrev-commit'
+alias gitdf="git diff --word-diff"
+alias gitdfs="git diff --word-diff --staged"
+alias gitl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gitl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 alias gits='git status'
+alias gitc="git checkout $1"
 # copy current branch name and pipe it to the clipboard
 alias gitcbn='git symbolic-ref --short HEAD && git symbolic-ref --short HEAD | pbcopy'
 # get pretty git history
