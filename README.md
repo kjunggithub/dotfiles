@@ -1,4 +1,8 @@
 # dotfiles
 ## install
+Clone repo into home dir:
+`git clone git@github.com:kjunggithub/dotfiles.git ~/.dotfiles`
 
-`ln -s ~/.dotvim/bash_profile ~/.bash_profile`
+Create symlinks:
+`ln -s ~/.dotfiles/bash_profile ~/.bash_profile`
+`ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf`
