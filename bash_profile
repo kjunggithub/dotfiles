@@ -134,7 +134,7 @@ alias presume='cd /Users/kjung/Sites/resume.dev/proj && sublime --project resume
 alias laravel="composer create-project laravel/laravel $1 --prefer-dist"
 alias slaravel='screen -dmS laravelSERV php artisan serve && open http://localhost:8000/'
 alias art='php artisan'
-alias cdump='composer dump-autoload -o'
+alias cdump='composer dumpautoload -o'
 alias cctags='ctags -R -f .tags'
 alias vhosts="sudo sublime /etc/apache2/extra/httpd-vhosts.conf"
 alias hosts="sudo sublime /etc/hosts"
@@ -202,34 +202,48 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# doge git
-alias wow="git status"
-alias such='git'
-alias very='git'
-alias much='git'
-alias so='git'
-
 # git
 git config --global --add color.ui true
 
+alias gitl='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --abbrev-commit'
+alias gitl5='git log -n 5 --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --abbrev-commit'
+alias gits='git status'
+# copy current branch name and pipe it to the clipboard
+alias gitcbn='git symbolic-ref --short HEAD && git symbolic-ref --short HEAD | pbcopy'
 # get pretty git history
-alias gitlf="git log --graph --decorate --pretty=oneline --abbrev-commit"
-# lola = git log --graph --decorate --pretty=oneline --abbrev-commit --all
-alias gitl="git log"
-alias gits="git status"
-alias gitt="git tag"
-alias gitpull="git pull origin master"
-alias gitpush="git push origin master"
+# git log --graph --decorate --pretty=oneline --abbrev-commit
+# git log --graph --decorate --pretty=oneline --abbrev-commit --all
 alias gitb="git branch"
 alias gitbr="git branch -r"
-alias gitcheckout="git checkout -b"
-alias gitadd.="git add --all"
-alias gitaddu="git add -u"
-alias gitd="git rm"
-alias gitreset="git reset --soft HEAD~1"
-alias gitbox="open -a gitbox"
-alias gitweb='open http://${PWD##*/}/'
-alias template='git clone git@kevinjung.ca:bootlace.git'
+alias gita.="git add --all"
+alias gitau="git add -u"
+function gita { git add "$*" ;}
+# alias gitweb='open http://${PWD##*/}/'
+# git stash
+alias gitsc="git stash"
+alias gitsl="git stash list"
+alias gitsa='git apply'
+alias gitsd='git stash drop'
+alias gitsp='git stash pop'
+# hubflow
+alias githfupd='git checkout develop && git hf update'
+alias githfup='git hf update'
+alias githffs="git hf feature start $1"
+alias githffc="git hf feature cancel -f $1"
+# git push
+alias gitpo="git push origin $1"
+function gitpof { git push origin +"$@" ;}
+
+# git reset
+# to get the latest from origin and wipe local,
+# run gitrh within a bracn other than develop.
+# for ex 'git reset --hard origin/branch'
+alias gitrh="git reset --hard $1"
+function gitrho { git reset --hard origin/"$@" ;}
+# git commit
+alias gitcav='git commit -av'
+function gitcm { git commit -m "$1" ;}
+function gitcam { git commit -am "$1";}
 
 # virtualbox
 alias startsqueeze='vboxmanage startvm "Squeeze" --type headless'
@@ -271,7 +285,7 @@ function extract () {
     fi
 }
 
-function opengit {
+function gitweb {
     if [ -d .git ]; then
         remotes=$(git remote -v | awk -F'git@github.com:' '{print $2}' | cut -d" " -f1)
         if [ -z "$remotes" ];
@@ -296,20 +310,6 @@ function cf() {
     else
         echo 'No Finder window found' >&2
     fi
-}
-
-function gitc {
-	git commit -m "$1"
-}
-
-alias gitcav='git commit -av'
-
-function gitcam {
-	git commit -am "$1"
-}
-
-function gita {
-	git add "$*"
 }
 
 ## alias to copy it to the clipboard
