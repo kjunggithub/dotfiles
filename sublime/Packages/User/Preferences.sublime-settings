@@ -1,0 +1,36 @@
+{
+	"auto_complete_selector": "source, text",
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/Sunburst (SL) (SL).tmTheme",
+	"detect_slow_plugins": false,
+	"drag_text": false,
+	"draw_indent_guides": true,
+	"find_selected_text": true,
+	"font_face": "Ubuntu Mono derivative Powerline",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 16.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"show_tab_close_buttons": true,
+	"spell_check": false,
+	"tab_size": 4,
+	"theme": "Centurion.sublime-theme",
+	"trim_trailing_white_space_on_save": false,
+	"word_wrap": true,
+	"scroll_past_end": true,
+	"draw_minimap_border": true
+}

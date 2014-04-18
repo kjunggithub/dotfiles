@@ -8,6 +8,8 @@ Create symlinks:
 ```shell
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/sublime /Users/kjung/Library/Application\ Support/Sublime\ Text\ 3
+
 ```
 
 Todos:
