@@ -25,6 +25,15 @@
 	[
 		80
 	],
+	"folder_exclude_patterns":
+	[	
+		".DS_Store",
+		".bundle",
+		".git",
+		".sass-cache",
+		"wp-admin",
+		"wp-includes"
+	],
 	"show_tab_close_buttons": true,
 	"spell_check": false,
 	"tab_size": 4,
@@ -32,5 +41,7 @@
 	"trim_trailing_white_space_on_save": false,
 	"word_wrap": true,
 	"scroll_past_end": true,
-	"draw_minimap_border": true
+	"draw_minimap_border": true,
+	"use_simple_full_screen": true,
+	"overlay_scroll_bars": "enabled"
 }
