@@ -13,5 +13,7 @@
 	{ "keys": ["ctrl+f"], "command": "jump_to_interactive"},
 	{ "keys": ["ctrl+e"], "command": "expand_selection_to_quotes"},
 	{ "keys": ["ctrl+r"], "command": "expand_selection", "args": {"to": "brackets"} },
-	{ "keys": ["ctrl+a"], "command": "alignment"}
+	{ "keys": ["ctrl+a"], "command": "alignment"},
+	{ "keys": ["ctrl+s"], "command": "change_quotes" }
+
 ]
