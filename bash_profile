@@ -168,8 +168,8 @@ alias ping="ping -c 5" # ping 5 times ‘by default’
 alias grep="grep --color=auto"
 alias stfu="osascript -e 'set volume output muted true'"
 alias loud="osascript -e 'set Volume 10'"
-alias wanip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias lanip="netstat -rn |grep default"
+alias wanip="curl ipecho.net/plain; echo"
+alias lanip="ipconfig getifaddr en0"
 alias ql="qlmanage -p 2>/dev/null" # preview a file using QuickLook
 alias ka="killall"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
