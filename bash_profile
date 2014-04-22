@@ -121,6 +121,8 @@ git config --global push.default tracking
 git config --global core.editor "sublime -n -w"
 git config --global user.name "Kevin Jung"
 git config --global user.email "admin@kjung.ca"
+# git config --global --unset diff
+# git config --global --unset diff.external
 # git config --global core.editor "vim"
 
 ######################################################################
