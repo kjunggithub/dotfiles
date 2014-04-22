@@ -1,57 +1,17 @@
-#list of homebrew files to install
-# coreutils, git, git-extras, hubflow, tmux, bash-completion
-# brew install macvim --override-system-vim
-# defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-# defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-# defaults write NSGlobalDomain KeyRepeat -int 0
-# defaults write com.apple.Safari ShowFavoritesBar -bool false
+######################################################################
+# set up path
+######################################################################
+# mamp (change php version in mamp and in the path as needed)
+# PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
 
-# Set up Safari for development.
-# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-# defaults write com.apple.Safari IncludeDevelopMenu -bool true
-# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-# defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-# defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# homebrew (homebrew php + mysql)
+PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
+export PATH="$PATH"
 
-# git branch autocomplete
-if [ -f ~/scripts/git-completion.bash ]; then
-  source ~/scripts/git-completion.bash
-fi
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-# activate z (brew install z)
-. `brew --prefix`/etc/profile.d/z.sh
-
-# cool guy history
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
-
-# cool guy autocomplete (tab and shift-tab)
-bind 'Tab: menu-complete'
-bind '"\e[Z": complete'
-# bind 'Control-j:menu-complete-backward'
-
-# Black 0;30
-# Dark Gray 1;30
-# Blue 0;34
-# Light Blue 1;34
-# Green 0;32
-# Light Green 1;32
-# Cyan 0;36
-# Light Cyan 1;36
-# Red 0;31
-# Light Red 1;31
-# Purple 0;35
-# Light Purple 1;35
-# Brown 0;33
-# Yellow 1;33
-# Light Gray 0;37
-# White 1;37
-
-# prompt colours
+######################################################################
+# ps1
+######################################################################
+# ps1 colours
 BOLD="\[\e[1m\]"
 UNDERLINE="\[\033[4m\]"
 DEFAULT="\[\e[0m\]"
@@ -68,70 +28,20 @@ BLUE="\[\033[0;34m\]"
 LIGHT_BLUE="\[\033[1;34m\]"
 RED="\[\033[0;31m\]"
 
-# ps1 options
-# \a : an ASCII bell character (07)
-# \d : the date in "Weekday Month Date" format (e.g., "Tue May 26")
-# \D{format} :  the format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-specific time representation. The braces are required
-# \e : an ASCII escape character (033)
-# \h : the hostname up to the first '.'
-# \H : the hostname
-# \j : the number of jobs currently managed by the shell
-# \l : the basename of the shell’s terminal device name
-# \n : newline
-# \r : carriage return
-# \s : the name of the shell, the basename of $0 (the portion following the final slash)
-# \t : the current time in 24-hour HH:MM:SS format
-# \T : the current time in 12-hour HH:MM:SS format
-# \@ : the current time in 12-hour am/pm format
-# \A : the current time in 24-hour HH:MM format
-# \u : the username of the current user
-# \v : the version of bash (e.g., 2.00)
-# \V : the release of bash, version + patch level (e.g., 2.00.0)
-# \w : the current working directory, with $HOME abbreviated with a tilde
-# \W : the basename of the current working directory, with $HOME abbreviated with a tilde
-# \! : the history number of this command
-# \# : the command number of this command
-# \$ : if the effective UID is 0, a #, otherwise a $
-# \nnn : the character corresponding to the octal number nnn
-# \\ : a backslash
-# \[ : begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
-# \] : end a sequence of non-printing characters
-
-# symbols (http://panmental.de/symbols/info.htm)
-# install vcprompt (brew install vcprompt)
-# export PS1="$RED\@$DEFAULT: $YELLOW\u@\h$DEFAULT in:$BLUE \w\$(vcprompt -f '\n$DEFAULT%n$DEFAULT sha: $GREEN%r$DEFAULT branch: $GREEN%b%m%u')\n$GREEN"≫" $DEFAULT"
-
-# hipster PS1
-VCPROMPT_FORMAT=
+######################################################################
+# exports
+######################################################################
+# hipster ps1
 export PS1="$RED\@$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor
 export EDITOR='sublime -nw'
 # export EDITOR='vim'
 
-# mamp (change php version in mamp and in the path as needed)
-# PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
-
-# homebrew (homebrew php + apple mysql)
-PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
-export PATH="$PATH"
-
-# projects
-# laravel
-alias plaravel='cd /Users/kjung/Sites/laravel.dev/proj && sublime --project laravel.dev.sublime-project && open http://laravel.dev && cd .. && cd public'
-alias rlaravel='cd /Users/kjung/Sites/laravel.dev/public/ && art migrate:refresh --seed'
-alias cplaravel='/Users/kjung/Scripts/sync\ laravel.command'
-
-# promo
-alias ppromo='cd /Users/kjung/Sites/promo.dev/proj && sublime --project promo.dev.sublime-project && open http://promo.dev && cd .. && cd public'
-alias rpromo='cd /Users/kjung/Sites/promo.dev/public/ && art migrate:refresh --seed'
-alias cppromo='/Users/kjung/Scripts/sync\ promo.command'
-
-# resume
-alias presume='cd /Users/kjung/Sites/resume.dev/proj && sublime --project resume.dev.sublime-project && open http://resume.dev && cd .. && cd public'
-
-# dev
-alias laravel="composer create-project laravel/laravel $1 --prefer-dist"
+######################################################################
+# aliases
+######################################################################
+alias claravel="composer create-project laravel/laravel $1 --prefer-dist"
 alias slaravel='screen -dmS laravelSERV php artisan serve && open http://localhost:8000/'
 alias art='php artisan'
 alias cdump='composer dumpautoload -o'
@@ -147,7 +57,8 @@ alias tmux="tmux -2"
 # alias tmux="TERM=screen-256color-bce tmux -2"
 
 # unix
-alias systemup="brew update && brew upgrade && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
+alias sl="sublime $1"
+alias systemup="brew update && brew upgrade && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge diskutil repairPermissions /"
 alias permrepair="diskutil repairPermissions /"
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
@@ -194,6 +105,7 @@ alias lsl="ls -l"
 alias ls="ls -GpF"
 alias lsh='ls -lh'
 alias lsm='ls -tho'
+alias cfp='fp | pbcopy'
 
 # change dir
 alias ..="cd .."
@@ -201,60 +113,80 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# git
+######################################################################
+# git config
+######################################################################
 git config --global --add color.ui true
+git config --global push.default tracking
+git config --global core.editor "sublime -n -w"
+git config --global user.name "Kevin Jung"
+git config --global user.email "admin@kjung.ca"
+# git config --global core.editor "vim"
 
-alias gitdf="git diff --word-diff"
-alias gitdfs="git diff --word-diff --staged"
+######################################################################
+# git aliases
+######################################################################
+# git hubflow
+alias ghfupd='git checkout develop && git hf update'
+alias ghfup='git hf update'
+alias ghffs="git hf feature start $1"
+alias ghffc="git hf feature cancel -f $1"
+
+# git log
 alias gitl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 alias gitl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
-alias gits='git status'
-alias gitc="git checkout $1"
-# copy current branch name and pipe it to the clipboard
-alias gitcbn='git symbolic-ref --short HEAD && git symbolic-ref --short HEAD | pbcopy'
-# get pretty git history
-# git log --graph --decorate --pretty=oneline --abbrev-commit
-# git log --graph --decorate --pretty=oneline --abbrev-commit --all
-alias gitb="git branch"
-alias gitbr="git branch -r"
-alias gita.="git add --all"
-alias gitau="git add -u"
-function gita { git add "$*" ;}
-# alias gitweb='open http://${PWD##*/}/'
+
 # git stash
-alias gitsc="git stash"
-alias gitsl="git stash list"
-alias gitsa='git apply'
-alias gitsd='git stash drop'
-alias gitsp='git stash pop'
-# hubflow
-alias githfupd='git checkout develop && git hf update'
-alias githfup='git hf update'
-alias githffs="git hf feature start $1"
-alias githffc="git hf feature cancel -f $1"
+alias gss="git stash save $1"
+alias gsl="git stash list"
+alias gsa='git apply'
+alias gsd='git stash drop'
+alias gsp='git stash pop'
+
+# git diff
+alias gdf="git diff"
+alias gdfs="git diff --staged"
+alias gs='git status'
+alias gco="git checkout $1"
+# copy current branch name and pipe it to the clipboard
+alias gcbn='git symbolic-ref --short HEAD && git symbolic-ref --short HEAD | pbcopy'
+alias gb="git branch"
+alias gbr="git branch -r"
+alias ga.="git add --all"
+alias gau="git add -u"
+function ga { git add "$*" ;}
+
 # git push
-alias gitpo="git push origin $1"
-function gitpof { git push origin +"$@" ;}
+alias gpo="git push origin $1"
+function gpof { git push origin +"$@" ;}
 
 # git reset
 # to get the latest from origin and wipe local,
 # run gitrh within a bracn other than develop.
 # for ex 'git reset --hard origin/branch'
-alias gitrh="git reset --hard $1"
-function gitrho { git reset --hard origin/"$@" ;}
-# git commit
-alias gitcav='git commit -av'
-function gitcm { git commit -m "$1" ;}
-function gitcam { git commit -am "$1";}
+alias grh="git reset --hard $1"
+function grho { git reset --hard origin/"$@" ;}
 
+# git commit
+alias gcav='git commit -av'
+function gcm { git commit -m "$1" ;}
+function gcam { git commit -am "$1";}
+
+# alias g="git"
+# complete -o default -o nospace -F _git g
+
+######################################################################
 # virtualbox
+######################################################################
 alias startsqueeze='vboxmanage startvm "Squeeze" --type headless'
 alias start8='vboxmanage startvm "8" --type headless'
 alias kill8='vboxmanage controlvm 8 acpipowerbutton'
 alias save8='vboxmanage controlvm 8 savestate'
 alias gui8='vboxmanage controlvm 8 savestate ; virtualbox'
-alias cfp='fp | pbcopy'
 
+######################################################################
+# functions
+######################################################################
 #functions (most used commands from history)
 function htop {
   history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head
@@ -316,10 +248,6 @@ function cf() {
 
 ## alias to copy it to the clipboard
 
-## !! -repeat last cmd
-## !$ -repeat last paramter of last cmd
-## !^ -repeat first parameter of last cmd
-
 function entdir {
 	mkdir $1
 	cd $1
@@ -327,6 +255,110 @@ function entdir {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# tips
+######################################################################
+# load scripts
+######################################################################
+# git branch autocomplete
+if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
+  source ~/.dotfiles/scripts/git-completion.bash
+fi
+
+# bash auto complete
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+# activate z (brew install z)
+. `brew --prefix`/etc/profile.d/z.sh
+
+######################################################################
+# bindings
+######################################################################
+# cool guy history
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+# cool guy autocomplete (tab and shift-tab)
+bind 'Tab: menu-complete'
+bind '"\e[Z": complete'
+# bind 'Control-j:menu-complete-backward'
+
+######################################################################
+# homebrew
+######################################################################
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt
+# brew install macvim --override-system-vim
+
+######################################################################
+# os x defaults
+######################################################################
+# defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+# defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+# defaults write NSGlobalDomain KeyRepeat -int 0
+# defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+# Set up Safari for development.
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# defaults write com.apple.Safari IncludeDevelopMenu -bool true
+# defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+# defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+# defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+######################################################################
+# bash tips
+######################################################################
 # ctrl-E # move cursor to end of line
 # ctrl-A # move cursor to beginning of line
+# !! -repeat last cmd
+# !$ -repeat last paramter of last cmd
+# !^ -repeat first parameter of last cmd
+
+######################################################################
+# ps1 colours, symbols, and options
+######################################################################
+
+# Black 0;30
+# Dark Gray 1;30
+# Blue 0;34
+# Light Blue 1;34
+# Green 0;32
+# Light Green 1;32
+# Cyan 0;36
+# Light Cyan 1;36
+# Red 0;31
+# Light Red 1;31
+# Purple 0;35
+# Light Purple 1;35
+# Brown 0;33
+# Yellow 1;33
+# Light Gray 0;37
+# White 1;37
+
+# ps 1 options
+# \a : an ASCII bell character (07)
+# \d : the date in "Weekday Month Date" format (e.g., "Tue May 26")
+# \D{format} :  the format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-specific time representation. The braces are required
+# \e : an ASCII escape character (033)
+# \h : the hostname up to the first '.'
+# \H : the hostname
+# \j : the number of jobs currently managed by the shell
+# \l : the basename of the shell’s terminal device name
+# \n : newline
+# \r : carriage return
+# \s : the name of the shell, the basename of $0 (the portion following the final slash)
+# \t : the current time in 24-hour HH:MM:SS format
+# \T : the current time in 12-hour HH:MM:SS format
+# \@ : the current time in 12-hour am/pm format
+# \A : the current time in 24-hour HH:MM format
+# \u : the username of the current user
+# \v : the version of bash (e.g., 2.00)
+# \V : the release of bash, version + patch level (e.g., 2.00.0)
+# \w : the current working directory, with $HOME abbreviated with a tilde
+# \W : the basename of the current working directory, with $HOME abbreviated with a tilde
+# \! : the history number of this command
+# \# : the command number of this command
+# \$ : if the effective UID is 0, a #, otherwise a $
+# \nnn : the character corresponding to the octal number nnn
+# \\ : a backslash
+# \[ : begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
+# \] : end a sequence of non-printing characters
