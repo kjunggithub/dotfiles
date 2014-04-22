@@ -133,8 +133,8 @@ alias ghffs="git hf feature start $1"
 alias ghffc="git hf feature cancel -f $1"
 
 # git log
-alias gitl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
-alias gitl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 
 # git stash
 alias gss="git stash save $1"
