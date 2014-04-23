@@ -12,7 +12,7 @@ PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
 ######################################################################
-# ps1
+# ps1 http://news.softpedia.com/news/How-to-Customize-the-Shell-Prompt-40033.shtml
 ######################################################################
 # ps1 colours
 BOLD="\[\e[1m\]"
@@ -35,7 +35,7 @@ RED="\[\033[0;31m\]"
 # exports
 ######################################################################
 # hipster ps1
-export PS1="$RED$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT sha: $YELLOW%r$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
+export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor
 export EDITOR='sublime -nw'
