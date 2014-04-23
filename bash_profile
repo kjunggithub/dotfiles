@@ -1,11 +1,13 @@
 ######################################################################
 # set up path
 ######################################################################
+# includes
+PLUGINS=/$HOME/.dotfiles/plugins/
+
 # mamp (change php version in mamp and in the path as needed)
-# PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
+# PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew (homebrew php + mysql)
-PLUGINS=/$HOME/.dotfiles/plugins/
 PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
@@ -256,7 +258,7 @@ function entdir {
 	cd $1
 }
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ######################################################################
 # load scripts
@@ -264,10 +266,6 @@ function entdir {
 # git branch autocomplete
 if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
   source ~/.dotfiles/scripts/git-completion.bash
-fi
-
-if [ -f ~/.dotfiles/plugins/plugins/fuzzyclock/bash-fuzzy-clock.sh ]; then
-  source ~/.dotfiles/plugins/plugins/fuzzyclock/bash-fuzzy-clock.sh
 fi
 
 # bash auto complete
