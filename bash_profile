@@ -2,7 +2,7 @@
 # set up path
 ######################################################################
 # includes
-PLUGINS=/$HOME/.dotfiles/plugins/
+PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp (change php version in mamp and in the path as needed)
 # PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
