@@ -1,0 +1,94 @@
+#!/usr/bin/python
+# -*- coding: iso-8859-1 -*-
+############################################################################
+#    Copyright (C) 2005 by Christoph Neuroth <delmonico@gmx.net>           #
+#                                                                          #
+#    This program is free software; you can redistribute it and/or modify  #
+#    it under the terms of the GNU General Public License as published by  #
+#    the Free Software Foundation; either version 2 of the License, or     #
+#    (at your option) any later version.                                   #
+#                                                                          #
+#    This program is distributed in the hope that it will be useful,       #
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of        #
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         #
+#    GNU General Public License for more details.                          #
+#                                                                          #
+#    You should have received a copy of the GNU General Public License     #
+#    along with this program; if not, write to the                         #
+#    Free Software Foundation, Inc.,                                       #
+#    59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             #
+############################################################################
+
+"""
+Commandline tool to show a "fuzzy clock".
+"""
+
+version="0.3"
+
+from fuzzyclock import FuzzyClock
+import sys
+import optparse
+import re
+
+#i18n
+import locale
+import gettext
+from distutils.sysconfig import get_python_lib
+import os
+locale.setlocale(locale.LC_ALL, '')
+if os.path.isdir('locale'):
+	locale_dir='locale/'
+else:
+	locale_dir=os.path.join(get_python_lib(),'fuzzyclock','locale')
+gettext.install('fuzzyclock', locale_dir, unicode=True)
+
+def main():
+    #Set up the option parser
+    opt=optparse.OptionParser(version="%prog " + version + ", " +
+                              "Copyright (C) 2005 Christoph Neuroth\n" +
+                              "fuzzyClock.py comes with ABSOLUTELY NO WARRANTY; " +
+                              "for details see the file COPYING")
+
+    opt.add_option("-f", action="store", dest="fuzziness",
+                   type="int", default=1, help=_("Fuzziness level (1-4)"))
+    opt.add_option("-t", action="store", dest="time", type="string",
+                   default=None, help=_("Time (HH:MM)") )
+    opt.add_option("-d", action="store", dest="dow",
+                   type="int", default=None,
+                   help=_("Day of Week (1=Monday ... 7=Sunday)"))
+
+    #Parse the commandline
+    (options, remainingArgs) = opt.parse_args()
+
+    #Do the magic ;)
+    fc = FuzzyClock()
+
+    if not 1 <= options.fuzziness <= 4:
+        print _("Wrong fuzziness value, should be between 1 and 4.")
+        return 2
+
+    if options.time:
+        #Check for correct format and value
+        if re.match('^[0-9]{1,2}:[0-9]{2}$', options.time):
+            time = options.time.split(":")
+            if 0 <= int(time[0]) <= 23 and 0 <= int(time[1]) <= 59:
+                fc.setTime(options.time)
+            else:
+                print _("Wrong time value, should be between 00:00 and 23:59.")
+                return 2
+        else:
+            print _("Incorrect time format, should be \"HH:MM\".")
+            return 2
+
+    if options.dow:
+        if 1 <= options.dow <= 7:
+            fc.setDayOfWeek(options.dow)
+        else:
+            print _(("Incorrect day of week, should be a value between 1 " +
+                  "(Monday) and 7 (Sunday)."))
+            return 2
+
+    print fc.getFuzzyTime(options.fuzziness)
+
+if __name__ == "__main__":
+    sys.exit(main())

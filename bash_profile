@@ -5,8 +5,9 @@
 # PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
 
 # homebrew (homebrew php + mysql)
-PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH
-export PATH="$PATH"
+PLUGINS=/$HOME/.dotfiles/plugins/
+PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+export PATH
 
 ######################################################################
 # ps1
@@ -32,7 +33,7 @@ RED="\[\033[0;31m\]"
 # exports
 ######################################################################
 # hipster ps1
-export PS1="$RED\@$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
+export PS1="$RED$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT sha: $YELLOW%r$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor
 export EDITOR='sublime -nw'
@@ -117,10 +118,10 @@ alias .....="cd ../../../.."
 # git config
 ######################################################################
 git config --global --add color.ui true
-git config --global push.default tracking
-git config --global core.editor "sublime -n -w"
-git config --global user.name "Kevin Jung"
-git config --global user.email "admin@kjung.ca"
+# git config --global push.default tracking
+# git config --global core.editor "sublime -n -w"
+# git config --global user.name "Kevin Jung"
+# git config --global user.email "admin@kjung.ca"
 # git config --global --unset diff
 # git config --global --unset diff.external
 # git config --global core.editor "vim"
@@ -263,6 +264,10 @@ function entdir {
 # git branch autocomplete
 if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
   source ~/.dotfiles/scripts/git-completion.bash
+fi
+
+if [ -f ~/.dotfiles/plugins/plugins/fuzzyclock/bash-fuzzy-clock.sh ]; then
+  source ~/.dotfiles/plugins/plugins/fuzzyclock/bash-fuzzy-clock.sh
 fi
 
 # bash auto complete
