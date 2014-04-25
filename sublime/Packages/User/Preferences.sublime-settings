@@ -31,7 +31,7 @@
 		"Vintage"
 	],
 	"overlay_scroll_bars": "enabled",
-	"remember_open_files": false,
+	"remember_open_files": true,
 	"rulers":
 	[
 		80
@@ -43,6 +43,5 @@
 	"theme": "Centurion.sublime-theme",
 	"trim_trailing_white_space_on_save": false,
 	"use_simple_full_screen": true,
-	"word_wrap": true,
-	"remember_open_files": true
+	"word_wrap": true
 }
