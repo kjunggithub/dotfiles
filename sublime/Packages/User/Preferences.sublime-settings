@@ -32,7 +32,7 @@
 		"Vintage"
 	],
 	"overlay_scroll_bars": "enabled",
-	"remember_open_files": true,
+	"remember_open_files": false,
 	"rulers":
 	[
 		80

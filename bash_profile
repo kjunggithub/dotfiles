@@ -132,6 +132,9 @@ git config --global --add color.ui true
 ######################################################################
 # git aliases
 ######################################################################
+# git rebase
+alias grid='git rebase -i develop'
+
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
 alias ghfup='git hf update'
