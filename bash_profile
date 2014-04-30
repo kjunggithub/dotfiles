@@ -158,7 +158,9 @@ alias gdfs="git diff --staged"
 alias gs='git status'
 alias gco="git checkout $1"
 # copy current branch name and pipe it to the clipboard
-alias gcbn='git symbolic-ref --short HEAD && git symbolic-ref --short HEAD | pbcopy'
+function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
+function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
+
 alias gb="git branch"
 alias gbr="git branch -r"
 alias ga.="git add --all"
