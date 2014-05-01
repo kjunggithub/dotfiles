@@ -67,7 +67,7 @@ alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimul
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"
-alias addvhost='sudo sh /Users/kjung/Scripts/vhost.sh'
+alias addvhost='sudo sh $HOME/.dotfiles/scripts/add-vhost.sh'
 alias profile='cd ~ && sublime ~/.bash_profile && source ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
 alias brewup='brew update && brew upgrade'
