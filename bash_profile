@@ -122,7 +122,7 @@ alias .....="cd ../../../.."
 ######################################################################
 git config --global --add color.ui true
 # git config --global push.default tracking
-# git config --global core.editor "sublime -n -w"
+# git config --global core.editor "sublime -nw”
 # git config --global user.name "Kevin Jung"
 # git config --global user.email "admin@kjung.ca"
 # git config --global --unset diff
@@ -298,7 +298,7 @@ bind '"\e[Z": complete'
 # homebrew
 ######################################################################
 # brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt
-# gcc phplint
+# wget node 
 # brew install macvim --override-system-vim
 
 ######################################################################
@@ -315,6 +315,8 @@ bind '"\e[Z": complete'
 # defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 # defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 # defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+# defaults write com.apple.finder AppleShowAllFiles TRUE
+
 
 ######################################################################
 # bash tips
