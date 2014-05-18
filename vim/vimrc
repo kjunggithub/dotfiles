@@ -12,11 +12,11 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.dotfiles/vim/vundle/
 call vundle#rc()
 
 " load all vundle plugins
-source $HOME/.vim/packages.vim
+source $HOME/.dotfiles/vim/packages.vim
 
 " make stuff pretty
 syntax on
