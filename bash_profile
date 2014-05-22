@@ -55,6 +55,11 @@ alias apacheini='sublime  /etc/apache2/httpd.conf'
 alias phpini54="sudo sublime /usr/local/etc/php/5.4/php.ini"
 alias rapache="sudo apachectl restart"
 
+# mysql
+alias mysqlstart="/usr/local/mysql/support-files/mysql.server start"
+alias mysqlstop="/usr/local/mysql/support-files/mysql.server stop"
+alias mysqlrestart="/usr/local/mysql/support-files/mysql.server restart"
+
 # tmux
 alias tmux="tmux -2"
 # alias tmux="TERM=screen-256color-bce tmux -2"
