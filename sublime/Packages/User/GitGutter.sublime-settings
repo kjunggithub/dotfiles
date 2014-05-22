@@ -4,7 +4,7 @@
 
   // Live mode evaluates changes every time file is modified,
   // Set false to disable evaluation after each input
-  "live_mode": false,
+  "live_mode": true,
 
   // Focus Change mode evaluates changes every time a view gets the focus
   // Set false to disable evaluation when changing views
