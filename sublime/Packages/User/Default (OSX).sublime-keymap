@@ -15,6 +15,8 @@
 	{ "keys": ["ctrl+r"], "command": "expand_selection", "args": {"to": "brackets"} },
 	{ "keys": ["ctrl+a"], "command": "alignment"},
 	{ "keys": ["ctrl+s"], "command": "change_quotes" },
+	{ "keys": ["ctrl+v"], "command": "clipboard_display" },
+
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+c"], "command": "convert_to_camel"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"}
