@@ -5,6 +5,7 @@
 PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp (change php version in mamp and in the path as needed)
+# PATH=/Applications/MAMP/bin/php/php5.3.27/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 # PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew (homebrew php + mysql)
@@ -35,7 +36,7 @@ RED="\[\033[0;31m\]"
 # exports
 ######################################################################
 # hipster ps1
-export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt  -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
+export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor
 export EDITOR='sublime -nw'
