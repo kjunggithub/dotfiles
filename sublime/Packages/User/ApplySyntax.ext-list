@@ -3,17 +3,17 @@
 	[
 		"ini.dist",
 		".gitconfig",
-		".npmrc",
 		".gitignore",
+		".npmrc",
 		".gitattributes"
 	],
 	"PHP":
 	[
 		"php4",
-		"php3",
-		"phtml",
 		"php5",
-		"inc"
+		"inc",
+		"phtml",
+		"php3"
 	],
 	"Python":
 	[
@@ -22,13 +22,13 @@
 	],
 	"Ruby":
 	[
-		"rabl",
 		"rake",
 		"podspec",
 		"rb",
-		"thor",
+		"rabl",
+		"jbuilder",
 		"simplecov",
-		"jbuilder"
+		"thor"
 	],
 	"Ruby Haml":
 	[
@@ -36,8 +36,8 @@
 	],
 	"Shell-Unix-Generic":
 	[
-		"zsh",
 		"bash",
+		"zsh",
 		"sh"
 	],
 	"XML":
