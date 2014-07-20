@@ -143,6 +143,8 @@ git config --global --add color.ui true
 ######################################################################
 # git rebase
 alias grid='git rebase -i develop'
+alias gr--c='git rebase --continue'
+alias gr--a='git rebase --abort'
 
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
