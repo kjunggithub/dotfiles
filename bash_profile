@@ -5,11 +5,11 @@
 PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp (change php version in mamp and in the path as needed)
-PATH=/Applications/MAMP/bin/php/php5.3.27/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+# PATH=/Applications/MAMP/bin/php/php5.3.27/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 # PATH=/Applications/MAMP/bin/php/php5.4.19/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew (homebrew php + mysql)
-# PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
 ######################################################################
@@ -99,7 +99,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias gz="tar -zcvf"
 alias q='exit'
 alias f='open .'
-alias startvpn="ssh -ND 9999 kjung@kjungserv2.vps"
+alias startvpn="ssh -ND 9999 root@192.210.137.216"
 alias enableac3='defaults write com.cod3r.a52codec attemptPassthrough 1'
 alias disableac3='defaults delete com.cod3r.a52codec attemptPassthrough'
 alias lockscreen='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
