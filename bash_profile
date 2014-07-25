@@ -137,6 +137,7 @@ git config --global --add color.ui true
 # git config --global --unset diff
 # git config --global --unset diff.external
 # git config --global core.editor "vim"
+# git daemon --base-path=/Users/kjung/Sites --export-all
 
 ######################################################################
 # git aliases
