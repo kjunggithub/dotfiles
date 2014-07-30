@@ -1,0 +1,225 @@
+"===============================================================================
+" Setup
+"===============================================================================
+" Speed up esc
+set timeoutlen=1000
+set ttimeoutlen=0
+
+" be IMproved
+set nocompatible
+
+" 'required' ???
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.dotfiles/vim/vundle/
+
+" make stuff pretty
+syntax on
+
+" Be a cool guy
+scriptencoding utf-8
+set encoding=utf-8
+
+" better nerdtree splits
+set splitbelow
+set splitright
+
+" set wordwrap on
+set wrap
+
+" indent git commits
+filetype plugin indent on
+
+" Update how vim looks
+set background=dark
+colorscheme sunburst
+
+" show the cursor position all the time
+set ruler
+
+" show line numbers
+set number
+
+" draw a line on the same as the cursor position
+set cursorline
+
+" enable mouse support
+set mouse=a
+
+" display incomplete commands
+set showcmd
+
+" set the screen title to the currently opened file
+set title
+
+" stop blinking cursors
+set gcr=n:blinkon0
+
+" for powerline visiblity
+set laststatus=2
+set cmdheight=2
+
+" Allow backgrounding buffers without writing them, and remember marks/undo
+" for backgrounded buffers
+set hidden
+" Save undo's after file closes
+set undofile
+" where to save undo histories
+set undodir=~/.vim/undo
+
+" Turn backup off, since most stuff is in SVN, git anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" turn on wrap
+set wrap
+
+" Don't wrap lines, ew
+" set nowrap
+
+" A tab is 4 spaces
+set tabstop=4
+set shiftwidth=4
+
+" use spaces, not tabs
+set noexpandtab
+
+" Display unprintable chars
+
+" listchar=trail is not as flexible, use the below to highlight trailing
+" whitespace. Don't do it for unite windows or readonly files
+hi TabLine guibg=none guifg=none
+hi TabLineFill guibg=none
+
+highlight ExtraWhitespace ctermbg=none guibg=none
+match ExtraWhitespace /\s\+$/
+augroup MyAutoCmd
+	autocmd BufWinEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
+	autocmd InsertEnter * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+\%#\@<!$/ | endif
+	autocmd InsertLeave * if &modifiable && &ft!='unite' | match ExtraWhitespace /\s\+$/ | endif
+	autocmd BufWinLeave * if &modifiable && &ft!='unite' | call clearmatches() | endif
+augroup END
+
+" Allow backspacing while in insert
+set backspace=indent,eol,start
+
+" Set up code folding
+set foldmethod=indent
+set foldcolumn=2
+
+" Open folds by default
+set foldlevel=99
+
+" Improve searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Highlight line 80
+set cc=80
+
+" Command line completion
+set wildmenu
+set wildmode=list:longest,full
+
+" provide some context when editing
+set scrolloff=3
+
+" quit NERDTree after opening a file
+let g:NERDTreeQuitOnOpen = 0
+
+" I'm getting tired of accidentally holding down the shift key...
+" Reissue `w` even if I capitalize it...
+com W w
+com Q q
+
+" Set rvm ruby path
+let g:ruby_path = system('rvm current')
+
+" Add powerline symbol fonts to airline
+let g:airline_powerline_fonts = 1
+
+" Sets how many lines of history vim has to remember
+set history=10000
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Cursor settings. This makes terminal vim sooo much nicer!
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+
+"===============================================================================
+" Normal Mode Shift Key Mappings
+"===============================================================================
+
+" U: Redos since 'u' undos
+nnoremap U :redo<cr>
+
+" H: Go to beginning of line.
+noremap H ^
+
+" L: Go to end of line.
+noremap L g_
+
+
+"===============================================================================
+" Leader Key Mappings
+"===============================================================================
+
+" Set my leader to be semi-awesome
+let mapleader=";"
+let maplocalleader=";"
+
+" clear the search buffer when hitting ;return
+map <silent> <leader><cr> :nohl<cr>
+
+" toggle last buffer
+nnoremap <leader><leader> <c-^>
+
+" toggle syntastic, sometimes I just dont care
+nmap <unique> <Leader>s :SyntasticToggleMode<cr>
+
+" Toggle paste mode
+nmap <unique> <Leader>p :set paste!<cr>
+
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<cr>
+
+" open .vimrc
+nmap <leader>v :tabnew /etc/vim/vimrc <cr>
+
+"===============================================================================
+" Normal Mode Ctrl Key Mappings
+"===============================================================================
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-l> <c-w>l
+nnoremap <c-r> <c-w>r
+
+nnoremap <c-h> :tabp<cr>
+nnoremap <c-l> :tabn<cr>
+
+" another way to leave insert mode
+map! ;; <c-c>
+
+"===============================================================================
+" Insert Mode Ctrl Key Mappings
+"===============================================================================
+
+" Ctrl-e: Go to end of line
+inoremap <c-e> <esc>A
+
+" Ctrl-a: Go to begin of line
+inoremap <c-a> <esc>I
