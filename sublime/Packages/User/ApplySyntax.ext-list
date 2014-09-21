@@ -1,32 +1,32 @@
 {
 	"INI":
 	[
-		"ini.dist",
+		".gitattributes",
 		".gitconfig",
 		".gitignore",
 		".npmrc",
-		".gitattributes"
+		"ini.dist"
 	],
 	"PHP":
 	[
+		"inc",
+		"php3",
 		"php4",
 		"php5",
-		"inc",
-		"phtml",
-		"php3"
+		"phtml"
 	],
 	"Python":
 	[
-		"pyw",
-		"py3"
+		"py3",
+		"pyw"
 	],
 	"Ruby":
 	[
-		"rake",
-		"podspec",
-		"rb",
-		"rabl",
 		"jbuilder",
+		"podspec",
+		"rabl",
+		"rake",
+		"rb",
 		"simplecov",
 		"thor"
 	],
@@ -37,8 +37,8 @@
 	"Shell-Unix-Generic":
 	[
 		"bash",
-		"zsh",
-		"sh"
+		"sh",
+		"zsh"
 	],
 	"XML":
 	[
@@ -46,8 +46,8 @@
 	],
 	"YAML":
 	[
-		"yml.dist",
+		".gemrc",
 		"yml",
-		".gemrc"
+		"yml.dist"
 	]
 }
