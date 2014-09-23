@@ -12,6 +12,9 @@ PLUGINS=/$HOME/.dotfiles/plugins
 PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
+# set history limit
+export HISTSIZE=""
+
 ######################################################################
 # ps1 http://news.softpedia.com/news/How-to-Customize-the-Shell-Prompt-40033.shtml
 ######################################################################
