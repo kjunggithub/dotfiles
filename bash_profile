@@ -132,7 +132,7 @@ alias .....="cd ../../../.."
 ######################################################################
 # git config
 ######################################################################
-git config --global --add color.ui true
+# git config --global --add color.ui true
 # git config --global push.default tracking
 # git config --global core.editor "sublime -nw”
 # git config --global user.name "Kevin Jung"
