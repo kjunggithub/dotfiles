@@ -55,7 +55,7 @@ alias cdump='composer dumpautoload -o'
 alias cctags='ctags -R -f .tags'
 alias vhosts="sudo sublime /etc/apache2/extra/httpd-vhosts.conf"
 alias hosts="sudo sublime /etc/hosts"
-alias apacheini='sublime  /etc/apache2/httpd.conf'
+alias apacheini='sublime /etc/apache2/httpd.conf'
 alias phpini54="sudo sublime /usr/local/etc/php/5.4/php.ini"
 alias rapache="sudo apachectl restart"
 
