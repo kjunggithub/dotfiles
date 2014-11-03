@@ -1,7 +1,6 @@
 {
 	"installed_packages":
 	[
-		"Additional PHP Snippets",
 		"AdvancedNewFile",
 		"Alignment",
 		"All Autocomplete",
@@ -39,10 +38,9 @@
 		"LESS",
 		"Markdown Preview",
 		"Objective-C Autocompletion",
-		"PHPUnit",
 		"PHPUnit Completions",
-		"PHPUnit Snippets",
 		"Puppet",
+		"RemotePHPUnit",
 		"Sass",
 		"SASS Snippets",
 		"Search Stack Overflow",
