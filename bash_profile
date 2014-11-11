@@ -102,6 +102,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias gz="tar -zcvf"
 alias q='exit'
 alias f='open .'
+alias fuck='sudo !!'
 alias startvpn="ssh -ND 9999 root@192.210.137.216"
 alias enableac3='defaults write com.cod3r.a52codec attemptPassthrough 1'
 alias disableac3='defaults delete com.cod3r.a52codec attemptPassthrough'
