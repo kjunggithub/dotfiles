@@ -153,6 +153,7 @@ alias gr--a='git rebase --abort'
 
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
+alias gupd='git checkout develop && git pull && git fetch --all'
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghffc="git hf feature cancel -f $1"
