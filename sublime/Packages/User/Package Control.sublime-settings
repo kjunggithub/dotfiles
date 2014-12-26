@@ -1,4 +1,12 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -25,7 +33,7 @@
 		"Gist",
 		"Git",
 		"GitGutter",
-		"Goto Documentation",
+		"GotoDocumentation",
 		"Handlebars",
 		"hosts",
 		"HTMLAttributes",
@@ -38,6 +46,7 @@
 		"LESS",
 		"Markdown Preview",
 		"Objective-C Autocompletion",
+		"Package Control",
 		"PHPUnit Completions",
 		"Puppet",
 		"RemotePHPUnit",
@@ -47,6 +56,7 @@
 		"Search WordPress Codex or QueryPosts",
 		"SideBarEnhancements",
 		"SimplePHPUnit",
+		"Sublime Bookmarks",
 		"SublimeLinter",
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-csslint",
@@ -57,7 +67,6 @@
 		"SyncedSideBar",
 		"Tag",
 		"Theme - Centurion",
-		"Theme - Centurion Blue",
 		"WordCount",
 		"WordPress",
 		"WordPress Developer Resources"
