@@ -8,7 +8,7 @@
         "lint_mode": "background",
         "linters": {
             "csslint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "errors": "",
                 "excludes": [],
@@ -23,16 +23,25 @@
             "json": {
                 "@disable": false,
                 "args": [],
-                "excludes": []
+                "excludes": [],
+                "strict": true
             },
             "php": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "scss": {
+                "@disable": false,
+                "args": [],
+                "exclude-linter": "",
+                "excludes": [],
+                "include-linter": ""
             }
         },
         "mark_style": "fill",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [],
