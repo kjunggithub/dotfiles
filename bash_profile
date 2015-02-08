@@ -12,7 +12,7 @@ PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
 # set history limit
-export HISTSIZE=""
+export HISTSIZE="forever!"
 
 ######################################################################
 # ps1 http://news.softpedia.com/news/How-to-Customize-the-Shell-Prompt-40033.shtml
@@ -318,7 +318,7 @@ bind '"\e[Z": complete'
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus
 # wget node 
 # brew install macvim --override-system-vim
 
