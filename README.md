@@ -10,7 +10,6 @@ ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/sublime /Users/kjung/Library/Application\ Support/Sublime\ Text\ 3
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-cp ~/.dotfiles/cmus/autosave ~/.config/cmus/autosave
 git clone git://github.com/gmarik/vundle.git ~/.dotfiles/vim/bundle/vundle
 vim +BundleInstall +qall
 ```
