@@ -269,22 +269,22 @@ function entdir {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-######################################################################
-# load scripts
-######################################################################
-# git branch autocomplete
-if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
-  source ~/.dotfiles/scripts/git-completion.bash
-fi
+# ######################################################################
+# # load scripts
+# ######################################################################
+# # git branch autocomplete
+# if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
+#   source ~/.dotfiles/scripts/git-completion.bash
+# fi
 
-# bash auto complete
-if [ -f /etc/profile.d/bash_completion.sh ]; then
-  . /etc/profile.d/bash_completion.sh
-fi
+# # bash auto complete
+# if [ -f /etc/profile.d/bash_completion.sh ]; then
+#   . /etc/profile.d/bash_completion.sh
+# fi
 
-if [ -f /etc/profile.d/z.sh ]; then
-. /etc/profile.d/z.sh
-fi
+# if [ -f /etc/profile.d/z.sh ]; then
+# . /etc/profile.d/z.sh
+# fi
 
 ######################################################################
 # bindings
