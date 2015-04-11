@@ -29,8 +29,8 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage",
-		"GitGutter"
+		"GitGutter",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[

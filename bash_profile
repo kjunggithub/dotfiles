@@ -8,7 +8,7 @@ PLUGINS=/$HOME/.dotfiles/plugins
 # PATH=/Applications/MAMP/bin/php/php5.4.38/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew (homebrew php + mysql)
-PATH=/usr/local/mysql/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
 # set history limit
