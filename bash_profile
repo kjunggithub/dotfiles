@@ -135,11 +135,11 @@ alias .....="cd ../../../.."
 # git config --global --add color.ui true
 # git config --global push.default tracking
 # git config --global core.editor "sublime -nw”
+# git config --global core.editor "vim"
 # git config --global user.name "Kevin Jung"
-# git config --global user.email "admin@kjung.ca"
+# git config --global user.email "me@kjung.ca"
 # git config --global --unset diff
 # git config --global --unset diff.external
-# git config --global core.editor "vim"
 # git daemon --base-path=/Users/kjung/Sites --export-all
 
 ######################################################################
@@ -149,17 +149,25 @@ alias .....="cd ../../../.."
 alias grid='git rebase -i develop'
 alias gr--c='git rebase --continue'
 alias gr--a='git rebase --abort'
+alias gr--s='git rebase --skip'
 
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
+alias ghfupm='git checkout master && git hf update'
 alias gupd='git checkout develop && git pull && git fetch --all'
+alias gupm='git checkout master && git pull && git fetch --all'
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghffc="git hf feature cancel -f $1"
 
 # git log
-alias gl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+function gl {
+    git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
+}
+
+alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 
 # git stash
 alias gss="git stash save $1"
@@ -173,6 +181,7 @@ alias gdf="git diff"
 alias gdfs="git diff --staged"
 alias gs='git status'
 alias gco="git checkout $1"
+
 # copy current branch name and pipe it to the clipboard
 function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
 function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
@@ -215,7 +224,7 @@ alias gui8='vboxmanage controlvm 8 savestate ; virtualbox'
 # functions
 ######################################################################
 # cd into dir and list
-function cl() { cd "$@" && ls -la; }
+function cl { cd "$@" && ls -la; }
 
 # functions (most used commands from history)
 function htop {
