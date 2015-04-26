@@ -38,7 +38,7 @@ alias cdump='composer dumpautoload -o'
 alias cctags='ctags -R -f .tags'
 alias vhosts="sudo sublime /etc/apache2/extra/httpd-vhosts.conf"
 alias hosts="sudo sublime /etc/hosts"
-alias apacheini='sublime  /etc/apache2/httpd.conf'
+alias apacheini='sublime /etc/apache2/httpd.conf'
 alias phpini54="sudo sublime /usr/local/etc/php/5.4/php.ini"
 alias rapache="sudo apachectl restart"
 
@@ -85,6 +85,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias gz="tar -zcvf"
 alias q='exit'
 alias f='open .'
+alias fuck='sudo $(history -p \!\!)'
 alias startvpn="ssh -ND 9999 root@192.210.137.216"
 alias enableac3='defaults write com.cod3r.a52codec attemptPassthrough 1'
 alias disableac3='defaults delete com.cod3r.a52codec attemptPassthrough'
@@ -99,11 +100,11 @@ alias icdropbox='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacO
 alias repairperm='sudo diskutil repairPermissions /'
 alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
 # list (adding 'r' as param reverses the order displayed)
-alias la="ls $LS_OPTIONS -la" # list all, includes dot files
-alias lsl="ls $LS_OPTIONS -l"
-alias ls="ls $LS_OPTIONS -GpF"
-alias lsh='ls $LS_OPTIONS -lh'
-alias lsm='ls $LS_OPTIONS -tho'
+alias la="ls -la" # list all, includes dot files
+alias lsl="ls -l"
+alias ls="ls -GpF"
+alias lsh='ls -lh'
+alias lsm='ls -tho'
 alias cfp='fp | pbcopy'
 
 # change dir
@@ -112,19 +113,17 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-function cl() { cd "$@" && ls -la; }
-
 ######################################################################
 # git config
 ######################################################################
-git config --global --add color.ui true
+# git config --global --add color.ui true
 # git config --global push.default tracking
 # git config --global core.editor "sublime -nw”
+# git config --global core.editor "vim"
 # git config --global user.name "Kevin Jung"
-# git config --global user.email "admin@kjung.ca"
+# git config --global user.email "me@kjung.ca"
 # git config --global --unset diff
 # git config --global --unset diff.external
-# git config --global core.editor "vim"
 # git daemon --base-path=/Users/kjung/Sites --export-all
 
 ######################################################################
@@ -134,16 +133,25 @@ git config --global --add color.ui true
 alias grid='git rebase -i develop'
 alias gr--c='git rebase --continue'
 alias gr--a='git rebase --abort'
+alias gr--s='git rebase --skip'
 
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
+alias ghfupm='git checkout master && git hf update'
+alias gupd='git checkout develop && git pull && git fetch --all'
+alias gupm='git checkout master && git pull && git fetch --all'
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghffc="git hf feature cancel -f $1"
 
 # git log
-alias gl='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+function gl {
+    git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
+}
+
+alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
 
 # git stash
 alias gss="git stash save $1"
@@ -157,6 +165,7 @@ alias gdf="git diff"
 alias gdfs="git diff --staged"
 alias gs='git status'
 alias gco="git checkout $1"
+
 # copy current branch name and pipe it to the clipboard
 function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
 function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
@@ -199,7 +208,7 @@ alias gui8='vboxmanage controlvm 8 savestate ; virtualbox'
 # functions
 ######################################################################
 # cd into dir and list
-function cl() { cd "$@" && ls -la; }
+function cl { cd "$@" && ls -la; }
 
 # functions (most used commands from history)
 function htop {
@@ -263,28 +272,29 @@ function cf() {
 ## alias to copy it to the clipboard
 
 function entdir {
-	mkdir $1
-	cd $1
+    mkdir $1
+    cd $1
 }
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# ######################################################################
-# # load scripts
-# ######################################################################
-# # git branch autocomplete
-# if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
-#   source ~/.dotfiles/scripts/git-completion.bash
-# fi
+######################################################################
+# load scripts
+######################################################################
+# git branch autocomplete
+if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
+  source ~/.dotfiles/scripts/git-completion.bash
+fi
 
-# # bash auto complete
-# if [ -f /etc/profile.d/bash_completion.sh ]; then
-#   . /etc/profile.d/bash_completion.sh
-# fi
+# bash auto complete
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
-# if [ -f /etc/profile.d/z.sh ]; then
-# . /etc/profile.d/z.sh
-# fi
+# activate z (brew install z)
+if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
+  . $(brew --prefix)/etc/profile.d/z.sh
+fi
 
 ######################################################################
 # bindings
@@ -301,7 +311,7 @@ bind '"\e[Z": complete'
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus
 # wget node 
 # brew install macvim --override-system-vim
 
@@ -380,4 +390,3 @@ bind '"\e[Z": complete'
 # \\ : a backslash
 # \[ : begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
 # \] : end a sequence of non-printing characters
-
