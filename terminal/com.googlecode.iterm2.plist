@@ -295,6 +295,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>5</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -320,6 +322,11 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1915 153 445 103 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
@@ -410,11 +417,11 @@
 			<key>Ansi 2 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.53017014265060425</real>
+				<real>0.53333336114883423</real>
 				<key>Green Component</key>
-				<real>0.82454568147659302</real>
+				<real>0.82352942228317261</real>
 				<key>Red Component</key>
-				<real>0.53887021541595459</real>
+				<real>0.5372549295425415</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -908,11 +915,11 @@
 			<key>Selection Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.90196079015731812</real>
+				<real>0.63529413938522339</real>
 				<key>Green Component</key>
-				<real>0.90196079015731812</real>
+				<real>0.80000001192092896</real>
 				<key>Red Component</key>
-				<real>0.90196079015731812</real>
+				<real>0.63921570777893066</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
