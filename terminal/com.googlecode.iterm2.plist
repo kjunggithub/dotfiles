@@ -317,7 +317,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>51 301 924 485 0 0 1600 977 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 204 1279 768 0 0 1600 977 </string>
+	<string>0 501 730 476 0 0 1600 977 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -538,7 +538,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -1116,7 +1116,7 @@
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
-	<false/>
+	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.40000000596046448</real>
 	<key>SwitchTabModifier</key>
@@ -1149,6 +1149,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.0.0.20150412</string>
 </dict>
