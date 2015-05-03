@@ -327,7 +327,7 @@ bind '"\e[Z": complete'
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg
 # wget node 
 # brew install macvim --override-system-vim
 
