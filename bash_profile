@@ -74,12 +74,12 @@ alias tmux="tmux -2"
 alias sl="sublime $1"
 alias systemup="brew update && brew upgrade && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge diskutil repairPermissions /"
 alias permrepair="diskutil repairPermissions /"
-alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias rf='~/.bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"
 alias addvhost='sudo sh $HOME/.dotfiles/scripts/add-vhost.sh'
-alias profile='cd ~ && sublime ~/.bash_profile && source ~/.bash_profile'
+alias profile='cd ~ && sublime ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
 alias brewup='brew update && brew upgrade'
 alias brewdoc='brew doctor'
@@ -92,7 +92,7 @@ alias c="clear"
 alias ping="ping -c 5" # ping 5 times ‘by default’
 alias grep="grep --color=auto"
 alias stfu="osascript -e 'set volume output muted true'"
-alias loud="osascript -e 'set Volume 10'"
+alias yell="osascript -e 'set Volume 10'"
 alias wanip="curl ipecho.net/plain; echo"
 alias lanip="ipconfig getifaddr en0"
 alias ql="qlmanage -p 2>/dev/null" # preview a file using QuickLook
@@ -223,6 +223,20 @@ alias gui8='vboxmanage controlvm 8 savestate ; virtualbox'
 ######################################################################
 # functions
 ######################################################################
+# convert unix timestamp to utc
+function cet () {
+    if [[ $1 = '-u' && $2 ]];
+    then
+        # return utc time
+        echo $2
+        date -u -r $2 +"%B %d, %Y. %r %Z"
+    else
+        # return edt time
+        echo $1
+        date -r $1 +"%B %d, %Y. %r %Z"
+    fi
+}
+
 # cd into dir and list
 function cl { cd "$@" && ls -la; }
 
@@ -327,7 +341,7 @@ bind '"\e[Z": complete'
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg gawk
 # wget node 
 # brew install macvim --override-system-vim
 
