@@ -74,7 +74,7 @@ alias tmux="tmux -2"
 alias sl="sublime $1"
 alias systemup="brew update && brew upgrade --all && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge diskutil repairPermissions /"
 alias permrepair="diskutil repairPermissions /"
-alias rf='~/.bash_profile'
+alias rf='source ~/.dotfiles/bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"

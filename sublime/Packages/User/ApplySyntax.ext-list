@@ -1,4 +1,8 @@
 {
+	"HTML (Rails)":
+	[
+		"html.erb"
+	],
 	"INI":
 	[
 		".gitattributes",
@@ -6,6 +10,12 @@
 		".gitignore",
 		".npmrc",
 		"ini.dist"
+	],
+	"JSON":
+	[
+		".csslintrc",
+		".jscsrc",
+		".jshintrc"
 	],
 	"PHP":
 	[
