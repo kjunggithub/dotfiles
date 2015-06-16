@@ -53,5 +53,6 @@
 	"theme": "Centurion.sublime-theme",
 	"trim_trailing_white_space_on_save": false,
 	"use_simple_full_screen": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"show_full_path": true
 }
