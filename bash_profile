@@ -158,6 +158,7 @@ alias gupd='git checkout develop && git pull && git fetch --all'
 alias gupm='git checkout master && git pull && git fetch --all'
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
+alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
 
 # git log
