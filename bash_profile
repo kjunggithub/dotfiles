@@ -111,6 +111,7 @@ alias ffprofile='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p'
 alias pywebserver='python -m SimpleHTTPServer 8000'
 alias rubywebserver="ruby -run -e httpd . -p 8000"
 alias redo='sudo \!-1'
+alias ydl="youtube-dl"
 alias flushdns='dscacheutil -flushcache'
 alias icdropbox='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
 alias repairperm='sudo diskutil repairPermissions /'
