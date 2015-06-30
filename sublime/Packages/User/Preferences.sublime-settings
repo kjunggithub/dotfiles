@@ -42,6 +42,7 @@
 	],
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
+	"draw_white_space": "all",
 	"rulers":
 	[
 		80
