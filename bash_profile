@@ -71,6 +71,7 @@ alias tmux="tmux -2"
 # alias tmux="TERM=screen-256color-bce tmux -2"
 
 # unix
+alias rmt="rmtrash"
 alias sl="sublime $1"
 alias systemup="brew update && brew upgrade --all && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge diskutil repairPermissions /"
 alias permrepair="diskutil repairPermissions /"
