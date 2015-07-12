@@ -1,5 +1,4 @@
 [
-	// most used:
 	{ "keys": ["f1"], "command": "goto_documentation"},
 	{ "keys": ["f2"], "command": "goto_definition"},
 	{ "keys": ["f3"], "command": "navigate_to_definition"},
@@ -18,7 +17,18 @@
 	{ "keys": ["ctrl+v"], "command": "clipboard_display" },
 	{ "keys": ["ctrl+t"], "command": "open_recent_file", "args": {"index": 0 } }, 
 
+	{ "keys": ["ctrl+x"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["ctrl+b"], "command": "build" },
+
+	// Change cases
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+c"], "command": "convert_to_camel"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
-	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"}
+	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"},
+
+	// PHP Companion
+    // { "keys": ["f9"], "command": "expand_fqcn" },
+    // { "keys": ["shift+f9"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+    // { "keys": ["f10"], "command": "find_use" },
+    // { "keys": ["f8"], "command": "import_namespace" },
+    // { "keys": ["shift+f12"], "command": "goto_definition_scope" }
 ]
