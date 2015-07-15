@@ -49,12 +49,12 @@
 	],
 	"scroll_past_end": true,
 	"show_full_path": true,
+	"show_panel_on_build": false,
 	"show_tab_close_buttons": true,
 	"spell_check": false,
 	"tab_size": 4,
 	"theme": "Centurion.sublime-theme",
 	"trim_trailing_white_space_on_save": false,
 	"use_simple_full_screen": true,
-	"word_wrap": true,
-	"show_panel_on_build": false
+	"word_wrap": true
 }
