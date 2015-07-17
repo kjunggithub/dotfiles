@@ -18,7 +18,8 @@
             "jshint": {
                 "@disable": false,
                 "args": [],
-                "excludes": []
+                "excludes": [],
+                "excludes": "*.php"
             },
             "json": {
                 "@disable": false,
