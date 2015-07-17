@@ -35,8 +35,7 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"GitGutter"
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
