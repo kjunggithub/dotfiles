@@ -2,7 +2,11 @@
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
 	"caret_style": "phase",
+	"centurion_folder_icons": true,
 	"color_scheme": "Packages/User/Sunburst (SL) (SL).tmTheme",
+	"contrasted_quick_panel": true,
+	"contrasted_sidebar": true,
+	"contrasted_tabs": true,
 	"detect_slow_plugins": false,
 	"drag_text": false,
 	"draw_indent_guides": true,
@@ -28,6 +32,7 @@
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
+	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
 		"Vintage",
@@ -41,6 +46,7 @@
 		"normal_stippled",
 		"active_stippled"
 	],
+	"large_scroll_bars": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
 	"rulers":
@@ -53,17 +59,9 @@
 	"show_tab_close_buttons": true,
 	"spell_check": false,
 	"tab_size": 4,
-
+	"tabs_medium": true,
 	"theme": "Cyanide - Kevin.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
-	"word_wrap": true,
-	"icon_file_type_enable": true,
-	"centurion_folder_icons": true,
-	"tabs_medium": true,
-	"contrasted_sidebar": true,
-	"contrasted_tabs": true,
-	"contrasted_quick_panel": true,
-	"large_scroll_bars": true
-
+	"word_wrap": true
 }
