@@ -53,8 +53,17 @@
 	"show_tab_close_buttons": true,
 	"spell_check": false,
 	"tab_size": 4,
-	"theme": "Centurion.sublime-theme",
-	"trim_trailing_white_space_on_save": false,
+
+	"theme": "Cyanide - Kevin.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"icon_file_type_enable": true,
+	"centurion_folder_icons": true,
+	"tabs_medium": true,
+	"contrasted_sidebar": true,
+	"contrasted_tabs": true,
+	"contrasted_quick_panel": true,
+	"large_scroll_bars": true
+
 }

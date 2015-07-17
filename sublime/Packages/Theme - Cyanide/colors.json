@@ -1,0 +1,86 @@
+{
+  "backgrounds": [
+    {
+      "name": "default",
+      "hex": "0a0a0a",
+      "rgb": "10,10,10"
+    },
+    {
+      "name": "Black",
+      "hex": "000000",
+      "rgb": "0,0,0"
+    },
+    {
+      "name": "Contrasted",
+      "hex": "121212",
+      "rgb": "18,18,18"
+    },
+    {
+      "name": "Contrasted Semi",
+      "hex": "191919",
+      "rgb": "25,25,25"
+    },
+    {
+      "name": "Contrasted Light",
+      "hex": "282828",
+      "rgb": "40,40,40"
+    }
+  ],
+  "colors": [
+    {
+      "name": "default",
+      "hex": "64b2db",
+      "rgb": "100,178,219"
+    },
+    {
+      "name": "Acid",
+      "hex": "b6db51",
+      "rgb": "182,219,81"
+    },
+    {
+      "name": "Alert",
+      "hex": "fa2f00",
+      "rgb": "250,47,0"
+    },
+    {
+      "name": "Golden",
+      "hex": "ffbf3b",
+      "rgb": "255,191,59"
+    },
+    {
+      "name": "Love",
+      "hex": "f1416b",
+      "rgb": "214,65,107"
+    },
+    {
+      "name": "Mint",
+      "hex": "b7c775",
+      "rgb": "183,199,117"
+    },
+    {
+      "name": "Purple",
+      "hex": "d952aa",
+      "rgb": "217,82,170"
+    },
+    {
+      "name": "Salmon",
+      "hex": "ff786d",
+      "rgb": "255,120,109"
+    },
+    {
+      "name": "Sky",
+      "hex": "93d6d6",
+      "rgb": "147,214,214"
+    },
+    {
+      "name": "Wood",
+      "hex": "9c684f",
+      "rgb": "156,104,79"
+    },
+    {
+      "name": "Kevin",
+      "hex": "54e86f",
+      "rgb": "93, 143, 97"
+    }
+  ]
+}
