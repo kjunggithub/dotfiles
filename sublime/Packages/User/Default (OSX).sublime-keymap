@@ -26,13 +26,27 @@
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"},
 
+	// Override vintage command mode shortcut
 	{ "keys": ["j", "j"], "command": "exit_insert_mode",
 	    "context":
 	    [
 	        { "key": "setting.command_mode", "operand": false },
 	        { "key": "setting.is_widget", "operand": false }
 	    ]
-	}
+	},
+
+	// Cycle down autocomplete
+	{ "keys": ["ctrl+a"], "command": "auto_complete" },
+
+	// Hide autocomplete
+	{ "keys": ["ctrl+c"], "command": "hide_auto_complete", "context":
+	  [
+	    { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+	  ]
+	},
+
+	// Enable vintage redo
+	{ "keys": ["ctrl+r"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
 
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
