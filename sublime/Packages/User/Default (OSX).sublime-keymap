@@ -15,7 +15,7 @@
 	{ "keys": ["ctrl+a"], "command": "alignment"},
 	{ "keys": ["ctrl+s"], "command": "change_quotes" },
 	{ "keys": ["ctrl+v"], "command": "clipboard_display" },
-	{ "keys": ["ctrl+t"], "command": "open_recent_file", "args": {"index": 0 } }, 
+	{ "keys": ["ctrl+t"], "command": "open_recent_file", "args": {"index": 0 } },
 
 	{ "keys": ["ctrl+x"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
 	{ "keys": ["ctrl+b"], "command": "build" },
@@ -25,6 +25,14 @@
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+c"], "command": "convert_to_camel"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"},
+
+	{ "keys": ["j", "j"], "command": "exit_insert_mode",
+	    "context":
+	    [
+	        { "key": "setting.command_mode", "operand": false },
+	        { "key": "setting.is_widget", "operand": false }
+	    ]
+	}
 
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
