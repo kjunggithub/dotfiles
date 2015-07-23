@@ -5,7 +5,7 @@
 PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp (change php version in mamp and in the path as needed)
-# PATH=/Applications/MAMP/bin/php/php5.4.39/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+# PATH=/Applications/MAMP/bin/php/php5.6.7/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew (homebrew php + mysql)
 PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
@@ -345,7 +345,7 @@ bind '"\e[Z": complete'
 # homebrew
 ######################################################################
 # brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg gawk
-# wget node 
+# wget node
 # brew install macvim --override-system-vim
 
 ######################################################################

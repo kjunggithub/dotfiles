@@ -36,7 +36,7 @@
 	},
 
 	// Cycle down autocomplete
-	{ "keys": ["ctrl+a"], "command": "auto_complete" },
+	{ "keys": ["ctrl+s"], "command": "auto_complete" },
 
 	// Hide autocomplete
 	{ "keys": ["ctrl+c"], "command": "hide_auto_complete", "context":
