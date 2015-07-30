@@ -136,7 +136,7 @@ alias .....="cd ../../../.."
 ######################################################################
 # git config --global --add color.ui true
 # git config --global push.default tracking
-# git config --global core.editor "sublime -nw”
+# git config --global core.editor "sublime -nw"
 # git config --global core.editor "vim"
 # git config --global user.name "Kevin Jung"
 # git config --global user.email "me@kjung.ca"
@@ -186,6 +186,8 @@ alias gs='git status'
 alias gco="git checkout $1"
 
 # copy current branch name and pipe it to the clipboard
+
+alias gcbps="gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' && gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' | pbcopy"
 function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
 function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
 
