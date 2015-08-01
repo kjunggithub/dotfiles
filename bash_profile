@@ -44,6 +44,12 @@ export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt -f '$DEFAULT on: $
 export EDITOR='sublime -nw'
 # export EDITOR='vim'
 
+# cs fixer
+# $ composer global require fabpot/php-cs-fixer @stable
+# export PATH="$PATH:$HOME/.composer/vendor/bin"
+# $ brew tap josegonzalez/homebrew-php
+# $ brew install php-cs-fixer
+
 ######################################################################
 # aliases
 ######################################################################
