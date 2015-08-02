@@ -50,6 +50,9 @@ export EDITOR='sublime -nw'
 # $ brew tap josegonzalez/homebrew-php
 # $ brew install php-cs-fixer
 
+# crontab
+# 0 22 * * * /Users/kjung/Scripts/sync\ music.command > /dev/null 2>&1
+
 ######################################################################
 # aliases
 ######################################################################
