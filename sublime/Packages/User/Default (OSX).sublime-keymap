@@ -45,6 +45,15 @@
 	  ]
 	},
 
+	// // Wrap selection in tag
+	//   {
+	//       "keys"      :   ["ctrl+t"],
+	//       "command"   :   "insert_snippet",
+	//       "args": {
+	//           "contents": "<${1:p}>${0:$SELECTION}</${1}>"
+	//       }
+	//   },
+
 	// Enable vintage redo
 	{ "keys": ["ctrl+r"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
 

@@ -30,6 +30,8 @@
 	[
 		"subpixel_antialias"
 	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"font_size": 18.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -65,5 +67,8 @@
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
-	"word_wrap": true
+	"word_wrap": true,
+	"default_encoding": "UTF-8",
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true
 }
