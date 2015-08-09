@@ -20,6 +20,7 @@
 		".DS_Store",
 		".bundle",
 		".git",
+		".tags",
 		".sass-cache",
 		"node_modules",
 		"wp-admin",
