@@ -57,6 +57,14 @@
 	// Enable vintage redo
 	{ "keys": ["ctrl+r"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
 
+	{ "keys": ["j", "j"], "command": "exit_insert_mode",
+	            "context":
+	            [
+	                { "key": "setting.command_mode", "operand": false },
+	                { "key": "setting.is_widget", "operand": false }
+	            ]
+	        }
+
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
     // { "keys": ["shift+f9"], "command": "expand_fqcn", "args": {"leading_separator": true} },
