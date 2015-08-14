@@ -56,6 +56,7 @@ export EDITOR='sublime -nw'
 ######################################################################
 # aliases
 ######################################################################
+alias es='elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 alias claravel="composer create-project laravel/laravel $1 --prefer-dist"
 alias slaravel='screen -dmS laravelSERV php artisan serve && open http://localhost:8000/'
 alias art='php artisan'
