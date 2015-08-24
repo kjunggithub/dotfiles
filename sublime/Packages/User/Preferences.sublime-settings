@@ -14,6 +14,7 @@
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
 	"find_selected_text": true,
+	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
 		".DS_Store",
@@ -37,7 +38,6 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
-		"GitGutter"
 	],
 	"indent_guide_options":
 	[
