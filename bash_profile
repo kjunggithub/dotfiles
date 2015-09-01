@@ -173,6 +173,9 @@ alias ghffs="git hf feature start $1"
 alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
 
+# git clean
+alias gcdf"git clean -df"
+
 # git log
 function gl {
     git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
