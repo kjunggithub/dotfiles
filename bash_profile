@@ -1,13 +1,10 @@
-######################################################################
-# set up path
-######################################################################
-# includes
+# includes & ps1
 PLUGINS=/$HOME/.dotfiles/plugins
 
-# mamp (change php version in mamp and in the path as needed)
+# mamp ps 1(change php version in mamp and in the path as needed)
 # PATH=/Applications/MAMP/bin/php/php5.6.7/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
-# homebrew (homebrew php + mysql)
+# homebrew ps 1(homebrew php + mysql)
 PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
@@ -293,6 +290,7 @@ function extract () {
     fi
 }
 
+# open current git repo in github
 function gitweb {
     if [ -d .git ]; then
         remotes=$(git remote -v | awk -F'git@github.com:' '{print $2}' | cut -d" " -f1)
@@ -320,8 +318,7 @@ function cf() {
     fi
 }
 
-## alias to copy it to the clipboard
-
+# create a folder and cd into it
 function entdir {
 	mkdir $1
 	cd $1
@@ -332,12 +329,7 @@ function entdir {
 ######################################################################
 # load scripts
 ######################################################################
-# git branch autocomplete
-if [ -f ~/.dotfiles/scripts/git-completion.bash ]; then
-  source ~/.dotfiles/scripts/git-completion.bash
-fi
-
-# bash auto complete
+# bash auto complete (brew install git bash-completion)
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
