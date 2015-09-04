@@ -197,6 +197,7 @@ alias gdf="git diff"
 alias gdfs="git diff --staged"
 alias gdfh="git diff HEAD"
 alias gs='git status'
+alias gr="git reset"
 alias gco="git checkout $1"
 
 # copy current branch name and pipe it to the clipboard
