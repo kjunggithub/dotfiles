@@ -195,6 +195,7 @@ alias gsp='git stash pop'
 # git diff
 alias gdf="git diff"
 alias gdfs="git diff --staged"
+alias gdfh="git diff HEAD"
 alias gs='git status'
 alias gco="git checkout $1"
 
@@ -207,6 +208,7 @@ function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{pr
 alias gb="git branch"
 alias gbr="git branch -r"
 alias ga.="git add --all"
+alias gap="git add -p"
 alias gau="git add -u"
 function ga { git add "$*" ;}
 
