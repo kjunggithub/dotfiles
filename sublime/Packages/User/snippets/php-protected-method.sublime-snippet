@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[
-protected function $1()
+protected function $1($2)
 {
-	$2
+	$3
 }
 
 ]]></content>
