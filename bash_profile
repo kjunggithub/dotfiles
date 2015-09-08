@@ -171,7 +171,7 @@ alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
 
 # git clean
-alias gcdf"git clean -df"
+alias gcdf="git clean -df"
 
 # git log
 function gl {
