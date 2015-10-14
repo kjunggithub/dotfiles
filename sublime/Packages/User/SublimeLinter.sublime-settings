@@ -8,7 +8,7 @@
         "lint_mode": "background",
         "linters": {
             "csslint": {
-                "@disable": true,
+                "@disable": false,
                 "args": [],
                 "errors": "",
                 "excludes": [],
@@ -18,7 +18,6 @@
             "jshint": {
                 "@disable": false,
                 "args": [],
-                "excludes": [],
                 "excludes": "*.php"
             },
             "json": {

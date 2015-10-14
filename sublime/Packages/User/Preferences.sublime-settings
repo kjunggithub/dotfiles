@@ -24,7 +24,8 @@
 		".sass-cache",
 		"node_modules",
 		"wp-admin",
-		"wp-includes"
+		"wp-includes",
+		"*.pyc"
 	],
 	"font_face": "Ubuntu Mono derivative Powerline",
 	"font_options":

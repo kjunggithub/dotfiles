@@ -13,7 +13,7 @@
 	{ "keys": ["ctrl+e"], "command": "expand_selection_to_quotes"},
 	{ "keys": ["ctrl+r"], "command": "expand_selection", "args": {"to": "brackets"} },
 	{ "keys": ["ctrl+a"], "command": "alignment"},
-	{ "keys": ["ctrl+s"], "command": "change_quotes" },
+	{ "keys": ["ctrl+q"], "command": "change_quotes" },
 	{ "keys": ["ctrl+v"], "command": "clipboard_display" },
 	{ "keys": ["ctrl+t"], "command": "open_recent_file", "args": {"index": 0 } },
 
