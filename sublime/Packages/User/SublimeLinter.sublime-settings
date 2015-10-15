@@ -8,10 +8,12 @@
         "lint_mode": "background",
         "linters": {
             "csslint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "errors": "",
-                "excludes": [],
+                "excludes": [
+                    ""
+                ],
                 "ignore": "",
                 "warnings": ""
             },
@@ -32,11 +34,15 @@
                 "excludes": []
             },
             "scss": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "exclude-linter": "",
                 "excludes": [],
                 "include-linter": ""
+            },
+            "scsslint": {
+                "@disable": false,
+                "excludes": "*.css"
             }
         },
         "mark_style": "fill",

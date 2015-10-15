@@ -1,33 +1,72 @@
+" theme
+colorscheme sunburst
+
+" syntax highlighting
+syntax enable
+
+" number of visual spaces per TAB
+set tabstop=4
+
+" number of visual spaces per TAB
+set shiftwidth=4
+
+" number of spaces in tab when editing
+set softtabstop=4
+
+" keep tabs as tabs and not spaces
+set noexpandtab
+
+" line number
+set number
+
+" display command (bottom)
+set showcmd
+
+" highlight current line
+set cursorline
+
+" visual autocomplete menu
+set wildmenu
+
+" redraw less often
+set lazyredraw
+
+" highlight matching closing tags ([{()}])
+set showmatch
+
+" highlight search results
+set hlsearch
+
+" search as you type
+set incsearch
+
+" turn off search highlight
+" nnoremap <leader><space> :nohlsearch<CR>
+
+" jj is escape
+inoremap jj <esc>
+
 set timeoutlen=1000
 set ttimeoutlen=0
 set nocompatible
 filetype off
 set background=dark
-colorscheme sunburst
-syntax on
 scriptencoding utf-8
 set encoding=utf-8
 set wrap
 set ruler
-set number
-set cursorline
 set mouse=a
-set showcmd
 set title
 set gcr=n:blinkon0
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+
 set backspace=indent,eol,start
 set foldmethod=indent
 set foldcolumn=2
 set foldlevel=99
-set hlsearch
-set incsearch
+
 set ignorecase
 set smartcase
 set cc=80
-set wildmenu
 set wildmode=list:longest,full
 set scrolloff=3
 set history=10000
