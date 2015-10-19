@@ -2,7 +2,7 @@
 PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp ps 1(change php version in mamp and in the path as needed)
-# PATH=/Applications/MAMP/bin/php/php5.6.7/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+# PATH=/Applications/MAMP/bin/php/php5.6.10/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew ps 1(homebrew php + mysql)
 PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
