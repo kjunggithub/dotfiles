@@ -38,7 +38,7 @@ RED="\[\033[0;31m\]"
 export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor
-export EDITOR='sublime -nw'
+export EDITOR='subl -nw'
 # export EDITOR='vim'
 
 # cs fixer
@@ -59,10 +59,10 @@ alias slaravel='screen -dmS laravelSERV php artisan serve && open http://localho
 alias art='php artisan'
 alias cdump='composer dumpautoload -o'
 alias cctags='ctags -R -f .tags'
-alias vhosts="sudo sublime /etc/apache2/extra/httpd-vhosts.conf"
-alias hosts="sudo sublime /etc/hosts"
-alias apacheini='sublime /etc/apache2/httpd.conf'
-alias phpini54="sudo sublime /usr/local/etc/php/5.4/php.ini"
+alias vhosts="sudo subl /etc/apache2/extra/httpd-vhosts.conf"
+alias hosts="sudo subl /etc/hosts"
+alias apacheini='subl /etc/apache2/httpd.conf'
+alias phpini56="sudo subl /usr/local/etc/php/5.6/php.ini"
 alias rapache="sudo apachectl restart"
 
 # mysql
@@ -79,7 +79,7 @@ alias tmux="tmux -2"
 
 # unix
 alias rmt="rmtrash"
-alias sl="sublime $1"
+alias sl="subl $1"
 alias systemup="brew update && brew upgrade --all && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge diskutil repairPermissions /"
 alias permrepair="diskutil repairPermissions /"
 alias rf='source ~/.dotfiles/bash_profile'
@@ -87,7 +87,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"
 alias addvhost='sudo sh $HOME/.dotfiles/scripts/add-vhost.sh'
-alias profile='sublime ~/.bash_profile'
+alias profile='subl ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
 alias brewup='brew update && brew upgrade'
 alias brewdoc='brew doctor'
@@ -143,7 +143,7 @@ alias .....="cd ../../../.."
 ######################################################################
 # git config --global --add color.ui true
 # git config --global push.default tracking
-# git config --global core.editor "sublime -nw"
+# git config --global core.editor "subl -nw"
 # git config --global core.editor "vim"
 # git config --global user.name "Kevin Jung"
 # git config --global user.email "me@kjung.ca"
