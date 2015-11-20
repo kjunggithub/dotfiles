@@ -2,10 +2,10 @@
 PLUGINS=/$HOME/.dotfiles/plugins
 
 # mamp ps 1(change php version in mamp and in the path as needed)
-# PATH=/Applications/MAMP/bin/php/php5.6.10/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
+PATH=/Applications/MAMP/bin/php/php5.6.10/bin:/Applications/MAMP/Library/bin:/usr/local/bin:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # homebrew ps 1(homebrew php + mysql)
-PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
+# PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH:$PLUGINS
 export PATH
 
 # set history limit
@@ -37,7 +37,7 @@ RED="\[\033[0;31m\]"
 # hipster ps1
 export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
-# editor
+# editor`
 export EDITOR='subl -nw'
 # export EDITOR='vim'
 
