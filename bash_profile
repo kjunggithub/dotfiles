@@ -17,7 +17,8 @@ export HISTSIZE="forever!"
 # ps1 colours
 BOLD="\[\e[1m\]"
 UNDERLINE="\[\033[4m\]"
-DEFAULT="\[\e[0m\]"
+# DEFAULT="\[\e[0m\]"
+DEFAULT="\e[0m"
 GREEN="\[\033[0;32m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 CYAN='\[\e[1;36m\]'
@@ -29,7 +30,8 @@ BLACK="\[\033[0;30m\]"
 WHITE="\[\033[1;37m\]"
 BLUE="\[\033[0;34m\]"
 LIGHT_BLUE="\[\033[1;34m\]"
-RED="\[\033[0;31m\]"
+# RED="\[\033[0;31m\]"
+RED="\033[0;31m"
 
 ######################################################################
 # exports
@@ -195,7 +197,23 @@ alias gdfs="git diff --staged"
 alias gdfh="git diff HEAD"
 alias gs='git status'
 alias gr="git reset"
-alias gco="git checkout $1"
+
+function gco {
+    if [[ $1 = '.' ]];
+    then
+        printf "${RED}THIS DELETES ALL THE CODES! ARE YOU SURE??????${DEFAULT}"
+        echo
+        read response
+        if echo "$response" | grep -iq "^y" ;
+        then
+            git checkout \.
+        else
+            return
+        fi
+    fi
+
+    git checkout $1
+}
 
 # copy current branch name and pipe it to the clipboard
 
@@ -223,7 +241,7 @@ function grho { git reset --hard origin/"$@" ;}
 
 # git commit
 alias gcav='git commit -av'
-function gcm { git commit -m "$1" ;}
+function gcm { git commit -m "$1";}
 function gcam { git commit -am "$1";}
 
 # alias g="git"
