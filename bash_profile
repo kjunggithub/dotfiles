@@ -172,9 +172,6 @@ alias ghffs="git hf feature start $1"
 alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
 
-# git clean
-alias gcdf="git clean -df"
-
 # git log
 function gl {
     git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
@@ -197,6 +194,17 @@ alias gdfs="git diff --staged"
 alias gdfh="git diff HEAD"
 alias gs='git status'
 alias gr="git reset"
+
+# git clean
+function gcdf {
+    printf "${RED}THIS DELETES ALL THE CODES! ARE YOU SURE??????${DEFAULT}"
+    echo
+    read response
+    if echo "$response" | grep -iq "^y" ;
+    then
+        git clean -df
+    fi
+}
 
 function gco {
     if [[ $1 = '.' ]];
