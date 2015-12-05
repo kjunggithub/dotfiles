@@ -15,23 +15,22 @@ export HISTSIZE="forever!"
 # ps1 http://news.softpedia.com/news/How-to-Customize-the-Shell-Prompt-40033.shtml
 ######################################################################
 # ps1 colours
-BOLD="\[\e[1m\]"
-UNDERLINE="\[\033[4m\]"
-# DEFAULT="\[\e[0m\]"
+BOLD="\e[1m"
+UNDERLINE="\033[4m"
 DEFAULT="\e[0m"
-GREEN="\[\033[0;32m\]"
-LIGHT_GREEN="\[\033[1;32m\]"
-CYAN='\[\e[1;36m\]'
-MAGENTA="\[\033[1;31m\]"
-YELLOW="\[\033[1;33m\]"
-GREEN="\[\033[1;32m\]"
-PURPLE="\[\033[1;35m\]"
-BLACK="\[\033[0;30m\]"
-WHITE="\[\033[1;37m\]"
-BLUE="\[\033[0;34m\]"
-LIGHT_BLUE="\[\033[1;34m\]"
-# RED="\[\033[0;31m\]"
+GREEN="\033[0;32m"
+LIGHT_GREEN="\033[1;32m"
+CYAN='\e[1;36m'
+MAGENTA="\033[1;31m"
+YELLOW="\033[1;33m"
+GREEN="\033[1;32m"
+PURPLE="\033[1;35m"
+BLACK="\033[0;30m"
+WHITE="\033[1;37m"
+BLUE="\033[0;34m"
+LIGHT_BLUE="\033[1;34m"
 RED="\033[0;31m"
+ORANGE="\033[38;5;214m"
 
 ######################################################################
 # exports
@@ -197,7 +196,7 @@ alias gr="git reset"
 
 # git clean
 function gcdf {
-    printf "${RED}THIS DELETES ALL THE CODES! ARE YOU SURE??????${DEFAULT}"
+    printf "${ORANGE}'git clean -df' - HOLD UP! YOU SURE ABOUT THIS!?!? (y/n)${DEFAULT}"
     echo
     read response
     if echo "$response" | grep -iq "^y" ;
@@ -209,7 +208,7 @@ function gcdf {
 function gco {
     if [[ $1 = '.' ]];
     then
-        printf "${RED}THIS DELETES ALL THE CODES! ARE YOU SURE??????${DEFAULT}"
+        printf "${ORANGE}'git checkout .' - HOLD UP! YOU SURE ABOUT THIS!?!? (y/n)${DEFAULT}"
         echo
         read response
         if echo "$response" | grep -iq "^y" ;
