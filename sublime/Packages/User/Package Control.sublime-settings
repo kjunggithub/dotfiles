@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Additional PHP Snippets",
 		"AdvancedNewFile",
 		"Alignment",
 		"All Autocomplete",
@@ -28,6 +29,7 @@
 		"DocBlockr",
 		"Dotfiles Syntax Highlighting",
 		"Emmet",
+		"EncodingHelper",
 		"FileDiffs",
 		"Function Name Display",
 		"Gist",
