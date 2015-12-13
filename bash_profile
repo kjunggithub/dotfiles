@@ -132,6 +132,7 @@ alias ls="ls -GpF"
 alias lsh='ls -lh'
 alias lsm='ls -tho'
 alias cfp='fp | pbcopy'
+alias ps?="ps aux | grep"
 
 # change dir
 alias ..="cd .."
@@ -223,7 +224,6 @@ function gco {
 }
 
 # copy current branch name and pipe it to the clipboard
-
 alias gcbps="gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' && gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' | pbcopy"
 function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
 function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
@@ -279,6 +279,10 @@ function cet () {
         date -r $1 +"%B %d, %Y. %r %Z"
     fi
 }
+
+function backup() { cp "$1"{,.bak};}
+
+
 
 # cd into dir and list
 function cl { cd "$@" && ls -la; }
