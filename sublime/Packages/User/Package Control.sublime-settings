@@ -64,6 +64,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
+		"SublimeOnSaveBuild",
 		"Swift",
 		"SyncedSideBar",
 		"Tag",
