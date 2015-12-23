@@ -36,7 +36,7 @@ ORANGE="\033[38;5;214m"
 # exports
 ######################################################################
 # hipster ps1
-export PS1="$RED\$(fuzzyclock)$DEFAULT in:$BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
+export PS1="$RED\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫" $DEFAULT"
 
 # editor`
 export EDITOR='subl -nw'
