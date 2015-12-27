@@ -1135,6 +1135,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSColorPanelMode</key>
+	<string>7</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Desktop</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -1167,10 +1169,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>497 429 228 325 0 0 1920 1057 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1210 220 445 103 0 0 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>348 405 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>958 5 955 1052 0 0 1920 1057 </string>
+	<string>0 5 1909 1052 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1380,11 +1386,11 @@
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.42352941632270813</real>
+				<real>1</real>
 				<key>Green Component</key>
-				<real>0.42352941632270813</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.42352941632270813</real>
+				<real>1</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -1902,7 +1908,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>467738386.314098</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>472529445.61947697</real>
+	<real>472615846.58147502</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1949,7 +1955,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/Desktop</string>
+	<string>~/Desktop/something</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1965,7 +1971,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-22T17:06:07Z</date>
+	<date>2015-12-23T17:06:07Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

@@ -1,4 +1,5 @@
 *.DS_Store
+*.pyc
 vim/bundles/
 vim/vundle/
 sublime/Packages/User/Gist.sublime-settings
