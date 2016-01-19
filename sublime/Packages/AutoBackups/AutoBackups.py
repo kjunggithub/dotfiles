@@ -167,7 +167,11 @@ class AutoBackupsEventListener(sublime_plugin.EventListener):
         if os.access(backup_dir, os.F_OK) == False:
             os.makedirs(backup_dir)
 
-        shutil.copy(filename, newname)
+        try:
+            shutil.copy(filename, newname)
+        except FileNotFoundError:
+            self.console('Backup not saved. File '+filename+' not exists')
+            return False;
 
         hashes[buffer_id] = current_hash
         self.console('Backup saved to: '+newname.replace('\\', '/'))
@@ -473,6 +477,21 @@ class AutoBackupsDonateCommand(sublime_plugin.WindowCommand):
         sublime.message_dialog('AutoBackups: Thanks for your support ^_^')
         webbrowser.open_new_tab("https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=akalongman@gmail.com&item_name=Donation to Sublime Text - AutoBackups&item_number=1&no_shipping=1")
 
+class AutoBackupsOpenBackupsFolderCommand(sublime_plugin.WindowCommand):
+    def run(self, paths = []):
+        backup_dir = settings.get('backup_dir')
+
+        if sublime.platform() == 'windows':
+            import subprocess
+            if self.isDirectory():
+                subprocess.Popen(["explorer", self.escapeCMDWindows(backup_dir)])
+            else:
+                subprocess.Popen(["explorer", '/select,', self.escapeCMDWindows(backup_dir)])
+        else:
+            sublime.active_window().run_command("open_dir", {"dir": backup_dir} )
+
+    def escapeCMDWindows(self, string):
+        return string.replace('^', '^^')
 
 if st_version == 2:
     plugin_loaded()

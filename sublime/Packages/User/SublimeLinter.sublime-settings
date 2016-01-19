@@ -19,6 +19,9 @@
             },
             "jshint": {
                 "@disable": false,
+                "ignore_match": [
+                   ".*Missing.*",
+                   ],
                 "args": [],
                 "excludes": "*.php"
             },

@@ -41,6 +41,7 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
+		"Blade Snippets"
 	],
 	"indent_guide_options":
 	[
@@ -69,7 +70,7 @@
 	"tabs_large": false,
 	"tabs_medium": true,
 	"theme": "Cyanide - Kevin.sublime-theme",
-	"translate_tabs_to_spaces": false,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,

@@ -1,4 +1,0 @@
-Sublime AutoBackups 2.3.6 Changelog:
-
-
-- Minor fixes

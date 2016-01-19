@@ -42,6 +42,7 @@
 		"Hosts",
 		"HTMLAttributes",
 		"INI",
+		"JavaScriptNext - ES6 Syntax",
 		"jQuery",
 		"Laravel 5 Artisan",
 		"Laravel 5 Snippets",
@@ -72,9 +73,12 @@
 		"Tag",
 		"Theme - Centurion",
 		"TrailingSpaces",
+		"Vuejs Complete Package",
+		"Vuejs Snippets",
 		"WordCount",
 		"WordPress",
-		"WordPress Developer Resources"
+		"WordPress Developer Resources",
+		"WordpressDev"
 	],
 	"repositories":
 	[
