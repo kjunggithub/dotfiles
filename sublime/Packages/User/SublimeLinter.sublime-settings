@@ -17,13 +17,14 @@
                 "ignore": "",
                 "warnings": ""
             },
+            // npm install -g jshintc
             "jshint": {
                 "@disable": false,
-                "ignore_match": [
-                   ".*Missing.*",
-                   ],
                 "args": [],
-                "excludes": "*.php"
+                "excludes": "*.php",
+                "ignore_match": [
+                    ".*Missing.*"
+                ]
             },
             "json": {
                 "@disable": false,
@@ -35,6 +36,15 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            // brew install phpmd
+            "phpmd": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "rulesets": "unusedcode,codesize,controversial,design,naming"
+                // phpmd PHP/Depend/DbusUI/ xml rulesets/codesize.xml
+                // "rulesets": "cleancode,codesize,controversial,design,naming,unusedcode"
             },
             "scss": {
                 "@disable": true,

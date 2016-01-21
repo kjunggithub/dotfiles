@@ -67,6 +67,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
+		"SublimeLinter-phpmd",
 		"SublimeOnSaveBuild",
 		"Swift",
 		"SyncedSideBar",
