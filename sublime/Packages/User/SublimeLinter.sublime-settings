@@ -17,7 +17,6 @@
                 "ignore": "",
                 "warnings": ""
             },
-            // npm install -g jshintc
             "jshint": {
                 "@disable": false,
                 "args": [],
@@ -37,14 +36,11 @@
                 "args": [],
                 "excludes": []
             },
-            // brew install phpmd
             "phpmd": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": [],
                 "rulesets": "unusedcode,codesize,controversial,design,naming"
-                // phpmd PHP/Depend/DbusUI/ xml rulesets/codesize.xml
-                // "rulesets": "cleancode,codesize,controversial,design,naming,unusedcode"
             },
             "scss": {
                 "@disable": true,
