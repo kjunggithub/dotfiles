@@ -37,10 +37,10 @@
                 "excludes": []
             },
             "phpmd": {
-                "@disable": true,
+                "@disable": false,
                 "args": [],
                 "excludes": [],
-                "rulesets": "unusedcode,codesize,controversial,design,naming"
+                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
             "scss": {
                 "@disable": true,
