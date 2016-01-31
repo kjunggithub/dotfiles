@@ -40,7 +40,7 @@
                 "@disable": false,
                 "args": [],
                 "excludes": [],
-                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
+                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml",
             },
             "scss": {
                 "@disable": true,
