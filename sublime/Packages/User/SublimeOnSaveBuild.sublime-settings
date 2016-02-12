@@ -1,4 +1,4 @@
 {
-    "filename_filter": "\\.(p11hp)$",
+    "filename_filter": "\\.(php)$",
     "build_on_save": 1
 }
