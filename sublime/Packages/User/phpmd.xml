@@ -30,11 +30,11 @@
     <rule ref="rulesets/codesize.xml/TooManyMethods" />
 
     <rule ref="rulesets/naming.xml/ConstantNamingConventions" />
-    <rule ref="rulesets/naming.xml/LongVariable" />
+<!--     <rule ref="rulesets/naming.xml/LongVariable" />
     <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
             <property name="minimum" value="2"/>
         </properties>
-    </rule>
+    </rule> -->
 
 </ruleset>
