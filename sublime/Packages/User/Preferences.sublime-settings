@@ -1,4 +1,5 @@
 {
+	"update_check": false,
 	"atomic_save": true,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
@@ -34,7 +35,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 18.0,
+	"font_size": 20.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -51,8 +52,8 @@
 		"active_stippled"
 	],
 	"large_scroll_bars": true,
-	"line_padding_bottom": 1,
-	"line_padding_top": 1,
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
 	"rulers":
