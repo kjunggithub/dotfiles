@@ -1,5 +1,4 @@
 {
-	"update_check": false,
 	"atomic_save": true,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
@@ -72,6 +71,7 @@
 	"theme": "Cyanide - Kevin.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
 	"word_wrap": true
