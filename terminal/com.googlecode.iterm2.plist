@@ -1347,6 +1347,27 @@
 	<false/>
 	<key>NSColorPanelMode</key>
 	<string>4</string>
+	<key>NSFontPanelSizeList</key>
+	<array>
+		<string>9</string>
+		<string>10</string>
+		<string>11</string>
+		<string>12</string>
+		<string>13</string>
+		<string>14</string>
+		<string>18</string>
+		<string>24</string>
+		<string>36</string>
+		<string>48</string>
+		<string>64</string>
+		<string>72</string>
+		<string>96</string>
+		<string>144</string>
+		<string>288</string>
+		<string>20</string>
+	</array>
+	<key>NSFontPanelSizeSliderParams</key>
+	<string>1 0 100</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Desktop</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -1359,6 +1380,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -1370,7 +1393,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -1384,11 +1407,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>497 429 228 325 0 0 1920 1057 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1210 220 445 103 0 0 1920 1057 </string>
+	<string>465 307 445 77 0 0 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>766 426 924 485 0 0 1920 1057 </string>
+	<string>766 484 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>958 22 955 1035 0 0 1920 1057 </string>
+	<string>958 4 955 1053 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1942,7 +1965,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>UbuntuMonoDerivativePowerline-Regular 18</string>
+			<string>UbuntuMonoDerivativePowerline-Regular 20</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2117,10 +2140,16 @@
 			<string>/Users/kjung</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>DE558BE8-88EF-4E99-87E2-7933C8CAC1E9</string>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486440937.823201</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>467738386.314098</real>
+	<real>477629443.26481599</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>474768301.24966598</real>
+	<real>486264575.78051001</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -2167,7 +2196,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/Desktop</string>
+	<string>/Users/kjung/Desktop</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -2178,12 +2207,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=56</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-18T00:04:57Z</date>
+	<date>2016-06-01T02:07:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2229,6 +2260,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.0</string>
 </dict>
 </plist>
