@@ -29,7 +29,7 @@
 		"bower_components",
 		"*.pyc"
 	],
-	"font_face": "Ubuntu Mono derivative Powerline",
+	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"subpixel_antialias"
