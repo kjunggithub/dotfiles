@@ -70,7 +70,7 @@ alias gz="tar -zcvf"
 alias q='exit'
 alias f='open .'
 alias fuck='sudo $(history -p \!\!)'
-alias startvpn="ssh -ND 9999 root@192.227.143.138"
+alias startvpn="ssh -fqCND 9999 root@192.227.143.138"
 alias enableac3='defaults write com.cod3r.a52codec attemptPassthrough 1'
 alias disableac3='defaults delete com.cod3r.a52codec attemptPassthrough'
 alias lockscreen='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
@@ -78,6 +78,7 @@ alias ffprofile='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p'
 alias pywebserver='python -m SimpleHTTPServer 8000'
 alias rubywebserver="ruby -run -e httpd . -p 8000"
 alias ydl="youtube-dl"
+alias ydlb="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias flushdns='dscacheutil -flushcache'
 alias icdropbox='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
 alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
