@@ -20,14 +20,6 @@
 		".jshintrc",
 		"geojson"
 	],
-	"PHP":
-	[
-		"inc",
-		"php3",
-		"php4",
-		"php5",
-		"phtml"
-	],
 	"Python":
 	[
 		"py3",

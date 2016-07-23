@@ -27,7 +27,8 @@
 		"wp-admin",
 		"wp-includes",
 		"bower_components",
-		"*.pyc"
+		"*.pyc",
+		"public/"
 	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
@@ -41,6 +42,7 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
+		"PHP"
 	],
 	"indent_guide_options":
 	[
