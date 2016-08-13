@@ -113,6 +113,7 @@ alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
+alias nah="git checkout -"
 
 # git log
 alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
