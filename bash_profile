@@ -46,6 +46,7 @@ alias rf='source ~/.dotfiles/bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"
+# ctrl a then d to detach
 alias addvhost='sudo sh $HOME/.dotfiles/scripts/add-vhost.sh'
 alias profile='subl ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
