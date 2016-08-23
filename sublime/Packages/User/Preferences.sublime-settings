@@ -27,8 +27,7 @@
 		"wp-admin",
 		"wp-includes",
 		"bower_components",
-		"*.pyc",
-		"public/"
+		"*.pyc"
 	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
@@ -67,13 +66,14 @@
 	"show_panel_on_build": false,
 	"show_tab_close_buttons": true,
 	"spell_check": false,
+	"tab_completion": true,
 	"tab_size": 4,
 	"tabs_large": false,
 	"tabs_medium": true,
 	"theme": "Cyanide - Kevin.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"update_check": false,
+	"update_check": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
 	"word_wrap": true
