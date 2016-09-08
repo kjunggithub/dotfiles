@@ -17,8 +17,16 @@
                 "ignore": "",
                 "warnings": ""
             },
-            "jshint": {
+            "eslint": {
                 "@disable": false,
+                "args": [],
+                "excludes": "*.php",
+                "ignore_match": [
+                    ".*Missing.*"
+                ]
+            },
+            "jshint": {
+                "@disable": true,
                 "args": [],
                 "excludes": "*.php",
                 "ignore_match": [
