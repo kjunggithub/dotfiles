@@ -319,3 +319,6 @@ bind '"\e[B":history-search-forward'
 # cool guy autocomplete (tab and shift-tab)
 bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
+
+export TUMBLR_USERNAME="MY_FANTASTIC_TUMBLR_USERNAME"
+export TUMBLR_CONSUMER_KEY="MY_DAUNTING_OAUTH_CONSUMER_KEY"
