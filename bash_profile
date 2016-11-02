@@ -135,6 +135,11 @@ alias gdfh="git diff HEAD"
 alias gs='git status'
 alias gr="git reset"
 
+# phpunit
+alias puf="phpunit --filter"
+alias puu="phpunit --testsuite unit"
+alias pua="phpunit --testsuite acceptance"
+
 # git log
 function gl {
     git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
