@@ -1,6 +1,6 @@
 # paths and ps1
 PLUGINS=/$HOME/.dotfiles/plugins
-PATH=/Applications/MAMP/bin/php/php5.6.10/bin:/Applications/MAMP/Library/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$PATH:$PLUGINS
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # ps1 colours
 BOLD="\[\033[1m\]"

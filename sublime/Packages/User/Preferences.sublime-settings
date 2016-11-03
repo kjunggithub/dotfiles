@@ -1,5 +1,5 @@
 {
-	"atomic_save": true,
+	"atomic_save": false,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
 	"caret_style": "phase",
