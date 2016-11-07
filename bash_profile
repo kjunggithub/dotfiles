@@ -304,6 +304,10 @@ function entdir {
     cd $1
 }
 
+function lsp {
+    for f in $(ls -a); do stat -f "%A %N" $f; done;
+}
+
 # source rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
