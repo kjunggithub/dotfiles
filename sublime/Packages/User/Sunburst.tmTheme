@@ -66,6 +66,8 @@
 					<string>italic</string>
 					<key>foreground</key>
 					<string>#AEAEAE</string>
+					<key>background</key>
+					<string>#0d0d0d</string>
 				</dict>
 			</dict>
 			<dict>
@@ -77,6 +79,8 @@
 				<dict>
 					<key>foreground</key>
 					<string>#3387CC</string>
+					<key>background</key>
+					<string>#0a1b29</string>
 				</dict>
 			</dict>
 			<dict>
@@ -90,6 +94,8 @@
 					<string />
 					<key>foreground</key>
 					<string>#89BDFF</string>
+					<key>background</key>
+					<string>#001633</string>
 				</dict>
 			</dict>
 			<dict>
@@ -103,6 +109,8 @@
 					<string />
 					<key>foreground</key>
 					<string>#E28964</string>
+					<key>background</key>
+					<string>#2b1308</string>
 				</dict>
 			</dict>
 			<dict>
@@ -116,6 +124,8 @@
 					<string />
 					<key>foreground</key>
 					<string>#99CF50</string>
+					<key>background</key>
+					<string>#1b280b</string>
 				</dict>
 			</dict>
 			<dict>
@@ -129,6 +139,8 @@
 					<string />
 					<key>foreground</key>
 					<string>#65B042</string>
+					<key>background</key>
+					<string>#15250e</string>
 				</dict>
 			</dict>
 			<dict>
@@ -142,6 +154,8 @@
 					<string />
 					<key>foreground</key>
 					<string>#9B859D</string>
+					<key>background</key>
+					<string>#1c171c</string>
 				</dict>
 			</dict>
 			<dict>
@@ -153,6 +167,9 @@
 				<dict>
 					<key>foreground</key>
 					<string>#3E87E3</string>
+					<key>background</key>
+					<string>#06182d</string>
+
 				</dict>
 			</dict>
 			<dict>
@@ -209,6 +226,8 @@
 					<string>italic</string>
 					<key>foreground</key>
 					<string>#9B5C2E</string>
+					<key>background</key>
+					<string>#27170c</string>
 				</dict>
 			</dict>
 			<dict>
