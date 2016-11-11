@@ -1,4 +1,16 @@
 [
+    // click to trigger vim insert mode
+    // {
+    //     "button": "button1",
+    //     "count": 1,
+    //     "press_command": "drag_select",
+    //     "command": "press_key",
+    //     "args": {"key": "i"},
+    //     "context": [
+    //         {"key": "vi_command_mode_aware"}
+    //     ]
+    // },
+    // ctrl + click to goto definetion
     {
         "button": "button1",
         "count": 1,
@@ -8,6 +20,7 @@
         "press_command": "goto_definition_scope",
         "command": "find_use"
     },
+    // ctrl + mouse button click to import namespace
     {
         "button": "button2",
         "count": 1,
@@ -17,6 +30,7 @@
         "press_command": "drag_select",
         "command": "find_use"
     },
+    // alt + click to open urls (shows with underline)
     {
         "button": "button1",
         "count": 1,
