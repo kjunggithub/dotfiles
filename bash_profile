@@ -218,6 +218,9 @@ alias kill8='vboxmanage controlvm 8 acpipowerbutton'
 alias save8='vboxmanage controlvm 8 savestate'
 alias gui8='vboxmanage controlvm 8 savestate ; virtualbox'
 
+# vagrant
+alias vagrant='cd ~/vagrant && vagrant'
+
 # convert unix timestamp to utc
 function cet () {
     if [[ $1 = '-u' && $2 ]];
