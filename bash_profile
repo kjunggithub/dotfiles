@@ -23,7 +23,7 @@ ORANGE="\[\033[38;5;214m\]"
 # exports
 export PATH
 export HISTSIZE="forever!"
-export PS1="$RED\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$GREEN"≫"$DEFAULT"
+export PS1="$RED\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $GREEN%b$PURPLE %m%u')\n$DEFAULT"
 export EDITOR='subl -nw'
 
 # aliases
