@@ -52,8 +52,8 @@
 		"active_stippled"
 	],
 	"large_scroll_bars": true,
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 5,
+	"line_padding_top": 5,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
 	"rulers":
