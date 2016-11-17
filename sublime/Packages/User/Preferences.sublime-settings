@@ -2,6 +2,7 @@
 	"atomic_save": false,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
+	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"centurion_folder_icons": true,
 	"color_scheme": "Packages/User/Sunburst.tmTheme",
@@ -60,6 +61,7 @@
 	[
 		80
 	],
+	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_full_path": true,
