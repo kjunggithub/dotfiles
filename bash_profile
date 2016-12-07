@@ -83,6 +83,7 @@ alias ydlb="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 alias flushdns='dscacheutil -flushcache'
 alias icdropbox='HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox &'
 alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
+alias dep="./vendor/deployer/deployer/bin/dep"
 
 # list things
 alias la="ls -la"
