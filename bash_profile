@@ -27,6 +27,8 @@ export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEF
 export EDITOR='subl -nw'
 
 # aliases
+alias dep="./vendor/deployer/deployer/bin/dep"
+alias crontab="export EDITOR=vim && crontab"
 alias es='elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 alias art='php artisan'
 alias cdump='composer dumpautoload -o'
