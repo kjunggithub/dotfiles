@@ -27,6 +27,8 @@ export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEF
 export EDITOR='subl -nw'
 
 # aliases
+alias dep="./vendor/deployer/deployer/bin/dep"
+alias crontab="export EDITOR=vim && crontab"
 alias es='elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
 alias art='php artisan'
 alias cdump='composer dumpautoload -o'
@@ -40,7 +42,7 @@ alias phpunit="phpunit --colors"
 alias tmux="tmux -2"
 alias rmt="rmtrash"
 alias sl="subl $1"
-alias systemup="brew update && brew upgrade --all && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
+alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
 alias permrepair="sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /"
 alias rf='source ~/.dotfiles/bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

@@ -1,81 +1,15 @@
-" theme
-colorscheme sunburst
-
-" syntax highlighting
-syntax enable
-
-" number of visual spaces per TAB
-set tabstop=4
-
-" number of visual spaces per TAB
-set shiftwidth=4
-
-" number of spaces in tab when editing
-set softtabstop=4
-
-" keep tabs as tabs and not spaces
-set noexpandtab
-
-" line number
+syntax on
 set number
-
-" display command (bottom)
-set showcmd
-
-" highlight current line
-set cursorline
-
-" visual autocomplete menu
-set wildmenu
-
-" redraw less often
-set lazyredraw
-
-" highlight matching closing tags ([{()}])
-set showmatch
-
-" highlight search results
-set hlsearch
-
-" search as you type
-set incsearch
-
-" turn off search highlight
-" nnoremap <leader><space> :nohlsearch<CR>
-
-" jj is escape
-inoremap jj <esc>
-
-set timeoutlen=1000
-set ttimeoutlen=0
-set nocompatible
-filetype off
-set background=dark
-scriptencoding utf-8
-set encoding=utf-8
 set wrap
-set ruler
-set mouse=a
-set title
-set gcr=n:blinkon0
-
-set backspace=indent,eol,start
-set foldmethod=indent
-set foldcolumn=2
-set foldlevel=99
-
+set backup
+set backupdir=~/backup
+set history=50
 set ignorecase
 set smartcase
-set cc=80
-set wildmode=list:longest,full
-set scrolloff=3
-set history=10000
-set autoread
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h18
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+set hlsearch
+set incsearch
+set showmatch
+colorscheme sunburst
+set t_Co=256
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
