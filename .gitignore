@@ -3,3 +3,5 @@
 vim/bundles/
 vim/vundle/
 sublime/Packages/User/Gist.sublime-settings
+*.merged-ca-bundle
+*.crt
