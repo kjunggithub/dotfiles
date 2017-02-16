@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Additional PHP Snippets",
 		"AdvancedNewFile",
 		"Alignment",
@@ -26,6 +27,7 @@
 		"ChangeQuotes",
 		"Clickable URLs",
 		"Codecs33",
+		"Color Highlighter",
 		"ConvertToUTF8",
 		"Crontab Syntax",
 		"CTags",
@@ -39,6 +41,7 @@
 		"FileDiffs",
 		"FileSystem Autocompletion",
 		"Filter Lines",
+		"Flexbox Snippets",
 		"Function Name Display",
 		"FuzzyFilePath",
 		"Gist",
@@ -72,7 +75,7 @@
 		"Sublime Files",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-contrib-sublime-syntax",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
@@ -88,8 +91,7 @@
 		"Vuejs Snippets",
 		"WordPress",
 		"WordPress Developer Resources",
-		"WordpressDev",
-		"zz File Icons"
+		"WordpressDev"
 	],
 	"repositories":
 	[
