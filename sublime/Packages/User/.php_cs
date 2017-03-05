@@ -13,6 +13,7 @@
             'standardize_not_equals' => true,
             'single_quote' => true,
             'ordered_imports' => true,
+            // 'ordered_imports' => ['sortAlgorithm' => 'length'],
             'normalize_index_brace' => true,
             'not_operator_with_successor_space' => true,
             'no_blank_lines_after_phpdoc' => true,
