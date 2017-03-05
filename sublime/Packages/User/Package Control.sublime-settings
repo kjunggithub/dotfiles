@@ -76,6 +76,7 @@
 		"Sublime Files",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-contrib-sublime-syntax",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",

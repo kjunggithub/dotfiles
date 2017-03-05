@@ -1,7 +1,7 @@
 {
     "user": {
-        "debug": false,
-        "delay": 0.01,
+        "debug": true,
+        "delay": 0.3,
         "error_color": "D02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default.gutter-theme",
         "gutter_theme_excludes": [],
@@ -50,15 +50,12 @@
                 "excludes": [],
                 "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
-            // gem install scss_lint
             "scss": {
                 "@disable": false,
                 "args": [
                     "--config=/Users/kjung/.dotfiles/sublime/Packages/User/.scss-lint.yml"
                 ],
-                "exclude-linter": "",
-                "excludes": [],
-                "include-linter": ""
+                "excludes": []
             },
             "sublimesyntax": {
                 "@disable": false,
