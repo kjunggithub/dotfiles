@@ -1,6 +1,7 @@
 {
 	"atomic_save": false,
 	"auto_complete_selector": "source, text",
+	"auto_complete_with_fields": true,
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
