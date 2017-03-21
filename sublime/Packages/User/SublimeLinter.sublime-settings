@@ -18,7 +18,7 @@
                 "warnings": ""
             },
             "eslint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": "*.php",
                 "ignore_match": [
@@ -42,6 +42,7 @@
             "php": {
                 "@disable": false,
                 "args": [],
+                "cmd": "/usr/local/bin/php",
                 "excludes": []
             },
             "phpmd": {

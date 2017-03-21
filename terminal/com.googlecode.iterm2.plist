@@ -1370,7 +1370,7 @@
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>1 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Desktop</string>
+	<string>/Applications</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -1418,13 +1418,13 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>766 600 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>288 116 700 622 0 0 1280 777 </string>
+	<string>928 596 700 622 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>1241 858 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 473 592 584 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>322 204 890 852 0 0 2560 1417 </string>
+	<string>0 21 2551 1396 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2222,6 +2222,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -2261,6 +2263,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/kjung/.dotfiles/terminal</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -2278,7 +2282,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-04T21:42:37Z</date>
+	<date>2017-03-18T23:28:22Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2326,7 +2330,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
