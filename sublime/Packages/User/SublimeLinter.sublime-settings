@@ -7,6 +7,21 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "annotations": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "errors": [
+                    "FIXME"
+                ],
+                "warnings": [
+                    "NOTE",
+                    "README",
+                    "TODO",
+                    "XXX",
+                    "@todo"
+                ]
+            },
             "csslint": {
                 "@disable": true,
                 "args": [],
