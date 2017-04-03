@@ -10,10 +10,10 @@
             "annotations": {
                 "@disable": false,
                 "args": [],
-                "excludes": [],
                 "errors": [
                     "FIXME"
                 ],
+                "excludes": [],
                 "warnings": [
                     "NOTE",
                     "README",
