@@ -110,7 +110,7 @@
     "bracket_string_escape_mode": "string",
 
     // Set max number of multi-select brackets that will be searched automatically
-    "auto_selection_threshold" : 10,
+    "auto_selection_threshold" : 15,
 
     // Enable this to completely kill highlighting if "auto_selection_threshold"
     // is exceeded.  Default is to highlight up to the "auto_selection_threshold".
@@ -621,9 +621,15 @@
             "icon": "dot",
             // BH1's original default color for reference
             // "color": "entity.name.class",
-            "color": "brackethighlighter.default",
-            "style": "outline"
+            "color": "bracket.highlighter",
+            "style": "solid"
         },
+
+        //     - thin_underline
+        //     - solid
+        //     - outline
+        //     - squiggly
+        //     - stippled
 
         // This particular style is used to highlight
         // unmatched bracket pairs.  It is a special

@@ -771,6 +771,18 @@
 					<string>#FFFFFF</string>
 				</dict>
 			</dict>
+
+			<dict>
+				<key>name</key>
+				<string>Bracket Highlighter</string>
+				<key>scope</key>
+				<string>bracket.highlighter</string>
+				<key>settings</key>
+				<dict>
+					<key>background</key>
+					<string>#6cc644</string>
+				</dict>
+			</dict>
 		</array>
 		<key>uuid</key>
 		<string>C8C58F9A-35FE-44A4-9BC2-2F3C343DC81D</string>
