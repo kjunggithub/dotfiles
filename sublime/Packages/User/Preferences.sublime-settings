@@ -51,7 +51,7 @@
 		"draw_active"
 	],
 	"large_scroll_bars": true,
-	"line_padding_bottom": 5,
+	"line_padding_bottom": 8,
 	"line_padding_top": 5,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
