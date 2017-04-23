@@ -1,11 +1,11 @@
 %YAML 1.2
 ---
 # http://www.sublimetext.com/docs/3/syntax.html
-name: YAML (Docker)
+name: Plain Text (Buildpacks)
 hidden: true
 file_extensions:
-  - docker-compose.yml
-scope: source.yaml.docker
+  - .buildpacks
+scope: text.plain.buildpacks
 contexts:
   main:
-    - include: scope:source.yaml
+    - include: scope:text.plain
