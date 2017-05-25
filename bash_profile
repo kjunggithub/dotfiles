@@ -138,12 +138,19 @@ alias gdfh="git diff HEAD"
 alias gs='git status'
 alias gr="git reset"
 
+# fun git stuff
+alias glb="git shortlog -sn"
+
 # phpunit
 alias puf="phpunit --filter"
 alias puu="phpunit --testsuite unit"
 alias pua="phpunit --testsuite acceptance"
 
 # git log
+# see what everyone's been upto
+alias glrmt="git log --since=00:00:00 --all --no-merges --oneline --author=me@kjung.ca"
+alias glrm="git log --all --oneline --no-merges --author=me@kjung.ca"
+alias glr="git log --all --oneline --no-merges"
 function gl {
     git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
 }

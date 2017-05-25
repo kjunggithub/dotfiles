@@ -5,7 +5,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"centurion_folder_icons": true,
+	"centurion_afolder_icons": true,
 	"color_scheme": "Packages/User/Sunburst.tmTheme",
 	"contrasted_quick_panel": false,
 	"contrasted_sidebar": false,
