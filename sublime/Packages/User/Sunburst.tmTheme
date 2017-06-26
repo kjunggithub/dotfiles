@@ -169,9 +169,21 @@
 					<string>#3E87E3</string>
 					<key>background</key>
 					<string>#06182d</string>
-
 				</dict>
 			</dict>
+			<!-- Invalid -->
+			<dict>
+			    <key>scope</key>
+			    <string>invalid</string>
+			    <key>settings</key>
+			    <dict>
+			        <key>background</key>
+			        <string>#CC1B27</string>
+			        <key>foreground</key>
+			        <string>#51dfff</string>
+			    </dict>
+			</dict>
+
 			<dict>
 				<key>name</key>
 				<string>Invalid – Deprecated</string>

@@ -29,14 +29,5 @@
         ],
         "press_command": "drag_select",
         "command": "find_use"
-    },
-    // alt + click to open urls (shows with underline)
-    {
-        "button": "button1",
-        "count": 1,
-        "modifiers": [
-            "option"
-        ],
-        "press_command": "open_url_under_cursor"
     }
 ]

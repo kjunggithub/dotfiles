@@ -28,15 +28,6 @@
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
 	{ "keys": ["ctrl+alt+c", "ctrl+alt+s"], "command": "convert_to_snake"},
 
-	// Override vintage command mode shortcut
-	{ "keys": ["j", "j"], "command": "exit_insert_mode",
-	    "context":
-	    [
-	        { "key": "setting.command_mode", "operand": false },
-	        { "key": "setting.is_widget", "operand": false }
-	    ]
-	},
-
 	// Cycle down autocomplete
 	{ "keys": ["ctrl+s"], "command": "auto_complete" },
 
@@ -58,14 +49,7 @@
 
 	// Enable vintage redo
 	{ "keys": ["ctrl+r"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
-
-	{ "keys": ["j", "j"], "command": "exit_insert_mode",
-	            "context":
-	            [
-	                { "key": "setting.command_mode", "operand": false },
-	                { "key": "setting.is_widget", "operand": false }
-	            ]
-	        }
+	{ "keys": ["super+enter"], "command": "open_url_under_cursor" }
 
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
