@@ -580,55 +580,54 @@
     //
 
     // Sidebar file close
-    {
-        "class": "close_button",
-        "layer0.texture": "",
-        "layer0.opacity": 0,
-        "layer0.inner_margin": 0,
-        "layer0.tint": [190,90,78],
-        "content_margin": [8,8]
-    },
-    {
-        "class": "close_button",
-        "parents": [{"class": "tree_row","attributes": ["hover"]}],
-        "layer0.opacity": 1,
-        "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
-    },
+    // {
+    //     "class": "close_button",
+    //     "layer0.texture": "",
+    //     "layer0.opacity": 0,
+    //     "layer0.tint": [190,90,78],
+    //     "content_margin": [13,13],
+    // },
+    // {
+    //     "class": "close_button",
+    //     "parents": [{"class": "tree_row","attributes": ["hover"]}],
+    //     "layer0.opacity": 1,
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
+    // },
 
     // Sidebar file dirty
-    {
-        "class": "close_button",
-        "attributes": ["dirty"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/circle.png",
-        "layer0.opacity": 1,
-        "layer0.tint": [93, 143, 97]
-    },
-    {
-        "class": "close_button",
-        "attributes": ["dirty"],
-        "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
-    },
-    {
-        "class": "close_button",
-        "attributes": ["dirty"],
-        "parents": [{"class": "tree_row","attributes": ["hover"]}],
-        "layer0.texture": "Theme - Cyanide/Cyanide/cross.png",
-        "layer0.opacity": 1
-    },
+    // {
+    //     "class": "close_button",
+    //     "attributes": ["dirty"],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/circle.png",
+    //     "layer0.opacity": 1,
+    //     "layer0.tint": [93, 143, 97]
+    // },
+    // {
+    //     "class": "close_button",
+    //     "attributes": ["dirty"],
+    //     "parents": [{"class": "tree_row","attributes": ["selected"]}],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
+    // },
+    // {
+    //     "class": "close_button",
+    //     "attributes": ["dirty"],
+    //     "parents": [{"class": "tree_row","attributes": ["hover"]}],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png",
+    //     "layer0.opacity": 1
+    // },
 
     // Sidebar file close hover
-    {
-        "class": "close_button",
-        "attributes": ["hover"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
-    },
-    {
-        "class": "close_button",
-        "parents": [{"class": "tree_row","attributes": ["hover","selected"]}],
-        "layer0.texture": "Theme - Cyanide/Cyanide/cross.png",
-        "layer0.opacity": 1
-    },
+    // {
+    //     "class": "close_button",
+    //     "attributes": ["hover"],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
+    // },
+    // {
+    //     "class": "close_button",
+    //     "parents": [{"class": "tree_row","attributes": ["hover","selected"]}],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png",
+    //     "layer0.opacity": 1
+    // },
 
     //
     // SIDEBAR - GENERAL FILE ICONS
@@ -649,41 +648,41 @@
     },
 
     // Sidebar group closed
-    {
-        "class": "disclosure_button_control",
-        "content_margin": [8,8],
-        "layer0.texture": "Theme - Cyanide/Cyanide/folder-closed.png",
-        "layer0.tint": [93, 143, 97],
-        "layer0.opacity": 1,
-        "layer0.inner_margin": 0
-    },
-    {
-        "class": "disclosure_button_control",
-        "parents": [{"class": "tree_row","attributes": ["hover"]}],
-        "layer0.tint":[93, 143, 97]
-    },
-    {
-        "class": "disclosure_button_control",
-        "parents": [{"class": "tree_row","attributes": ["selected"]}]
-    },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "content_margin": [8,8],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/folder-closed.png",
+    //     "layer0.tint": [93, 143, 97],
+    //     "layer0.opacity": 1,
+    //     "layer0.inner_margin": 0
+    // },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "parents": [{"class": "tree_row","attributes": ["hover"]}],
+    //     "layer0.tint":[93, 143, 97]
+    // },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "parents": [{"class": "tree_row","attributes": ["selected"]}]
+    // },
 
     // Sidebar group open
-    {
-        "class": "disclosure_button_control",
-        "attributes": ["expanded"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
-    },
-    {
-        "class": "disclosure_button_control",
-        "attributes": ["expanded"],
-        "parents": [{"class": "tree_row","attributes": ["hover"]}]
-    },
-    {
-        "class": "disclosure_button_control",
-        "attributes": ["expanded"],
-        "parents": [{"class": "tree_row","attributes": ["selected"]}],
-        "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
-    },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "attributes": ["expanded"],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
+    // },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "attributes": ["expanded"],
+    //     "parents": [{"class": "tree_row","attributes": ["hover"]}]
+    // },
+    // {
+    //     "class": "disclosure_button_control",
+    //     "attributes": ["expanded"],
+    //     "parents": [{"class": "tree_row","attributes": ["selected"]}],
+    //     "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
+    // },
 
     //
     // SIDEBAR - ICONS (build 3062+)
