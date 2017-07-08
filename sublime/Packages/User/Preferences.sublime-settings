@@ -1,4 +1,5 @@
 {
+	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
 	"atomic_save": false,
 	"auto_complete_selector": "source, text",
 	"auto_complete_with_fields": true,
