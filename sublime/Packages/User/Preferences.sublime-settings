@@ -1,5 +1,4 @@
 {
-	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
 	"atomic_save": false,
 	"auto_complete_selector": "source, text",
 	"auto_complete_with_fields": true,
@@ -77,5 +76,6 @@
 	"update_check": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
+	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
 	"word_wrap": true
 }

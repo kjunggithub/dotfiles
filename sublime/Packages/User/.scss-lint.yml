@@ -25,7 +25,7 @@ linters:
     convention: zero # or `none`
 
   ChainedClasses:
-    enabled: false
+    enabled: true
 
   ColorKeyword:
     enabled: true
@@ -73,7 +73,7 @@ linters:
 
   HexNotation:
     enabled: true
-    style: lowercase # or 'uppercase'
+    style: uppercase # or 'uppercase'
 
   HexValidation:
     enabled: true
@@ -93,7 +93,7 @@ linters:
     enabled: true
     allow_non_nested_indentation: false
     character: space # or 'tab'
-    width: 4
+    width: 2
 
   LeadingZero:
     enabled: true
@@ -175,7 +175,7 @@ linters:
     allow_single_line_rule_sets: true
 
   SingleLinePerSelector:
-    enabled: true
+    enabled: false
 
   SpaceAfterComma:
     enabled: true
