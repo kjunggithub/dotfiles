@@ -67,7 +67,7 @@
                 "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
             "scss": {
-                "@disable": false,
+                "@disable": true,
                 "args": [
                     "--config=/Users/kjung/.dotfiles/sublime/Packages/User/.scss-lint.yml"
                 ],
