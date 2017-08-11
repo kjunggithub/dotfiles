@@ -14,6 +14,7 @@
 		"Apache Hive",
 		"ApacheConf.tmLanguage",
 		"ApplySyntax",
+		"Auto Hide Sidebar",
 		"Auto Semi-Colon",
 		"Auto-Spacing",
 		"AutoBackups",
@@ -53,6 +54,7 @@
 		"Git",
 		"Git Commit Message Syntax",
 		"GitGutter",
+		"Gitignored File Excluder",
 		"GotoDocumentation",
 		"Hosts",
 		"Hover Image Preview",
@@ -104,6 +106,7 @@
 		"TrailingSpaces",
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
+		"WordHighlight",
 		"WordPress",
 		"WordPress Developer Resources",
 		"WordpressDev"
