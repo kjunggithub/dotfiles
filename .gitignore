@@ -6,3 +6,4 @@ sublime/Packages/User/Gist.sublime-settings
 *.merged-ca-bundle
 *.crt
 sublime/Packages/User/Color Highlighter/icons/*
+sublime/Packages/User/Projects/*
