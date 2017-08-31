@@ -111,13 +111,18 @@ alias gr--s='git rebase --skip'
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
 alias ghfupm='git checkout master && git hf update'
-alias gupd='git checkout develop && git pull && git fetch --all'
-alias gupm='git checkout master && git pull && git fetch --all'
+alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git show'
+alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git show'
+
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
-alias nah="git checkout -"
+alias gnah="git reset --hard;git clean -df;"
+alias gwip='git add -A && git commit -m "work in progress"'
+alias gwipp='git add -A && git commit -m "work in progress" && git push'
+alias guc="git reset --soft HEAD^"
+alias gus="git reset"
 
 # git log
 alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
@@ -220,6 +225,10 @@ function grho { git reset --hard origin/"$@" ;}
 alias gcav='git commit -av'
 function gcm { git commit -m "$1";}
 function gcam { git commit -am "$1";}
+
+# weather
+alias wetter='curl -4 wttr.in/Toronto'
+alias wttr='curl -s wttr.in/Toronto | head -7 | tail -5'
 
 # virtualbox
 alias startsqueeze='vboxmanage startvm "Squeeze" --type headless'
