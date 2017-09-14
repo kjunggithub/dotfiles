@@ -113,6 +113,8 @@
 	"line_padding_bottom": 8,
 	"line_padding_top": 5,
 	"overlay_scroll_bars": "enabled",
+	"phpunit.composer": false,
+	"phpunit.php_executable": "/usr/local/bin/php",
 	"remember_open_files": false,
 	"rulers":
 	[
@@ -135,5 +137,7 @@
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
 	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
-	"word_wrap": true
+	"word_wrap": true,
+	"phpunit-sublime-terminal": "iTerm",
+
 }
