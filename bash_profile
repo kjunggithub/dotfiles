@@ -30,6 +30,13 @@ export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEF
 export EDITOR='subl -nw'
 
 # aliases
+# tmux
+alias tmux="tmux -2"
+alias tmuxn="tmux new -s $1"
+alias tmuxan="tmux a -t $1"
+alias tmuxkn="tmux kill-session -t $1"
+
+
 alias dep="./vendor/deployer/deployer/bin/dep"
 alias crontab="export EDITOR=vim && crontab"
 alias es='elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
@@ -42,7 +49,7 @@ alias apacheini='subl /etc/apache2/httpd.conf'
 alias phpini56="sudo subl /usr/local/etc/php/5.6/php.ini"
 alias rapache="sudo apachectl restart"
 alias phpunit="phpunit --colors"
-alias tmux="tmux -2"
+
 alias rmt="rmtrash"
 alias sl="subl $1"
 alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"

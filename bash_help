@@ -32,7 +32,8 @@
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg gawk
+# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg gawk tmux reattach-to-user-namespace
+
 # wget node
 # brew install macvim --override-system-vim
 
