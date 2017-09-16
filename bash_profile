@@ -1,10 +1,8 @@
-# iterm2 title bar colours
-echo -e "\033]6;1;bg;red;brightness;13\a"
-echo -e "\033]6;1;bg;green;brightness;21\a"
-echo -e "\033]6;1;bg;blue;brightness;27\a"
+# iterm2 titlebar colour rgb
+printf -- $'\033]6;1;bg;red;brightness;13\a\033]6;1;bg;green;brightness;21\a\033]6;1;bg;blue;brightness;27\a'
 
 # paths and ps1
-PLUGINS=/$HOME/.dotfiles/plugins
+PLUGINS=$HOME/.dotfiles/plugins
 PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin:$PATH:$PLUGINS
 
 # ps1 colours
