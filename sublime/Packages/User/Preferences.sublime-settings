@@ -102,6 +102,7 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
+		"Markdown",
 		"PHP"
 	],
 	"indent_guide_options":
@@ -110,8 +111,8 @@
 		"draw_active"
 	],
 	"large_scroll_bars": true,
-	"line_padding_bottom": 8,
-	"line_padding_top": 5,
+	"line_padding_bottom": 6,
+	"line_padding_top": 6,
 	"overlay_scroll_bars": "enabled",
 	"phpunit-sublime-terminal": "iTerm",
 	"phpunit.composer": false,

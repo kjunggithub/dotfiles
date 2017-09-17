@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/User/Sunburst.tmTheme",
+    "draw_centered": false,
+    "word_wrap": true,
+    "wrap_width": 0,
+    "line_numbers": true,
+    "highlight_line": true,
+    "line_padding_top": 6,
+    "line_padding_bottom": 6,
+}
