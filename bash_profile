@@ -31,11 +31,13 @@ export EDITOR='subl -nw'
 
 # aliases
 # tmux
-alias tmux="tmux -2"
-alias tmuxn="tmux new -s $1"
-alias tmuxan="tmux a -t $1"
-alias tmuxkn="tmux kill-session -t $1"
-
+alias tm="tmux -2"
+alias tma="tmux attach $1"
+alias tmn="tmux new -s $1"
+alias tman="tmux a -t $1"
+alias tmkn="tmux kill-session -t $1"
+alias tmls="tmux ls"
+alias tmk="tmux kill-server"
 
 alias dep="./vendor/deployer/deployer/bin/dep"
 alias crontab="export EDITOR=vim && crontab"
