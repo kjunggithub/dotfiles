@@ -1,4 +1,11 @@
 [
+	{ "keys": ["j", "j"], "command": "exit_insert_mode",
+	    "context":
+	    [
+	        { "key": "setting.command_mode", "operand": false },
+	        { "key": "setting.is_widget", "operand": false }
+	    ]
+	},
  	// phpunit
  	{ "keys": ["super+shift+t"], "command": "run_phpunit_test"},
  	{ "keys": ["super+t"], "command": "run_single_phpunit_test"},
