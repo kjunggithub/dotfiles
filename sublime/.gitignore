@@ -1,3 +1,4 @@
+*.cache
 Backup/
 Local/
 Cache/

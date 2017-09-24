@@ -23,6 +23,39 @@ LIGHT_BLUE="\[\033[1;34m\]"
 RED="\[\033[0;31m\]"
 ORANGE="\[\033[38;5;214m\]"
 
+function colourgrid()
+{
+    iter=16
+    while [ $iter -lt 52 ]
+    do
+        second=$[$iter+36]
+        third=$[$second+36]
+        four=$[$third+36]
+        five=$[$four+36]
+        six=$[$five+36]
+        seven=$[$six+36]
+        if [ $seven -gt 250 ];then seven=$[$seven-251]; fi
+
+        echo -en "\033[38;5;$(echo $iter)m█ "
+        printf "%03d" $iter
+        echo -en "   \033[38;5;$(echo $second)m█ "
+        printf "%03d" $second
+        echo -en "   \033[38;5;$(echo $third)m█ "
+        printf "%03d" $third
+        echo -en "   \033[38;5;$(echo $four)m█ "
+        printf "%03d" $four
+        echo -en "   \033[38;5;$(echo $five)m█ "
+        printf "%03d" $five
+        echo -en "   \033[38;5;$(echo $six)m█ "
+        printf "%03d" $six
+        echo -en "   \033[38;5;$(echo $seven)m█ "
+        printf "%03d" $seven
+
+        iter=$[$iter+1]
+        printf '\r\n'
+    done
+}
+
 # exports
 export PATH
 export HISTSIZE="forever!"
@@ -57,7 +90,7 @@ alias rmt="rmtrash"
 alias sl="subl $1"
 alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
 alias permrepair="sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /"
-alias rf='source ~/.dotfiles/bash_profile'
+alias rf='source ~/.bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias sscreen="screen -dmS $1 $2"
 alias rscreen="screen -r $1"
@@ -110,6 +143,7 @@ alias cfp='fp | pbcopy'
 alias ps?="ps aux | grep"
 
 # change dir
+alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -124,8 +158,8 @@ alias gr--s='git rebase --skip'
 # git hubflow
 alias ghfupd='git checkout develop && git hf update'
 alias ghfupm='git checkout master && git hf update'
-alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git show'
-alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git show'
+alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
+alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
 
 alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
@@ -164,8 +198,7 @@ alias puf="phpunit --filter"
 alias puu="phpunit --testsuite unit"
 alias pua="phpunit --testsuite acceptance"
 
-# git log
-# see what everyone's been upto
+# git log see what everyone's been upto
 alias glrmt="git log --since=00:00:00 --all --no-merges --oneline --author=me@kjung.ca"
 alias glrm="git log --all --oneline --no-merges --author=me@kjung.ca"
 alias glr="git log --all --oneline --no-merges"
@@ -346,10 +379,9 @@ function lsp {
 # source rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# bash auto complete (brew install git bash-completion)
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+    . $(brew --prefix)/share/bash-completion/bash_completion
+ fi
 
 # activate z (brew install z)
 if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
@@ -363,8 +395,3 @@ bind '"\e[B":history-search-forward'
 # cool guy autocomplete (tab and shift-tab)
 bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
-
-export TUMBLR_USERNAME="MY_FANTASTIC_TUMBLR_USERNAME"
-export TUMBLR_CONSUMER_KEY="MY_DAUNTING_OAUTH_CONSUMER_KEY"
-
-# brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook

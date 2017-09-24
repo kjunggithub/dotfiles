@@ -1,41 +1,10 @@
-# export EDITOR='vim'
-
-# cs fixer
-# $ composer global require fabpot/php-cs-fixer @stable
-# export PATH="$PATH:$HOME/.composer/vendor/bin"
-# $ brew tap josegonzalez/homebrew-php
-# $ brew install php-cs-fixer
-
-# crontab
-# 0 22 * * * /Users/kjung/Scripts/sync\ music.command > /dev/null 2>&1
-
-# mysql
-# alias mysqlstart="/usr/local/mysql/support-files/mysql.server start"
-# alias mysqlstop="/usr/local/mysql/support-files/mysql.server stop"
-# alias mysqlrestart="/usr/local/mysql/support-files/mysql.server restart"
-
-# alias tmux="TERM=screen-256color-bce tmux -2"
-# alias killmysql='killall -9 mysqld'
-
-# git config --global --add color.ui true
-# git config --global push.default tracking
-# git config --global core.editor "subl -nw"
-# git config --global core.editor "vim"
-# git config --global user.name "Kevin Jung"
-# git config --global user.email "me@kjung.ca"
-# git config --global --unset diff
-# git config --global --unset diff.external
-# git daemon --base-path=/Users/kjung/Sites --export-all
-
 # bind 'Control-j:menu-complete-backward'
 
 ######################################################################
 # homebrew
 ######################################################################
-# brew install coreutils git git-extras hubflow tmux bash-completion z vcprompt httpie cmus rmtrash ffmpeg gawk tmux reattach-to-user-namespace
-
-# wget node
-# brew install macvim --override-system-vim
+# brew install coreutils git git-extras hubflow tmux reattach-to-user-namespace bash-completion z vcprompt httpie rmtrash gawk rename curl wget node ffmpeg --with-fdk-aac diff-so-fancy
+# brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
 ######################################################################
 # os x defaults
@@ -84,7 +53,6 @@
 # Light Gray 0;37
 # White 1;37
 
-# ps 1 options
 # \a : an ASCII bell character (07)
 # \d : the date in "Weekday Month Date" format (e.g., "Tue May 26")
 # \D{format} :  the format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-specific time representation. The braces are required
@@ -113,5 +81,7 @@
 # \[ : begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
 # \] : end a sequence of non-printing characters
 
-# alias g="git"
 # complete -o default -o nospace -F _git g
+
+
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false

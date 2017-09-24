@@ -1,0 +1,12 @@
+# System files
+*.DS_Store
+
+# Compiled Python files
+*.pyc
+
+# External Drives
+.Spotlight-V100
+.Trashes
+
+# IDE
+.idea

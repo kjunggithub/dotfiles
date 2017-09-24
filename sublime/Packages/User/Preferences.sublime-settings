@@ -90,7 +90,7 @@
 		"bower_components",
 		"*.pyc"
 	],
-	"font_face": "Inconsolata",
+	"font_face": "Inconsolata Regular",
 	"font_options":
 	[
 		"subpixel_antialias"
