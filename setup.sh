@@ -142,6 +142,7 @@ apps=(
     unrarx
     yakyak
     vlc
+    caffeine
     appcleaner
     qlcolorcode
     qlstephen
