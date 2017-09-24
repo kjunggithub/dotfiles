@@ -395,3 +395,6 @@ bind '"\e[B":history-search-forward'
 # cool guy autocomplete (tab and shift-tab)
 bind 'Tab: menu-complete'
 bind '"\e[Z": complete'
+
+# ctrl-E # move cursor to end of line
+# ctrl-A # move cursor to beginning of line
