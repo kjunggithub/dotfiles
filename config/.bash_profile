@@ -86,6 +86,7 @@ alias phpini56="sudo subl /usr/local/etc/php/5.6/php.ini"
 alias rapache="sudo apachectl restart"
 alias phpunit="phpunit --colors"
 
+alias cat="ccat"
 alias rmt="rmtrash"
 alias sl="subl $1"
 alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
