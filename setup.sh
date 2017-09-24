@@ -65,6 +65,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# Stop iTunes from responding to the keyboard media keys
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
 for app in "Finder" "Dock"; do
     kill all "${app}" > /dev/null 2>&1
 done
@@ -109,6 +112,7 @@ apps=(
     ffmpeg --with-fdk-aac
     wifi-password
     rename
+    ansible
 )
 
 brew install "${apps[@]}"
@@ -158,8 +162,8 @@ unset -v apps
 echo 'Done'
 
 echo 'Installing fonts...'
-cp ~/.dotfiles/fonts/Inconsolata-Regular.ttf /Library/Fonts/Inconsolata-Regular.ttf
-cp ~/.dotfiles/fonts/Inconsolata-Bold.ttf /Library/Fonts/Inconsolata-Bold.ttf
+cp ~/.dotfiles/fonts/Inconsolata/Inconsolata-Regular.ttf /Library/Fonts/Inconsolata-Regular.ttf
+cp ~/.dotfiles/fonts/Inconsolata/Inconsolata-Bold.ttf /Library/Fonts/Inconsolata-Bold.ttf
 echo 'Done'
 
 echo 'Installing vim theme'
