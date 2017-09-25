@@ -10,3 +10,6 @@
 
 # IDE
 .idea
+
+# Ansible retry files
+.retry
