@@ -1,5 +1,5 @@
 # iterm2 titlebar colour rgb
-printf -- $'\033]6;1;bg;red;brightness;13\a\033]6;1;bg;green;brightness;21\a\033]6;1;bg;blue;brightness;27\a'
+printf -- $'\033]6;1;bg;red;brightness;0\a\033]6;1;bg;green;brightness;0\a\033]6;1;bg;blue;brightness;0\a'
 
 # paths and ps1
 PLUGINS=$HOME/.dotfiles/plugins
