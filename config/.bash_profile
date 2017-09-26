@@ -61,6 +61,8 @@ export PATH
 export HISTSIZE="forever!"
 export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $LIGHT_GREEN%b$PURPLE %m%u')\n$DEFAULT"
 export EDITOR='subl -nw'
+export LSCOLORS=ExfxExdxbxegedabagacad
+export CLICOLOR=1
 export PROMPT_COMMAND='echo -ne "\033]0; \007"'
 
 # aliases
