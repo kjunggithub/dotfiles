@@ -1,0 +1,323 @@
+# tmux
+alias tm="tmux -2"
+alias tma="tmux attach $1"
+alias tmn="tmux new -s $1"
+alias tman="tmux a -t $1"
+alias tmkn="tmux kill-session -t $1"
+alias tmls="tmux ls"
+alias tmk="tmux kill-server"
+
+# system
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias crontab="export EDITOR=vim && crontab"
+alias art='php artisan'
+alias cdump='composer dumpautoload -o'
+alias hosts="sudo subl /etc/hosts"
+alias phpunit="phpunit --colors"
+alias cat="ccat"
+alias rmt="rmtrash"
+alias sl="subl $1"
+alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
+alias permrepair="sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /"
+alias rf='source ~/.bash_profile'
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias profile='subl ~/.bash_profile'
+alias gemup='sudo gem update --system && sudo gem up'
+alias brewup='brew update && brew upgrade'
+alias brewdoc='brew doctor'
+alias osxup='sudo softwareupdate -i -a'
+alias slowon='sudo ipfw pipe 1 config bw 50KByte/s && sudo ipfw add 1 pipe 1 src-port 80'
+alias slowoff='sudo ipfw delete 1'
+alias ff="open -a firefox $*"
+alias c="clear"
+alias ping="ping -c 5"
+alias grep="grep --color=auto"
+alias stfu="osascript -e 'set volume output muted true'"
+alias yell="osascript -e 'set Volume 10'"
+alias wanip="curl ipecho.net/plain; echo"
+alias lanip="ipconfig getifaddr en0"
+alias ka="killall"
+alias q='exit'
+alias f='open .'
+alias fuck='sudo $(history -p \!\!)'
+alias startvpn="ssh -fqCND 9999 root@192.227.143.138"
+alias pywebserver='python -m SimpleHTTPServer 8000'
+alias rubywebserver="ruby -run -e httpd . -p 8000"
+alias ydl="youtube-dl"
+alias ydlb="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+alias flushdns='dscacheutil -flushcache'
+alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
+
+# screen
+alias sscreen="screen -dmS $1 $2"
+alias rscreen="screen -r $1"
+
+# list things
+alias la="ls -la"
+alias lsl="ls -l"
+alias ls="ls -GpFh"
+alias lsh='ls -lh'
+alias lsm='ls -tho'
+alias ps?="ps aux | grep"
+
+# change dir
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# git rebase
+alias grid='git rebase -i develop'
+alias gr--c='git rebase --continue'
+alias gr--a='git rebase --abort'
+alias gr--s='git rebase --skip'
+
+# git checkout dev/master
+alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
+alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
+
+# git hubflow
+alias ghfupm='git checkout master && git hf update'
+alias ghfupd='git checkout develop && git hf update'
+alias ghfup='git hf update'
+alias ghffs="git hf feature start $1"
+alias ghfff="git hf feature finish $1"
+alias ghffc="git hf feature cancel -f $1"
+alias gnah="git reset --hard;git clean -df;"
+alias gwip='git add -A && git commit -m "work in progress"'
+alias gwipp='git add -A && git commit -m "work in progress" && git push'
+alias guc="git reset --soft HEAD^"
+alias gus="git reset"
+
+# git log
+alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+
+# git stash
+alias gss="git stash save $1"
+alias gsl="git stash list"
+alias gsa='git apply'
+alias gsd='git stash drop'
+alias gsp='git stash pop'
+
+# git diff
+alias gdf="git diff"
+alias gdfs="git diff --staged"
+alias gdfh="git diff HEAD"
+alias gs='git status'
+alias gr="git reset"
+
+# fun git stuff
+alias glb="git shortlog -sn"
+
+# phpunit
+alias puf="phpunit --filter"
+alias puts="phpunit --testsuite"
+
+# git log see what everyone's been upto
+alias glrmt="git log --since=00:00:00 --all --no-merges --oneline --author=me@kjung.ca"
+alias glrm="git log --all --oneline --no-merges --author=me@kjung.ca"
+alias glr="git log --all --oneline --no-merges"
+function gl {
+    git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
+}
+
+# git clean
+function gcdf {
+    ORANGE="\033[38;5;214m"
+    DEFAULT="\033[0m"
+
+    echo -e "${ORANGE}git clean -df - HOLD UP! YOU SURE ABOUT THIS!?!? (y/n)${DEFAULT}"
+    read response
+    if echo "$response" | grep -iq "^y" ;
+    then
+        git clean -df
+    fi
+}
+
+# git checkout
+function gco {
+    ORANGE="\033[38;5;214m"
+    DEFAULT="\033[0m"
+
+    if [[ $1 = '.' ]];
+    then
+        echo -e "${ORANGE}git checkout . - HOLD UP! YOU SURE ABOUT THIS!?!? (y/n)${DEFAULT}"
+        read response
+        if echo "$response" | grep -iq "^y" ;
+        then
+            git checkout \.
+        else
+            return
+        fi
+    fi
+
+    git checkout $1
+}
+
+# squash commits
+function squash {
+    git reset --soft HEAD~$1 &&
+    git commit
+}
+
+# copy current branch name and pipe it to the clipboard
+alias gcbps="gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' && gcbn | cut -d _ -f 1 | sed 's/.*[/]//g' | pbcopy"
+function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpaste)  ;}
+function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
+
+# git branch
+alias gb="git branch"
+alias gbr="git branch -r"
+
+# git add
+alias ga.="git add --all"
+alias gap="git add -p"
+alias gau="git add -u"
+function ga { git add "$*" ;}
+
+# git push
+alias gpo="git push origin $1"
+function gpof { git push origin +"$@" ;}
+
+# git reset
+alias grh="git reset --hard $1"
+function grho { git reset --hard origin/"$@" ;}
+
+# git commit
+alias gcav='git commit -av'
+function gcm { git commit -m "$1";}
+function gcam { git commit -am "$1";}
+
+# weather
+alias wetter='curl -4 wttr.in/Toronto'
+alias wttr='curl -s wttr.in/Toronto | head -7 | tail -5'
+
+# vagrant
+alias vagrant='cd ~/vagrant && vagrant'
+
+# convert unix timestamp to utc
+function cet () {
+    if [[ $1 = '-u' && $2 ]];
+    then
+        # return utc time
+        echo $2
+        date -u -r $2 +"%B %d, %Y. %r %Z"
+    else
+        # return edt time
+        echo $1
+        date -r $1 +"%B %d, %Y. %r %Z"
+    fi
+}
+
+# backup a file
+function backup() { cp "$1"{,.bak};}
+
+# cd into dir and list
+function cdl { cd "$@" && ls -la; }
+
+# functions (most used commands from history)
+function htop {
+  history | awk '{ print $2 }' | sort | uniq -c |sort -rn | head
+}
+
+# credit: http://nparikh.org/notes/zshrc.txt
+# Usage: extract <file>
+# Description: extracts archived files / mounts disk images
+# Note: .dmg/hdiutil is Mac OS X-specific.
+function extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $1                        ;;
+            *.tar.gz)   tar -zxvf $1                        ;;
+            *.bz2)      bunzip2 $1                          ;;
+            *.dmg)      hdiutil mount $1                    ;;
+            *.gz)       gunzip $1                           ;;
+            *.tar)      tar -xvf $1                         ;;
+            *.tbz2)     tar -jxvf $1                        ;;
+            *.tgz)      tar -zxvf $1                        ;;
+            *.zip)      unzip $1                            ;;
+            *.ZIP)      unzip $1                            ;;
+            *.pax)      cat $1 | pax -r                     ;;
+            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+            *.Z)        uncompress $1                       ;;
+            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# open current git repo in github
+function gitweb {
+    if [ -d .git ]; then
+        remotes=$(git remote -v | awk -F'git@github.com:' '{print $2}' | cut -d" " -f1)
+        if [ -z "$remotes" ];
+        then
+            remotes=$(git remote -v | awk -F'https://github.com/' '{print $2}' | cut -d" " -f1)
+        fi
+
+        remote_url=$(echo $remotes | cut -d" " -f1)
+        url="https://github.com/"
+        url="${url}${remote_url}"
+        open $url
+    else
+      echo "Not a git repo"
+    fi;
+}
+
+# open current finder path in terminal
+function cf() {
+    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
+    if [ "$target" != "" ]; then
+        cd "$target"
+    else
+        echo 'No Finder window found' >&2
+    fi
+}
+
+# create a folder and cd into it
+function entdir {
+    mkdir $1
+    cd $1
+}
+
+function colourgrid()
+{
+    iter=16
+    while [ $iter -lt 52 ]
+    do
+        second=$[$iter+36]
+        third=$[$second+36]
+        four=$[$third+36]
+        five=$[$four+36]
+        six=$[$five+36]
+        seven=$[$six+36]
+        if [ $seven -gt 250 ];then seven=$[$seven-251]; fi
+
+        echo -en "\033[38;5;$(echo $iter)m█ "
+        printf "%03d" $iter
+        echo -en "   \033[38;5;$(echo $second)m█ "
+        printf "%03d" $second
+        echo -en "   \033[38;5;$(echo $third)m█ "
+        printf "%03d" $third
+        echo -en "   \033[38;5;$(echo $four)m█ "
+        printf "%03d" $four
+        echo -en "   \033[38;5;$(echo $five)m█ "
+        printf "%03d" $five
+        echo -en "   \033[38;5;$(echo $six)m█ "
+        printf "%03d" $six
+        echo -en "   \033[38;5;$(echo $seven)m█ "
+        printf "%03d" $seven
+
+        iter=$[$iter+1]
+        printf '\r\n'
+    done
+}
+
+
+function lsp {
+    for f in $(ls -a); do stat -f "%A %N" $f; done;
+}
