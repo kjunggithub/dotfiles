@@ -6,7 +6,7 @@ printf -- $'\033]6;1;bg;red;brightness;0\a\033]6;1;bg;green;brightness;0\a\033]6
 shopt -s cdspell;
 
 # paths and ps1
-PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.dotfiles/plugins
+PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.dotfiles/plugins
 
 # ps1 colours
 BOLD="\[\033[1m\]"

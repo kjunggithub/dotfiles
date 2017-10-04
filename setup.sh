@@ -71,6 +71,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
+# Unhide Dock instantly
+defaults write com.apple.dock autohide-time-modifier -float 0
+
 # Stop iTunes from responding to the keyboard media keys
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
@@ -84,6 +87,9 @@ then
   echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+# tap php
+brew tap homebrew/homebrew-php
 
 echo 'Installing brew formulas...'
 brew update
@@ -108,6 +114,7 @@ apps=(
     hubflow
     node
     tmux
+    php71
     phpunit
     php-cs-fixer
     youtube-dl
@@ -121,8 +128,9 @@ apps=(
     ansible
 )
 
-brew install "${apps[@]}"
-
+for app in ${apps[@]}; do
+    brew install $app
+done
 unset -v apps
 
 brew cleanup
@@ -149,6 +157,8 @@ apps=(
     yakyak
     vlc
     caffeine
+    virtualbox
+    vagrant
     appcleaner
     qlcolorcode
     qlstephen
