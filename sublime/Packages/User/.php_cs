@@ -6,6 +6,7 @@
     return PhpCsFixer\Config::create()
         ->setRules([
             '@PSR2' => true,
+            'short_scalar_cast' => true,
             'blank_line_after_opening_tag' => true,
             'array_syntax' => ['syntax' => 'short'],
             'no_short_echo_tag' => true,
