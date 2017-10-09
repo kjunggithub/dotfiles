@@ -117,6 +117,7 @@ apps=(
     php71
     phpunit
     php-cs-fixer
+    phpmd
     youtube-dl
     reattach-to-user-namespace
     z
