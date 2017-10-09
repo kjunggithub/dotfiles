@@ -126,6 +126,9 @@ apps=(
     wifi-password
     rename
     ansible
+    whatmp3
+    flac
+    lame
 )
 
 for app in ${apps[@]}; do

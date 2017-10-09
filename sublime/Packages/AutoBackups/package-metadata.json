@@ -1,1 +1,1 @@
-{"version": "2.3.7", "url": "https://github.com/akalongman/sublimetext-autobackups", "platforms": ["*"], "sublime_text": "*", "dependencies": [], "description": "Sublime Text 2/3 Auto backups plugin"}
+{"version": "2.4.0", "platforms": ["*"], "description": "Sublime Text 2/3 Auto backups plugin", "url": "https://github.com/akalongman/sublimetext-autobackups", "sublime_text": "*", "dependencies": []}

@@ -60,9 +60,14 @@ def plugin_loaded():
     backup_dir = settings.get('backup_dir')
     backup_per_day = settings.get('backup_per_day')
     backup_per_time = settings.get('backup_per_time')
+    backup_name_mode = settings.get('backup_name_mode')
 
-    PathsHelper.initialize(platform, backup_dir, backup_per_day, backup_per_time)
+    PathsHelper.initialize(platform, backup_dir, backup_per_day, backup_per_time, backup_name_mode)
     cprint('AutoBackups: Plugin Initialized')
+    cprint('With: backup_dir: {}\n\
+            backup_per_day: {}\n\
+            backup_per_time: {}\n\
+            backup_name_mode: {}'.format(backup_dir, backup_per_day, backup_per_time, backup_name_mode))
     sublime.set_timeout(gc, 10000)
 
 
@@ -108,17 +113,17 @@ class AutoBackupsEventListener(sublime_plugin.EventListener):
         view_size = view.size()
         max_backup_file_size = settings.get('max_backup_file_size_bytes')
         if (view_size is None):
-            self.console('Size of view not available')
+            self.console('View size not available.')
             return
 
         if (max_backup_file_size is None):
-            self.console('Max allowed size from config not available')
+            self.console('Max size allowed by config not available.')
             return
 
 
         # don't save files above configured size
         if view_size > max_backup_file_size:
-            self.console('Backup not saved, file too large (%d bytes)' % view.size())
+            self.console('Backup not saved, file too large (%d bytes).' % view.size())
             return
 
 
@@ -131,8 +136,6 @@ class AutoBackupsEventListener(sublime_plugin.EventListener):
             #cprint("AutoBackups: " + filename + " is excluded");
             return
 
-
-
         # not create file backup if current file is backup
         if on_load_event & self.is_backup_file(filename):
             return
@@ -141,6 +144,8 @@ class AutoBackupsEventListener(sublime_plugin.EventListener):
         newname = PathsHelper.get_backup_filepath(filename)
         if newname == None:
             return
+
+        self.console(newname)
 
         buffer_id = view.buffer_id()
         content = filename+view.substr(sublime.Region(0, view_size))
@@ -170,7 +175,7 @@ class AutoBackupsEventListener(sublime_plugin.EventListener):
         try:
             shutil.copy(filename, newname)
         except FileNotFoundError:
-            self.console('Backup not saved. File '+filename+' not exists')
+            self.console('Backup not saved. File '+filename+' does not exist!')
             return False;
 
         hashes[buffer_id] = current_hash
@@ -248,12 +253,12 @@ class AutoBackupsOpenBackupCommand(sublime_plugin.TextCommand):
             if os.path.isfile(newname):
                 window.open_file(newname)
             else:
-                sublime.error_message('Backup for ' + filepath + ' not exists!')
+                sublime.error_message('Backup for ' + filepath + ' does not exist!')
         else:
             f_files = self.getData(False)
 
             if not f_files:
-                sublime.error_message('Backups for this file not exists!')
+                sublime.error_message('Backups for this file do not exist!')
                 return
 
             backup_per_time = settings.get('backup_per_time')

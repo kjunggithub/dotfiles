@@ -47,6 +47,7 @@ alias ydl="youtube-dl"
 alias ydlb="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias flushdns='dscacheutil -flushcache'
 alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
+alias ftm="whatmp3 --320 -c "`pwd`""
 
 # screen
 alias sscreen="screen -dmS $1 $2"
