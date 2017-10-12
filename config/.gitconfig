@@ -24,7 +24,6 @@
 	editor = subl -nw
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
-    ignorecase = false
 [user]
 	name = Kevin Jung
 	email = me@kjung.ca
