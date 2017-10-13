@@ -795,6 +795,20 @@
 					<string>#12ffa9a0</string>
 				</dict>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>WordHighlight</string>
+				<key>scope</key>
+				<string>wordhighlight</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#FFFFFF</string>
+
+					<key>background</key>
+					<string>#d48c32</string>
+				</dict>
+			</dict>
 		</array>
 		<key>uuid</key>
 		<string>C8C58F9A-35FE-44A4-9BC2-2F3C343DC81D</string>
