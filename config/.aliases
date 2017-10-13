@@ -322,3 +322,15 @@ function colourgrid()
 function lsp {
     for f in $(ls -a); do stat -f "%A %N" $f; done;
 }
+
+function gcgrep() {
+    BRANCHES=`git branch -l --no-color | tr -d '*' | awk '{print $1}' | grep -e $1 | wc -l`
+    COUNT=${BRANCHES//[[:blank:]]/}
+    BRANCH=`git branch -l --no-color | tr -d '*' | awk '{print $1}' | grep -e $1`
+    if [ "$COUNT" == "1" ]; then
+        echo `git checkout "$BRANCH"`
+    else
+        echo $COUNT branches match the pattern "\"$1\""
+        git branch -l | grep -e $1
+    fi
+}
