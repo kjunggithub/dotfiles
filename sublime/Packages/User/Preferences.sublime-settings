@@ -6,6 +6,7 @@
 	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"centurion_afolder_icons": true,
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/Sunburst.tmTheme",
 	"contrasted_quick_panel": false,
 	"contrasted_sidebar": false,
