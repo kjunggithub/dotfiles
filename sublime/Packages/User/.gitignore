@@ -9,4 +9,6 @@ __pycache__
 .SublimeREPLHistory
 todo.md
 Projects/
+Color Highlighter/
 oscrypto-ca-bundle.crt
+encoding_cache.json
