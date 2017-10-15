@@ -198,7 +198,7 @@ ln -s ~/.dotfiles/config/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/config/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/config/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/sublime/Packages ~/Library/Application\ Support/Sublime\ Text\ 3/User
+ln -s ~/.dotfiles/sublime/Packages ~/Library/Application\ Support/Sublime\ Text\ 3
 ln -s ~/.dotfiles/config/.hyper.js ~/.hyper.js
 
 echo 'Done'
