@@ -1,9 +1,0 @@
-*.cache
-Backup/
-Local/
-Cache/
-Index/
-Packages/User/Package Control.cache/
-Packages/User/Package Control.last-run
-Packages/User/encoding_cache.json
-Packages/ConvertToUTF8/messages/
