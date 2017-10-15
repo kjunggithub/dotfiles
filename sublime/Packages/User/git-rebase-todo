@@ -1,0 +1,27 @@
+pick 6628822 please rm -rf
+ reword 6g9c941 need food
+  edit 2e9c951 requesting backup
+   fixup 563c121 fml
+    p 4tu47yt88ff823gdas git 1.8.5 rebase -i now respects core.abbrev setting
+fukcdeupcommand 563c121 finally works
+   exec 6628822 not works
+  squash 2e9c951 works?
+ f 46576e0 fix transform, transition, perspective regexps
+x 2455951 init
+
+# Rebase 2db903b..2e9c951 onto 2db903b
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out

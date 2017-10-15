@@ -1,0 +1,6 @@
+{
+    // npm -g i scss-convert
+    "path": "/Users/kjung/.rvm/gems/ruby-2.1.2/bin",
+    "selector": "source.css, source.sass, source.scss",
+    "shell_cmd": "sass-convert --indent 2 --unix-newlines \"$file\" \"$file\""
+}

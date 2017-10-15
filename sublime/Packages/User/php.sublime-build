@@ -1,0 +1,5 @@
+{
+    "path": "/usr/local/bin",
+    "selector": "source.php",
+    "shell_cmd": "php-cs-fixer fix \"$file\" --allow-risky=yes --config=/Users/kjung/.dotfiles/sublime/Packages/User/.php_cs"
+}
