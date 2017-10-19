@@ -140,6 +140,6 @@
 	"update_check": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
-	"word_separators": "./\\()\"':,.;<>-~!@#%^&*|+=[]{}`~?",
+	"word_separators": "./\\()\"':,.;<>-~!#%^&*|+=[]{}`~?",
 	"word_wrap": true
 }
