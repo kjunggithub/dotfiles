@@ -66,8 +66,10 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 # cool guy autocomplete (tab and shift-tab)
-bind 'Tab: menu-complete'
+bind 'TAB: menu-complete'
 bind '"\e[Z": complete'
+bind 'set show-all-if-ambiguous on'
+bind 'set completion-ignore-case on'
 
 # ctrl-E # move cursor to end of line
 # ctrl-A # move cursor to beginning of line
