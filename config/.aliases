@@ -8,6 +8,7 @@ alias tmls="tmux ls"
 alias tmk="tmux kill-server"
 
 # system
+alias sudo="sudo "
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias crontab="export EDITOR=vim && crontab"
 alias art='php artisan'

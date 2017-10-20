@@ -25,11 +25,12 @@ BLUE="\[\033[0;34m\]"
 LIGHT_BLUE="\[\033[1;34m\]"
 RED="\[\033[0;31m\]"
 ORANGE="\[\033[38;5;214m\]"
+SYMBOL='👻'
 
 # exports
 export PATH
 
-export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $LIGHT_GREEN%b$PURPLE %m%u')\n$DEFAULT"
+export PS1="$SYMBOL  $MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $LIGHT_GREEN%b$PURPLE %m%u')\n$DEFAULT"
 export EDITOR='subl -nw'
 export LSCOLORS=ExfxExdxbxegedabagacad
 export CLICOLOR=1
