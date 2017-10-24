@@ -104,7 +104,8 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"PHP"
+		"PHP",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[

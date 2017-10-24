@@ -13,3 +13,6 @@
 
 # Ansible retry files
 .retry
+
+# Vim
+*.swp
