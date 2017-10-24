@@ -130,6 +130,7 @@ apps=(
     whatmp3
     flac
     lame
+    the_silver_searcher
 )
 
 for app in ${apps[@]}; do
