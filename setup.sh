@@ -173,8 +173,10 @@ apps=(
     quicklook-csv
     betterzipql
     qlimagesize
+    qlvideo
     webpquicklook
 )
+
 echo "${apps[@]}"
 
 for app in ${apps[@]}; do
