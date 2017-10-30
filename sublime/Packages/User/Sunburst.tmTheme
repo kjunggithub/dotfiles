@@ -44,7 +44,7 @@
 					<key>background</key>
 					<string>#000000</string>
 					<key>caret</key>
-					<string>#A7A7A7</string>
+					<string>#fcc938</string>
 					<key>foreground</key>
 					<string>#F8F8F8</string>
 					<key>invisibles</key>
@@ -806,7 +806,7 @@
 					<string>#FFFFFF</string>
 
 					<key>background</key>
-					<string>#d48c32</string>
+					<string>#fcc938</string>
 				</dict>
 			</dict>
 		</array>
