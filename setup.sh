@@ -131,6 +131,7 @@ apps=(
     flac
     lame
     the_silver_searcher
+    tldr
 )
 
 for app in ${apps[@]}; do
