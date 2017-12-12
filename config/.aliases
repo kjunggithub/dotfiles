@@ -104,6 +104,9 @@ alias gsa='git apply'
 alias gsd='git stash drop'
 alias gsp='git stash pop'
 
+# git reflo
+alias grl='git reflog --date=iso'
+
 # git diff
 alias gdf="git diff"
 alias gdfs="git diff --staged"
