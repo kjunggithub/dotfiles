@@ -86,9 +86,10 @@ alias ghfup='git hf update'
 alias ghffs="git hf feature start $1"
 alias ghfff="git hf feature finish $1"
 alias ghffc="git hf feature cancel -f $1"
-alias gnah="git reset --hard;git clean -df;"
+alias gnah="git reset --hard && git clean -df"
 alias gwip='git add -A && git commit -m "work in progress"'
 alias gwipp='git add -A && git commit -m "work in progress" && git push'
+alias gwipfp='git add -A && git commit -m "work in progress" && git push --force'
 alias guc="git reset --soft HEAD^"
 alias gus="git reset"
 
