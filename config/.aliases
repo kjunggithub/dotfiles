@@ -75,9 +75,9 @@ alias gpa="git apply $1"
 
 # git rebase
 alias grid='git rebase -i develop'
-alias grc='git rebase --continue'
-alias gra='git rebase --abort'
-alias grs='git rebase --skip'
+alias gr--c='git rebase --continue'
+alias gr--a='git rebase --abort'
+alias gr--s='git rebase --skip'
 
 # git checkout dev/master
 alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
@@ -227,6 +227,10 @@ function backup() { cp "$1"{,.bak};}
 
 # cd into dir and list
 function cdl { cd "$@" && ls -la; }
+
+function pn() {
+    echo -e "\033]50;SetProfile=$@\a"
+}
 
 # functions (most used commands from history)
 function htop {
