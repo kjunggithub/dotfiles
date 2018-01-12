@@ -11,7 +11,6 @@
 		"Alignment",
 		"All Autocomplete",
 		"AndyPHP",
-		"ApacheConf.tmLanguage",
 		"ApplySyntax",
 		"Auto Semi-Colon",
 		"Auto-Spacing",
@@ -82,7 +81,6 @@
 		"Sublime Files",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-contrib-sublime-syntax",
 		"SublimeLinter-csslint",
@@ -96,7 +94,9 @@
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
 		"WordHighlight",
-		"WordPress"
+		"WordPress",
+		"SublimeLinter-eslint",
+		"ApacheConf"
 	],
 	"repositories":
 	[
