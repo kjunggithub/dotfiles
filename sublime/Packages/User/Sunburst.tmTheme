@@ -372,6 +372,45 @@
 				</dict>
 			</dict>
 			<dict>
+			            <key>name</key>
+			            <string>Function name</string>
+			            <key>scope</key>
+			            <string>variable.function</string>
+			            <key>settings</key>
+			            <dict>
+			                <key>foreground</key>
+			                <string>#FFFFFF</string>
+			                <key>background</key>
+			                <string>#000000</string>
+			            </dict>
+			        </dict>
+			<dict>
+			      <key>name</key>
+			      <string>Function Call</string>
+			      <key>scope</key>
+			      <string>meta.function-call</string>
+			      <key>settings</key>
+			      <dict>
+			            <key>foreground</key>
+			            <string>#FFFFFF</string>
+			      	<key>background</key>
+			      	<string>#000000</string>
+			      </dict>
+			</dict>
+			<dict>
+			    <key>name</key>
+			    <string>Punctuation</string>
+			    <key>scope</key>
+			    <string>punctuation.accessor</string>
+			    <key>settings</key>
+			    <dict>
+			    	<key>background</key>
+			    	<string>#2b1308</string>
+			        <key>foreground</key>
+			    	<string>#E28964</string>
+			    </dict>
+			</dict>
+			<dict>
 				<key>name</key>
 				<string>✘ Doctype/XML Processing</string>
 				<key>scope</key>

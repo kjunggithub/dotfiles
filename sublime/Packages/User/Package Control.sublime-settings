@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"php-grammar"
 	],
 	"installed_packages":
 	[
@@ -11,6 +12,7 @@
 		"Alignment",
 		"All Autocomplete",
 		"AndyPHP",
+		"ApacheConf",
 		"ApplySyntax",
 		"Auto Semi-Colon",
 		"Auto-Spacing",
@@ -67,7 +69,6 @@
 		"Package Control",
 		"PHP Companion",
 		"PHP Completions Kit",
-		"php-grammar",
 		"php-snippets",
 		"Pretty JSON",
 		"ProjectManager",
@@ -84,6 +85,7 @@
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-contrib-sublime-syntax",
 		"SublimeLinter-csslint",
+		"SublimeLinter-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
 		"SublimeLinter-php",
@@ -95,8 +97,7 @@
 		"Vuejs Snippets",
 		"WordHighlight",
 		"WordPress",
-		"SublimeLinter-eslint",
-		"ApacheConf"
+		"PHPGrammar"
 	],
 	"repositories":
 	[

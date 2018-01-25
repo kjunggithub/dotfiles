@@ -104,7 +104,7 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"PHP"
+		"php-grammar"
 	],
 	"indent_guide_options":
 	[
