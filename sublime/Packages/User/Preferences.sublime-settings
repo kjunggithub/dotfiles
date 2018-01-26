@@ -103,8 +103,7 @@
 	"icon_file_type_enable": true,
 	"ignored_packages":
 	[
-		"Markdown",
-		"php-grammar"
+		"Markdown"
 	],
 	"indent_guide_options":
 	[

@@ -411,6 +411,32 @@
 			    </dict>
 			</dict>
 			<dict>
+			    <key>name</key>
+			    <string>Use Statement</string>
+			    <key>scope</key>
+			    <string>meta.use</string>
+			    <key>settings</key>
+			    <dict>
+			    	<key>foreground</key>
+			    	<string>#9B859D</string>
+			    	<key>background</key>
+			    	<string>#1c171c</string>
+			    </dict>
+			</dict>
+			<dict>
+			    <key>name</key>
+			    <string>Meta Namespace</string>
+			    <key>scope</key>
+			    <string>entity.name.namespace</string>
+			    <key>settings</key>
+			    <dict>
+			    	<key>foreground</key>
+			    	<string>#9B859D</string>
+			    	<key>background</key>
+			    	<string>#1c171c</string>
+			    </dict>
+			</dict>
+			<dict>
 				<key>name</key>
 				<string>✘ Doctype/XML Processing</string>
 				<key>scope</key>
