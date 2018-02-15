@@ -69,8 +69,10 @@
 		"PHP Companion",
 		"PHP Completions Kit",
 		"php-snippets",
+		"PHPGrammar",
 		"Pretty JSON",
 		"ProjectManager",
+		"rainbow_csv",
 		"ReIndent",
 		"Sass",
 		"SASS Snippets",
@@ -95,8 +97,7 @@
 		"Vue Syntax Highlight",
 		"Vuejs Snippets",
 		"WordHighlight",
-		"WordPress",
-		"PHPGrammar"
+		"WordPress"
 	],
 	"repositories":
 	[

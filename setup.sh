@@ -96,6 +96,7 @@ brew update
 brew upgrade
 
 apps=(
+    vim
     coreutils
     moreutils
     findutils
@@ -119,7 +120,7 @@ apps=(
     php-cs-fixer
     phpmd
     youtube-dl
-    reattach-to-user-namespace
+    reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
     z
     homebrew/dupes/openssh
     imagemagick --with-webp
