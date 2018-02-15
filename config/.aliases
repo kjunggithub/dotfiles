@@ -8,6 +8,7 @@ alias tmls="tmux ls"
 alias tmk="tmux kill-server"
 
 # system
+alias nah="cd -"
 alias sudo="sudo "
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias crontab="export EDITOR=vim && crontab"
@@ -84,12 +85,26 @@ alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all
 alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
 
 # git hubflow
-alias ghfupm='git checkout master && git hf update'
-alias ghfupd='git checkout develop && git hf update'
-alias ghfup='git hf update'
-alias ghffs="git hf feature start $1"
-alias ghfff="git hf feature finish $1"
-alias ghffc="git hf feature cancel -f $1"
+function gfs()
+{
+    if [[ -z $(git status -s) ]]
+    then
+        git checkout -b $1
+        git push -u origin $1
+        git branch | grep \* | cut -d ' ' -f2 | toilet -f term -F border --gay
+    else
+        echo "[rejected] Tree has changes, please clear tree and try again."
+        git status
+        # git status -sb
+    fi
+}
+
+function gff()
+{
+    git push -d origin $1
+    git branch -d $1
+}
+
 alias gnah="git reset --hard && git clean -df"
 alias gwip='git add -A && git commit -m "work in progress"'
 alias gwipp='git add -A && git commit -m "work in progress" && git push'
