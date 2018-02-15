@@ -2903,11 +2903,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>command</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string></string>
+				<string>/usr/local/bin/subl \1:\2</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
