@@ -63,9 +63,9 @@
             "phpcs": {
                 "@disable": false,
                 "args": [],
+                "cmd": "/Users/kjung/.composer/vendor/bin/phpcs",
                 "excludes": [],
-                "standard": "/Users/kjung/.dotfiles/sublime/Packages/User/phpcs/Standard/Kevin",
-                "cmd": "/Users/kjung/.composer/vendor/bin/phpcs"
+                "standard": "/Users/kjung/.dotfiles/sublime/Packages/User/phpcs/Standard/Kevin"
             },
             "phpmd": {
                 "@disable": false,
