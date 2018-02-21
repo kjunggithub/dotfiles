@@ -2170,15 +2170,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 768 620 392 0 0 2560 1417 </string>
+	<string>970 769 620 392 0 0 2560 1418 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1110 786 796 473 0 0 2560 1418 </string>
+	<string>1110 669 796 473 0 0 2560 1418 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 492 890 926 0 0 2560 1418 </string>
+	<string>0 0 2560 1418 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>343 181 570 452 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -2903,7 +2903,7 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>command</string>
+				<string>editor</string>
 				<key>editor</key>
 				<string>com.sublimetext.3</string>
 				<key>text</key>
@@ -4066,7 +4066,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-02-15T01:04:18Z</date>
+	<date>2018-02-21T03:41:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -4128,7 +4128,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5.beta.2</string>
+	<string>3.1.6beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>4</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
