@@ -87,22 +87,29 @@ alias gupm='git checkout master && git pull --rebase --prune && git fetch --all 
 # git hubflow
 function gfs()
 {
+    echo Creating branch $1 toilet -f term -F border --gay
     if [[ -z $(git status -s) ]]
     then
         git checkout -b $1
         git push -u origin $1
-        git branch | grep \* | cut -d ' ' -f2 | toilet -f term -F border --gay
+        # git branch | grep \* | cut -d ' ' -f2 | toilet -f term -F border --gay
     else
-        echo "[rejected] Tree has changes, please clear tree and try again."
         git status
+        echo "[rejected] Tree has changes, please clear tree and try again."
         # git status -sb
     fi
 }
 
-function gff()
+function gfc()
 {
-    git push -d origin $1
-    git branch -d $1
+    echo Deleting branch $1 toilet -f term -F border --gay
+    if [[ -z $(git status -s) ]]
+        git push -d origin $1
+        git branch -d $1
+    then
+        git status
+        echo "[rejected] Tree has changes, please clear tree and try again."
+    fi
 }
 
 alias gnah="git reset --hard && git clean -df"
