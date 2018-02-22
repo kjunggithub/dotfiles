@@ -2125,8 +2125,10 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
+	<string>~/Desktop</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -2136,11 +2138,6 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
-	<array>
-		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
-		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
-	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -2169,18 +2166,18 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>704 391 445 103 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 769 620 392 0 0 2560 1418 </string>
+	<string>608 327 700 622 0 0 1920 1058 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 126 606 469 0 0 2560 1418 </string>
+	<string>269 126 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1110 669 796 473 0 0 2560 1418 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>230 833 592 584 0 0 2560 1417 </string>
+	<string>541 418 1018 447 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1418 0 0 2560 1418 </string>
+	<string>0 132 890 926 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>343 181 570 452 0 0 2560 1417 </string>
+	<string>176 70 570 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -3980,24 +3977,14 @@
 			<string>/Users/kjung</string>
 		</dict>
 	</array>
-	<key>NoSyncAutoBurialReveal</key>
-	<true/>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>42A05625-B1DC-435B-9C37-73F671C7FE5A</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
+	<string>35B1D93C-711A-429F-BD00-291F2618B62F</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>528564010.367746</real>
+	<real>527781813.03138798</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -4062,11 +4049,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=61</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=93</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-02-21T03:41:22Z</date>
+	<date>2018-02-22T14:28:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -4101,8 +4088,6 @@
 	<integer>10</integer>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1512050432</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
