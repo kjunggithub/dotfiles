@@ -87,8 +87,7 @@ alias gupm='git checkout master && git pull --rebase --prune && git fetch --all 
 # git hubflow
 function gfs()
 {
-    echo 'Creating branch:'
-    toilet -f term -F border --gay $1
+    rainbowToilet 'Creating branch:' $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -104,8 +103,7 @@ function gfs()
 
 function gfc()
 {
-    echo 'Deleting branch:'
-    toilet -f term -F border --gay $1
+    rainbowToilet 'Deleting branch:' $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -133,6 +131,7 @@ alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(
 alias gss="git stash save $1"
 alias gsl="git stash list"
 alias gsa='git apply'
+alias gsa#='git apply stash@{$1}'
 alias gsd='git stash drop'
 alias gsp='git stash pop'
 
@@ -220,11 +219,18 @@ alias gap="git add -p && git status"
 alias gau="git add -u && git status"
 function ga { git add "$*";  git status;}
 
+# git pull
+alias gpr="git pull --rebase"
+
 # git push
-alias gpo="git push origin $1"
+function gpo {
+    rainbowToilet 'Pushing branch:' $1
+
+    git push origin $1
+}
+
 function gpof {
-    echo 'Force pushing branch:'
-    toilet -f term -F border --gay $1
+    rainbowToilet 'Force pushing branch:' $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -273,6 +279,12 @@ function cdl { cd "$@" && ls -la; }
 
 function pn() {
     echo -e "\033]50;SetProfile=$@\a"
+}
+
+function rainbowToilet()
+{
+    echo $arg1
+    toilet -f term -F border --gay $arg2
 }
 
 # functions (most used commands from history)
