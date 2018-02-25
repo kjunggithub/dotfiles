@@ -81,13 +81,17 @@ alias gr--a='git rebase --abort'
 alias gr--s='git rebase --skip'
 
 # git checkout dev/master
-alias gupd='git checkout develop && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
-alias gupm='git checkout master && git pull --rebase --prune && git fetch --all && git log -1 --pretty=%B'
+alias gupd='git checkout develop && git fetch --all && git pull --rebase --prune && git log -1 --pretty=%B'
+alias gupm='git checkout master && git fetch --all && git pull --rebase --prune && git log -1 --pretty=%B'
+
+# git pull
+alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%B"
 
 # git hubflow
 function gfs()
 {
-    rainbowToilet 'Creating branch:' $1
+    echo 'Creating branch:'
+    toilet -f term -F border --gay $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -103,7 +107,8 @@ function gfs()
 
 function gfc()
 {
-    rainbowToilet 'Deleting branch:' $1
+    echo 'Deleting branch:'
+    toilet -f term -F border --gay $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -219,18 +224,11 @@ alias gap="git add -p && git status"
 alias gau="git add -u && git status"
 function ga { git add "$*";  git status;}
 
-# git pull
-alias gpr="git pull --rebase"
-
 # git push
-function gpo {
-    rainbowToilet 'Pushing branch:' $1
-
-    git push origin $1
-}
-
+alias gpo="git push origin $1"
 function gpof {
-    rainbowToilet 'Force pushing branch:' $1
+    echo 'Force pushing branch:'
+    toilet -f term -F border --gay $1
 
     if [[ -z $(git status -s) ]]
     then
@@ -279,12 +277,6 @@ function cdl { cd "$@" && ls -la; }
 
 function pn() {
     echo -e "\033]50;SetProfile=$@\a"
-}
-
-function rainbowToilet()
-{
-    echo $arg1
-    toilet -f term -F border --gay $arg2
 }
 
 # functions (most used commands from history)
