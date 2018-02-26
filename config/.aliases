@@ -246,6 +246,7 @@ function grho { git reset --hard origin/"$@" ;}
 
 # git commit
 alias gcav='git commit -av'
+alias gca='git commit --amend'
 function gcm { git commit -m "$1";}
 function gcam { git commit -am "$1";}
 

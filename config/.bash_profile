@@ -73,3 +73,9 @@ bind 'set completion-ignore-case on'
 
 # ctrl-E # move cursor to end of line
 # ctrl-A # move cursor to beginning of line
+
+# create or attach to tmux session
+if [ -z "$TMUX" ] && [ ${UID} != 0 ]
+then
+    tmux new-session -A -s main
+fi
