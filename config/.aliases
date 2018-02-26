@@ -200,8 +200,9 @@ function gco {
 
 # squash commits
 function squash {
+    # git rebase --interactive HEAD~$1
     git reset --soft HEAD~$1 &&
-    git commit
+    git commit --amend
 }
 
 # deploy
