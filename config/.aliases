@@ -15,7 +15,8 @@ alias crontab="export EDITOR=vim && crontab"
 alias art='php artisan'
 alias cdump='composer dumpautoload -o'
 alias hosts="sudo subl /etc/hosts"
-alias phpunit="phpunit --colors"
+alias phpunit="phpunit --colors --testdox"
+alias pu="phpunit"
 alias cat="ccat"
 alias rmt="rmtrash"
 alias sl="subl $1"
@@ -122,8 +123,22 @@ function gfc()
 
 alias gnah="git reset --hard && git clean -df"
 alias gwip='git add -A && git commit -m "work in progress"'
-alias gwipp='git add -A && git commit -m "work in progress" && git push'
-alias gwipfp='git add -A && git commit -m "work in progress" && git push --force'
+function gwipp()
+{
+    echo 'Pushing branch:'
+    toilet -f term -F border --gay $1
+
+    git add -A && git commit -m "work in progress" && git push
+}
+
+function gwipp()
+{
+    echo 'Force pushing branch:'
+    toilet -f term -F border --gay $1
+
+    git add -A && git commit -m "work in progress" && git push --force
+}
+
 alias guc="git reset --soft HEAD^"
 alias gus="git reset"
 
