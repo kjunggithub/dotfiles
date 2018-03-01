@@ -91,12 +91,11 @@ alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%
 # git hubflow
 function gfs()
 {
-    toilet -f term -F border --gay 'Creating branch $1'
+    toilet -f term -F border --gay "Creating branch $1!"
     if [[ -z $(git status -s) ]]
     then
         git checkout -b $1
         git push -u origin $1
-        # git branch | grep \* | cut -d ' ' -f2 | toilet -f term -F border --gay
     else
         git status
         echo "[rejected] Tree has changes, please clear tree and try again."
@@ -106,7 +105,7 @@ function gfs()
 
 function gfc()
 {
-    toilet -f term -F border --gay 'Force deleting branch $1'
+    toilet -f term -F border --gay "Force deleting branch $1!"
     if [[ -z $(git status -s) ]]
     then
         git push -d origin $1
@@ -120,7 +119,7 @@ function gfc()
 alias gnah="git reset --hard && git clean -df"
 function gwip()
 {
-    toilet -f term -F border --gay 'Pushing work in progress branch!'
+    toilet -f term -F border --gay "Pushing work in progress branch!"
     git add -A && git commit -m "work in progress" && git push
 }
 
@@ -234,8 +233,7 @@ function ga { git add "$*";  git status;}
 # git push
 alias gpo="git push origin $1"
 function gpof {
-    echo 'Force pushing branch:'
-    toilet -f term -F border --gay $1
+    toilet -f term -F border --gay "Force pushing branch $1"
 
     if [[ -z $(git status -s) ]]
     then
