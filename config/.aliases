@@ -122,20 +122,15 @@ function gfc()
 }
 
 alias gnah="git reset --hard && git clean -df"
-alias gwip='git add -A && git commit -m "work in progress"'
-function gwipp()
+function gwip()
 {
-    echo 'Pushing branch:'
-    toilet -f term -F border --gay $1
-
+    toilet -f term -F border --gay 'Pushing work in progress branch!'
     git add -A && git commit -m "work in progress" && git push
 }
 
 function gwipp()
 {
-    echo 'Force pushing branch:'
-    toilet -f term -F border --gay $1
-
+    toilet -f term -F border --gay 'Force pushing work in progress branch!'
     git add -A && git commit -m "work in progress" && git push --force
 }
 
