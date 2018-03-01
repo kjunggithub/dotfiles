@@ -91,9 +91,7 @@ alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%
 # git hubflow
 function gfs()
 {
-    echo 'Creating branch:'
-    toilet -f term -F border --gay $1
-
+    toilet -f term -F border --gay 'Creating branch $1'
     if [[ -z $(git status -s) ]]
     then
         git checkout -b $1
@@ -108,9 +106,7 @@ function gfs()
 
 function gfc()
 {
-    echo 'Deleting branch:'
-    toilet -f term -F border --gay $1
-
+    toilet -f term -F border --gay 'Force deleting branch $1'
     if [[ -z $(git status -s) ]]
     then
         git push -d origin $1
