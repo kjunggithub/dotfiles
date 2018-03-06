@@ -71,6 +71,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# git standup
+alias gsua='git log --all --since="9:30am yesterday" --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
+alias gsu='git log --all --author=$USER --since="9:30am yesterday" --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
+
 # git patch
 alias gps="git --no-pager diff --no-color > $1"
 alias gpa="git apply $1"
@@ -133,9 +137,9 @@ alias guc="git reset --soft HEAD^"
 alias gus="git reset"
 
 # git log
-alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
-alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
-alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short'
+alias gla='git log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
+alias gl5='git log -n 5 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
+alias gl10='git log -n 10 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
 
 # git stash
 alias gss="git stash save $1"
@@ -145,7 +149,7 @@ alias gsa#='git apply stash@{$1}'
 alias gsd='git stash drop'
 alias gsp='git stash pop'
 
-# git reflo
+# git reflog
 alias grl='git reflog --date=iso'
 
 # git diff
@@ -163,11 +167,11 @@ alias puf="phpunit --filter"
 alias puts="phpunit --testsuite"
 
 # git log see what everyone's been upto
-alias glrmt="git log --since=00:00:00 --all --no-merges --oneline --author=me@kjung.ca"
-alias glrm="git log --all --oneline --no-merges --author=me@kjung.ca"
+alias glrmt="git log --since=00:00:00 --all --no-merges --oneline --author=$USER"
+alias glrm="git log --all --oneline --no-merges --author=$USER"
 alias glr="git log --all --oneline --no-merges"
 function gl {
-    git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short;
+    git log -n $1 --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S";
 }
 
 # git clean
