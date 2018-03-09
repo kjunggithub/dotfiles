@@ -3,7 +3,7 @@
         "debug": true,
         "delay": 0.3,
         "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default.gutter-theme",
+        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
@@ -61,18 +61,16 @@
                 "excludes": []
             },
             "phpcs": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
-                "cmd": "/Users/kjung/.composer/vendor/bin/phpcs",
                 "excludes": [],
-                "standard": "/Users/kjung/.dotfiles/sublime/Packages/User/phpcs/Standard/Kevin"
+                "standard": "PSR2",
+                "stdin-path": "${file}"
             },
             "phpmd": {
                 "@disable": false,
-                "args": [],
                 "cmd": "/usr/local/bin/phpmd",
-                "excludes": [],
-                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
+                "ruleset": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
             "scss": {
                 "@disable": true,
@@ -82,11 +80,6 @@
                 "exclude-linter": "",
                 "excludes": [],
                 "include-linter": ""
-            },
-            "sublimesyntax": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
             }
         },
         "mark_style": "fill",
@@ -94,7 +87,7 @@
         "passive_warnings": false,
         "paths": {
             "linux": [],
-            "osx": [],
+            "osx": ["/usr/local/bin/"],
             "windows": []
         },
         "python_paths": {
