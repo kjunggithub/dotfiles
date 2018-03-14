@@ -95,11 +95,11 @@ alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%
 # git hubflow
 function gfs()
 {
-    toilet -f term -F border --gay "Creating branch $1!"
+    toilet -f term -F border --gay "Creating branch feature/$1!"
     if [[ -z $(git status -s) ]]
     then
-        git checkout -b $1
-        git push -u origin $1
+        git checkout -b feature/$1
+        git push -u origin feature/$1
     else
         git status
         echo "[rejected] Tree has changes, please clear tree and try again."
