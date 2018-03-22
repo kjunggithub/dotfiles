@@ -193,8 +193,6 @@ cp ~/.dotfiles/fonts/Inconsolata/Inconsolata-Bold.ttf /Library/Fonts/Inconsolata
 echo 'Done'
 
 echo 'Installing vim theme'
-mkdir -p ~/.vim/colors/
-cp ~/.dotfiles/vim/colors/sunburst.vim ~/.vim/colors/sunburst.vim
 echo 'Done'
 
 echo 'Creating symlinks...'
@@ -203,7 +201,9 @@ ln -s ~/.dotfiles/config/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/config/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/config/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/config/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/vim/colors ~/.vim/colors
+ln -s ~/.dotfiles/vim/pack ~/.vim/pack
 ln -s ~/.dotfiles/sublime/Packages ~/Library/Application\ Support/Sublime\ Text\ 3
 ln -s ~/.dotfiles/config/.hyper.js ~/.hyper.js
 
-echo 'Done'
+echo 'Done!'
