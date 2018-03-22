@@ -1,7 +1,14 @@
 # vim packages
-## Adding a vim package
+
+## Install existing plugins
 ```shell
 cd ~/.dotfiles
+git submodule init
+git submodule update --recursive
+```
+
+## Adding a vim package
+```shell
 git submodule init
 git submodule add https://github.com/vim-airline/vim-airline.git vim/pack/shapeshed/start/vim-airline
 git add .gitmodules vim/pack/shapeshed/start/vim-airline

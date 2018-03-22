@@ -1,18 +1,18 @@
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-airline-themes"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-airline-themes
+[submodule "vim/pack/default/start/vim-airline-themes"]
+	path = vim/pack/default/start/vim-airline-themes
 	url = git@github.com:vim-airline/vim-airline-themes.git
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-syntastic"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-syntastic
+[submodule "vim/pack/default/start/vim-syntastic"]
+	path = vim/pack/default/start/vim-syntastic
 	url = git@github.com:vim-syntastic/syntastic.git
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-gitgutter"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-gitgutter
+[submodule "vim/pack/default/start/vim-gitgutter"]
+	path = vim/pack/default/start/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-airline"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-airline
+[submodule "vim/pack/default/start/vim-airline"]
+	path = vim/pack/default/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-polyglot"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-polyglot
+[submodule "vim/pack/default/start/vim-polyglot"]
+	path = vim/pack/default/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
-[submodule "/Users/kjung/.dotfiles/vim/pack/default/start/vim-ctrlp"]
-	path = /Users/kjung/.dotfiles/vim/pack/default/start/vim-ctrlp
+[submodule "vim/pack/default/start/vim-ctrlp"]
+	path = vim/pack/default/start/vim-ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
