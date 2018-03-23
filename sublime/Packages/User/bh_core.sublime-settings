@@ -17,7 +17,7 @@
     // Enable high visibility by default when sublime starts up
     // If sublime is already running and this gets changed,
     // you will not see any changes (restart required to see change)
-    "high_visibility_enabled_by_default": false,
+    "high_visibility_enabled_by_default": true,
 
     // Experimental: Creates a visible bar at the beginning of all lines between
     // multiline bracket spans.
@@ -101,7 +101,7 @@
     "ignore_block_mode_in_plugin": true,
 
     // Character threshold to search
-    "search_threshold": 5000,
+    "search_threshold": 10000,
 
     // Ignore threshold
     "ignore_threshold": false,
