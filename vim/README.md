@@ -10,8 +10,8 @@ git submodule update --recursive
 ## Adding a vim package
 ```shell
 git submodule init
-git submodule add https://github.com/vim-airline/vim-airline.git vim/pack/shapeshed/start/vim-airline
-git add .gitmodules vim/pack/shapeshed/start/vim-airline
+git submodule add git@github.com:vendor/repo.git vim/pack/default/start/vim-repo
+git add .gitmodules vim/pack/default/start/vim-repo
 git commit
 ```
 
@@ -23,8 +23,8 @@ git commit
 
 ## Deleting a package
 ```shell
-git submodule deinit vim/pack/shapeshed/start/vim-airline
-git rm vim/pack/shapeshed/start/vim-airline
-rm -Rf .git/modules/vim/pack/shapeshed/start/vim-airline
+git submodule deinit vim/pack/default/start/vim-airline
+git rm vim/pack/default/start/vim-airline
+rm -Rf .git/modules/vim/pack/default/start/vim-airline
 git commit
 ```
