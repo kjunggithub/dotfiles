@@ -8,7 +8,7 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
-colorscheme base16-classic-dark
+colorscheme sunburst
 set t_Co=256
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
