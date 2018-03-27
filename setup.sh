@@ -133,6 +133,7 @@ apps=(
     lame
     the_silver_searcher
     tldr
+    hh
 )
 
 for app in ${apps[@]}; do
