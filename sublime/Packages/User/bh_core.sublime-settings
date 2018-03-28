@@ -110,7 +110,7 @@
     "bracket_string_escape_mode": "string",
 
     // Set max number of multi-select brackets that will be searched automatically
-    "auto_selection_threshold" : 15,
+    "auto_selection_threshold" : 20,
 
     // Enable this to completely kill highlighting if "auto_selection_threshold"
     // is exceeded.  Default is to highlight up to the "auto_selection_threshold".
