@@ -43,8 +43,10 @@
                 "strict": true
             },
             "phpmd": {
-            	"@disable": false,
-                "cmd": "${folder}/vendor/bin/phpmd",
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
             "php": {
                 "@disable": false,
