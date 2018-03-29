@@ -395,6 +395,11 @@ function colourgrid()
     done
 }
 
+function rfdb() {
+    mysql -h 192.168.33.10 -u root -proot -e "DROP DATABASE rivalry"
+    mysql -h 192.168.33.10 -u root -proot -e "CREATE DATABASE rivalry"
+    mysql -h 192.168.33.10 -u root -proot $1 < $2
+}
 
 function lsp {
     for f in $(ls -a); do stat -f "%A %N" $f; done;
