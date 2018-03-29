@@ -42,16 +42,17 @@
                 "excludes": [],
                 "strict": true
             },
-            "phpmd": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
-            },
             "php": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "phpmd": {
+                "@disable": false,
+                "cmd": "/usr/local/bin/phpmd",
+                "args": [],
+                "excludes": [],
+                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
             "scsslint": {
                 "@disable": false,

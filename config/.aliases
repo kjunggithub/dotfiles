@@ -120,6 +120,13 @@ function gfc()
     fi
 }
 
+function gcbl()
+{
+    CURRENT=$(gcbn)
+    echo "${CURRENT}"
+    git cherry -v develop ${CURRENT}
+}
+
 alias gnah="git reset --hard && git clean -df"
 function gwip()
 {
