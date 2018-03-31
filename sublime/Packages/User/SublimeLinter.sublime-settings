@@ -45,12 +45,20 @@
             "php": {
                 "@disable": false,
                 "args": [],
+                "cmd": "/usr/bin/php",
                 "excludes": []
+            },
+            "phpcs": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "standard": "PSR2",
+                "stdin-path": "${file}"
             },
             "phpmd": {
                 "@disable": false,
-                "cmd": "/usr/local/bin/phpmd",
                 "args": [],
+                "cmd": "/usr/local/bin/phpmd",
                 "excludes": [],
                 "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
             },
