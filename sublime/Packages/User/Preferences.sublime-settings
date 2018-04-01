@@ -6,7 +6,7 @@
 	"caret_extra_width": 4,
 	"caret_style": "solid",
 	"centurion_afolder_icons": true,
-	"close_windows_when_empty": false,
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/Sunburst.tmTheme",
 	"contrasted_quick_panel": false,
 	"contrasted_sidebar": false,
@@ -116,7 +116,7 @@
 	"overlay_scroll_bars": "enabled",
 	"phpunit-sublime-terminal": "iTerm",
 	"phpunit.composer": false,
-	"phpunit.php_executable": "/usr/local/bin/php",
+	"phpunit.php_executable": "/usr/bin/php",
 	"remember_open_files": false,
 	"rulers":
 	[
