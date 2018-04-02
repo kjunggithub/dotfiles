@@ -16,3 +16,6 @@
 
 # Vim
 *.swp
+
+# php cs fixer
+*.php_cs.cache
