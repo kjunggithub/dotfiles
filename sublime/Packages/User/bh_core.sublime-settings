@@ -377,7 +377,9 @@
                 "keyword.operator",
                 "source.ruby.rails.embedded.html",
                 "source.ruby.embedded.html",
-                "storage.type.function.arrow.js"
+                "storage.type.function.arrow.js",
+                "punctuation.accessor.php",
+                "punctuation.accessor.arrow.php"
             ],
             "language_filter": "whitelist",
             "language_list": [
@@ -387,6 +389,7 @@
                 "PHP",
                 "HTML (Rails)",
                 "HTML (Jinja Templates)",
+                "HTML (Jinja2)",
                 "HTML (Twig)",
                 "HTML (Django)",
                 "HTML+CFML",
@@ -416,7 +419,7 @@
         // !!! May conflict with 'php_keywords' if enabled in same file !!!
         {
             "name": "ruby_embedded_html",
-            "open": "((?:(?<=<%)|(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:))",
+            "open": "((?:(?<=<%)|(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|(?:(?<=<%)|(?<=^))\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
             "close": "(?<=[\\s;])(end)\\b(?!:)",
             "style": "default",
             "scope_exclude": ["text.html", "source", "comment", "string"],
@@ -432,7 +435,7 @@
         // Ruby conditional statements
         {
             "name": "ruby",
-            "open": "((?:(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|^\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|^\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:))",
+            "open": "((?:(?<=^)|(?<==)|(?<=<<))\\s*\\b(?:if|begin|case)\\b(?!:)|^\\s*(?:(?:private|public|protected)\\s*)?def\\b[\\p{Ll}\\p{Lu}]*\\b(?!:)|^\\s*\\b(?:for|until|unless|while|class|module)\\b(?!:)|(?<!:)\\bdo\\b(?!:)|(?<=return)\\s*\\b(?:begin|case|for|until|while|class|module)\\b(?!:))",
             "close": "(?<=[\\s;])(end)\\b(?!:)",
             "style": "default",
             "scope_exclude": ["string", "comment"],
@@ -444,12 +447,12 @@
         // C/C++ compile switches
         {
             "name": "c_compile_switch",
-            "open": "(\\#(?:if|ifdef|ifndef))\\b",
-            "close": "(\\#endif)\\b",
+            "open": "\\#[ \\t]*(if|ifdef|ifndef)\\b",
+            "close": "\\#[ \\t]*(endif)\\b",
             "style": "c_define",
             "scope_exclude": ["string", "comment"],
             "language_filter": "whitelist",
-            "language_list": ["C++", "C", "Objective-C", "CCpp", "C Improved"],
+            "language_list": ["C++", "C", "Objective-C++", "Objective-C", "CCpp", "C Improved"],
             "enabled": true
         },
         // PHP conditional keywords
@@ -513,8 +516,8 @@
         // Lua
         {
             "name": "lua",
-            "open": "(?<=[\\s;])(if|while|function|do|repeat)\\b",
-            "close": "(?<=[\\s;])(end|until)\\b",
+            "open": "(?:(?<=[\\s;])|(?<=^))(if|function|do|repeat)\\b",
+            "close": "(?:(?<=[\\s;])|(?<=^))(end|until)\\b",
             "style": "default",
             "scope_exclude": ["string", "comment"],
             "plugin_library": "bh_modules.luakeywords",
@@ -681,8 +684,8 @@
             // "style": "underline"
         },
         "regex": {
-            "icon": "regex"
-            // "color": "brackethighlighter.quote",
+            "icon": "regex",
+            "color": "brackethighlighter.quote"
             // "style": "underline"
         }
     }
