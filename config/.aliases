@@ -26,7 +26,7 @@ alias rf='source ~/.bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias profile='subl ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
-alias brewup='brew update && brew upgrade'
+alias brewup='brew update && brew upgrade && brew cleanup && brew prune'
 alias brewdoc='brew doctor'
 alias osxup='sudo softwareupdate -i -a'
 alias slowon='sudo ipfw pipe 1 config bw 50KByte/s && sudo ipfw add 1 pipe 1 src-port 80'
