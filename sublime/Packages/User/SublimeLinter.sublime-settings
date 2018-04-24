@@ -1,111 +1,184 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "load/save",
-        "linters": {
-            "annotations": {
-                "@disable": true,
-                "args": [],
-                "errors": [
-                    "FIXME"
-                ],
-                "excludes": [],
-                "warnings": [
-                    "NOTE",
-                    "README",
-                    "TODO",
-                    "@todo",
-                    "XXX",
-                    "WIP"
-                ]
-            },
-            "csslint": {
-                "@disable": false,
-                "args": [],
-                "errors": "",
-                "excludes": [],
-                "ignore": "",
-                "warnings": ""
-            },
-            "jshint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "json": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "strict": true
-            },
-            "php": {
-                "@disable": false,
-                "args": [],
-                "cmd": "/usr/bin/php",
-                "excludes": []
-            },
-            "phpcs": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "standard": "PSR2",
-                "stdin-path": "${file}"
-            },
-            "phpmd": {
-                "@disable": false,
-                "args": [],
-                "cmd": "/usr/local/bin/phpmd",
-                "excludes": [],
-                "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"
-            },
-            "scsslint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "sublimesyntax": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            }
+    // Set to true to print extra information in the console.
+    "debug": true,
+
+    // When in the "background" lint mode, this value determines
+    // a delay before a request is send to the linter
+    "delay": 0.3,
+
+    // Available gutter themes:
+    // Blueberry Cross
+    // Blueberry Round
+    // Circle
+    // Danish Royalty
+    // Default
+    // Hands
+    // Knob
+    // Knob Symbol
+    // Koloria
+    // ProjectIcons
+    // Note that you may need to change the "icon" property in "styles"
+    // to an icon in the theme (they usually include "warning" and "error")
+    "gutter_theme": "Default",
+
+    // EXPERIMENTAL: See below `demote_while_editing`.
+    // Tip: If you set this to a very high number, like 360 seconds, you
+    // basically see the demoted regions only on save.
+    "highlights.time_to_idle": 1.5,
+
+    // EXPERIMENTAL: One of 'none', 'ws_regions', 'warnings', 'all'
+    // Essentially picks a predicate fn from `highlights.py` to demote the
+    // visibility of some lint errors while editing (busy). These errors
+    // appear after `time_to_idle` seconds or immediately on save.
+    "highlights.demote_while_editing": "none",
+
+    // EXPERIMENTAL: A typical Sublime scope which gets applied to
+    // the regions while busy. Use the empty string to actually hide
+    // the regions. E.g. try 'comment' to get a soft gray.
+    "highlights.demote_scope": "",
+
+    // Lint Modes determine when the linter is run
+    // background: asynchronously on every change
+    // load_save: when a file is opened and every time it's saved
+    // manual: only when calling the Lint This View command
+    // save: only when a file is saved
+    "lint_mode": "save",
+
+    // Example of linter specific settings.
+    // Linter specific settings can also be changed in sublime-project settings.
+    // What settings are available is documented in the readme of the
+    // specific linter plugin.
+    // "linters": {
+    //     "somelinter": {
+    //         "disable": false,
+    //         "args": [],
+    //         "excludes": []
+    //     },
+    //     "somepythonlinter": {
+    //         "python": null,
+    //         "disable": false,
+    //         "args": [
+    //             "--max-complexity", "-1",
+    //             "--max-line-length", "100",
+    //             "--ignore", "E731,E402"
+    //         ],
+    //         "excludes": [],
+    //     }
+    // }
+    "linters": {
+        "php": {
+            "disable": false,
+            "executable": "/usr/local/bin/php",
+            "args": [],
+            "excludes": []
         },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": false,
-        "paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
+        "phpmd": {
+            "disable": false,
+            "executable": "/usr/local/bin/phpmd",
+            "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml",
+            "args": [],
+            "excludes": []
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
+    },
+
+    // Determines what happens when a linter reports a problem without column.
+    // By default, a mark is put in the gutter and the first character is highlighted.
+    // If this setting is `true`, the entire line is also highlighted.
+    "no_column_highlights_line": true,
+
+    // Provide extra paths to be searched when locating system executables.
+    "paths": {
+        "linux": [],
+        "osx": [],
+        "windows": []
+    },
+
+    // Show a report for problems on a line by hovering over the gutter.
+    "show_hover_line_report": false,
+
+    // Show a report for problems on a region by hovering over it.
+    "show_hover_region_report": false,
+
+    // Highlight problems in the minimap.
+    "show_marks_in_minimap": false,
+
+    // Show the output panel on save if there are problems.
+    // Note: currently works best with lint_mode "background", See #1200
+    // Set to "window" to check if the window has problems.
+    // Set to "view" to only check the current file.
+    // Set to "never" to disable this feature.
+    "show_panel_on_save": "window",
+
+    // Display counters in the status bar.
+    // {warning} and {error} will be replaced with the actual numbers.
+    // Set to "" to display nothing
+    "statusbar.counters_template": "W: {warning} E: {error}",
+
+    // Show the messages for problems at your cursor position
+    // {message} will be replaced by the actual messages.
+    // {linter} will be replaced by the linter reporting the error.
+    // {type} will be replaced by either warning or error.
+    // {code} will be replaced by the error code.
+    // Set to "" to display nothing
+    "statusbar.messages_template": "{message}",
+
+    // Global styles for all linters.
+    // - mark_style options:
+    //   "none"
+    //   "fill", "outline",
+    //   "solid_underline", "squiggly_underline", "stippled_underline"
+    //   The underline styles are replaced with outlines when there is
+    //   whitespace in the problem region, because underlines aren't drawn
+    //   on whitespace (ST issue #137).
+    // - priority determines which mark is shown in the gutter;
+    //   error marks will still always override warning marks.
+    // - scope is used to determine the color;
+    //   region.<colorish> are automatically generated scopes in ST > 3148.
+    // - types is an array which can contain "warning" and/or "error".
+    // - codes is an array which can contain error codes provided by a linter.
+    // - icon can be:
+    //   one of the default icons: "circle", "dot" or "bookmark"
+    //   or "none" to remove the icon
+    //   or a path to an icon file like
+    //      "Packages/SublimeLinter/gutter-themes/Blueberry Cross/error.png"
+    //   or one provided by a gutter theme (e.g. "warning" or "error")
+    //      in theme Default: "warning", "error", "cog", "x",
+    //      and "diamond", "heart", "pointer", "square", "star", "triangle" all
+    //      also have an -outline variant.
+    // Note: At least one of those targets is required: types or codes.
+    // Styles can also be specified per linter.
+    "styles": [
+        {
+            "mark_style": "fill",
+            "priority": 1,
+            "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "warning"
+            ]
         },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": true,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "html (django)": "html",
-            "html (rails)": "html",
-            "html 5": "html",
-            "javascript (babel)": "javascript",
-            "magicpython": "python",
-            "php": "html",
-            "python django": "python",
-            "pythonimproved": "python"
-        },
-        "tooltip_fontsize": "1rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
-        "tooltip_theme_excludes": [],
-        "tooltips": true,
-        "use_current_shell_path": false,
-        "warning_color": "DDB700",
-        "wrap_find": true
+        {
+            "mark_style": "fill",
+            "priority": 1,
+            "scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "error"
+            ]
+        }
+    ],
+
+    // Maps variant syntaxes to the syntax that you have a linter for.
+    // The syntax is the name of the syntax definition file, in lower case
+    // Run this in the console to find it: view.settings().get('syntax').lower()
+    "syntax_map": {
+        "html (django)": "html",
+        "html (rails)": "html",
+        "html 5": "html",
+        "javascript (babel)": "javascript",
+        "magicpython": "python",
+        "php": "html",
+        "python django": "python",
+        "pythonimproved": "python"
     }
 }
