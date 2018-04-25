@@ -65,8 +65,10 @@
 	{ "keys": ["ctrl+r"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
 
     { "keys": ["super+enter"], "command": "toggle_full_screen" },
-	{ "keys": ["super+ctrl+enter"], "command": "open_url_under_cursor" }
+	{ "keys": ["super+ctrl+enter"], "command": "open_url_under_cursor" },
 
+    { "keys": ["ctrl+="], "command": "upper_case" },
+    { "keys": ["ctrl+-"], "command": "lower_case" }
 
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
