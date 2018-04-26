@@ -28,7 +28,7 @@
             'no_blank_lines_after_phpdoc' => true,
             'no_blank_lines_after_class_opening' => true,
             'linebreak_after_opening_tag' => true,
-            'ordered_class_elements' => true,
+            // 'ordered_class_elements' => true,
             'object_operator_without_whitespace' => true,
             'hash_to_slash_comment' => true,
             'function_typehint_space' => true,
@@ -46,7 +46,7 @@
             'magic_constant_casing' => true,
             'blank_line_before_return' => true,
             'no_empty_comment' => true,
-            'method_separation' => true,
+            'class_attributes_separation' => true,
             'no_leading_import_slash' => true,
             'no_leading_namespace_whitespace' => true,
             'no_mixed_echo_print' => ['use' => 'echo'],
@@ -54,7 +54,8 @@
             'ternary_operator_spaces' => true,
             'simplified_null_return' => true,
             'trailing_comma_in_multiline_array' => true,
-
+            'combine_consecutive_unsets' => true,
+            'native_function_casing' => true,
         ])
         ->setFinder($finder);
 
