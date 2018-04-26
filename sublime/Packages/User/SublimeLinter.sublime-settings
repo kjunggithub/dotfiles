@@ -94,10 +94,10 @@
     },
 
     // Show a report for problems on a line by hovering over the gutter.
-    "show_hover_line_report": false,
+    "show_hover_line_report": true,
 
     // Show a report for problems on a region by hovering over it.
-    "show_hover_region_report": false,
+    "show_hover_region_report": true,
 
     // Highlight problems in the minimap.
     "show_marks_in_minimap": false,
@@ -107,7 +107,7 @@
     // Set to "window" to check if the window has problems.
     // Set to "view" to only check the current file.
     // Set to "never" to disable this feature.
-    "show_panel_on_save": "window",
+    "show_panel_on_save": "view",
 
     // Display counters in the status bar.
     // {warning} and {error} will be replaced with the actual numbers.
