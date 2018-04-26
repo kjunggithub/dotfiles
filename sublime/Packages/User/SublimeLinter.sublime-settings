@@ -68,16 +68,16 @@
     "linters": {
         "php": {
             "disable": false,
-            "executable": "/usr/local/bin/php",
+            "excludes": [],
             "args": [],
-            "excludes": []
+            "executable": "/usr/local/bin/php"
         },
         "phpmd": {
             "disable": false,
-            "executable": "/usr/local/bin/phpmd",
-            "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml",
-            "args": [],
-            "excludes": []
+            "excludes": [],
+            "args": ["/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml"],
+            // "rulesets": "/Users/kjung/.dotfiles/sublime/Packages/User/phpmd.xml",
+            "executable": "/usr/local/bin/phpmd"
         },
     },
 
