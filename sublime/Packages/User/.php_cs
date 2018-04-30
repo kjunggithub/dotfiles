@@ -54,7 +54,7 @@
             'ternary_operator_spaces' => true,
             'simplified_null_return' => true,
             'trailing_comma_in_multiline_array' => true,
-            'combine_consecutive_unsets' => true,
+            // 'combine_consecutive_unsets' => true,
             'native_function_casing' => true,
         ])
         ->setFinder($finder);
