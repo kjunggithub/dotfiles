@@ -46,7 +46,7 @@
             'magic_constant_casing' => true,
             'blank_line_before_return' => true,
             'no_empty_comment' => true,
-            'class_attributes_separation' => true,
+            'class_attributes_separation' => false,
             'no_leading_import_slash' => true,
             'no_leading_namespace_whitespace' => true,
             'no_mixed_echo_print' => ['use' => 'echo'],

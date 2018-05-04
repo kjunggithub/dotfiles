@@ -19,3 +19,6 @@
 
 # php cs fixer
 *.php_cs.cache
+
+# npm
+*node_modules
