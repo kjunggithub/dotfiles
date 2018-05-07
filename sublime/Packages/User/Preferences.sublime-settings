@@ -4,8 +4,8 @@
 	"auto_complete_with_fields": true,
 	"binary_file_patterns":
 	[
-		"*.dds",
 		"*.eot",
+		"*.dds",
 		"*.gif",
 		"*.ico",
 		"*.jar",

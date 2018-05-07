@@ -1,4 +1,6 @@
 {
+    "spell_check": true,
+
 	"extensions":
 	[
 		"COMMIT_EDITMSG"
