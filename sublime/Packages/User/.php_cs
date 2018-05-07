@@ -37,9 +37,9 @@
             'concat_space' => ['spacing' => 'none'],
 
             'binary_operator_spaces' => [
-                'default' => 'align_single_space_minimal'
-                // 'align_double_arrow' => true,
-                // 'align_equals' => false,
+                // 'default' => 'align_single_space_minimal'
+                'align_double_arrow' => true,
+                'align_equals' => false,
             ],
             'elseif' => true,
             'encoding' => true,
