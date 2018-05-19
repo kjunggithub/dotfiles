@@ -134,6 +134,7 @@ apps=(
     the_silver_searcher
     tldr
     hh
+    fd
 )
 
 for app in ${apps[@]}; do
