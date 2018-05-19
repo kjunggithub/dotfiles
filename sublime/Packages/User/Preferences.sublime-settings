@@ -134,6 +134,7 @@
 	"phpunit-sublime-terminal": "iTerm",
 	"phpunit.composer": false,
 	"phpunit.php_executable": "/usr/bin/php",
+	"remember_full_screen": true,
 	"remember_open_files": false,
 	"rulers":
 	[
