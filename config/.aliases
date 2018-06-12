@@ -92,6 +92,14 @@ alias gupm='git checkout master && git fetch --all && git pull --rebase --prune 
 # git pull
 alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%B"
 
+
+function repeat()
+{
+    for ((n=0;n<$1;n++)); do
+        $2
+     done
+}
+
 # git hubflow
 function gfs()
 {
