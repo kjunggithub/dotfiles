@@ -37,11 +37,6 @@
 	{ "keys": ["ctrl+d"], "command": "find_under_expand" },
 	{"keys": ["ctrl+p"], "command": "pretty_json"},
 
-	// Change cases
-	// { "keys": ["ctrl+alt+c", "ctrl+alt+c"], "command": "convert_to_camel"},
-	// { "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
-	{ "keys": ["ctrl+alt+q"], "command": "convert_to_snake"},
-
 	// Cycle down autocomplete
 	{ "keys": ["ctrl+s"], "command": "auto_complete" },
 
@@ -68,7 +63,10 @@
 	{ "keys": ["super+ctrl+enter"], "command": "open_url_under_cursor" },
 
     { "keys": ["ctrl+="], "command": "upper_case" },
-    { "keys": ["ctrl+-"], "command": "lower_case" }
+    { "keys": ["ctrl+-"], "command": "lower_case" },
+    { "keys": ["ctrl+super+-"], "command": "convert_to_snake"},
+    { "keys": ["ctrl+super+="], "command": "convert_to_camel"}
+    // { "keys": ["ctrl+alt+c", "ctrl+alt+p"], "command": "convert_to_pascal"},
 
 	// PHP Companion
     // { "keys": ["f9"], "command": "expand_fqcn" },
