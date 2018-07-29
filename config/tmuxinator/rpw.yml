@@ -1,6 +1,6 @@
-# /Users/kjung/.config/tmuxinator/rw.yml
+# /Users/kjung/.config/tmuxinator/rpw.yml
 
-name: rw
+name: rpw
 root: ~/Sites/rivalry.dev/rivalry
 
 # Optional tmux socket
@@ -28,13 +28,13 @@ root: ~/Sites/rivalry.dev/rivalry
 # tmux_options: -f ~/.tmux.mac.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
+tmux_command: tmux -2
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: editor
+startup_window: rpw
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
-# startup_pane: 1
+startup_pane: 0
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
@@ -42,7 +42,7 @@ root: ~/Sites/rivalry.dev/rivalry
 # Runs after everything. Use it to attach to tmux with custom options etc.
 
 windows:
-  - rivalry prod web:
+  - rpw:
       layout: even-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
