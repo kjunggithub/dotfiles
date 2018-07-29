@@ -179,6 +179,7 @@ apps=(
     qlimagesize
     qlvideo
     webpquicklook
+    tmuxinator-completion
 )
 
 echo "${apps[@]}"
@@ -188,6 +189,10 @@ for app in ${apps[@]}; do
 done
 unset -v apps
 echo 'Done'
+
+echo 'Installing gems...'
+sudo gem install tmuxinator -n /usr/local/bin
+
 
 echo 'Installing fonts...'
 cp ~/.dotfiles/fonts/Inconsolata/Inconsolata-Regular.ttf /Library/Fonts/Inconsolata-Regular.ttf
@@ -207,5 +212,7 @@ ln -s ~/.dotfiles/vim/colors ~/.vim/colors
 ln -s ~/.dotfiles/vim/pack ~/.vim/pack
 ln -s ~/.dotfiles/sublime/Packages ~/Library/Application\ Support/Sublime\ Text\ 3
 ln -s ~/.dotfiles/config/.hyper.js ~/.hyper.js
+ln -s ~/.dotfiles/config/tmuxinator ~/.config
 
+# sudo gem install tmuxinator -n /usr/local/bin
 echo 'Done!'
