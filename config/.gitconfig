@@ -29,3 +29,5 @@
 	email = me@kjung.ca
 [help]
     autocorrect = 50
+[rerere]
+	enabled = true
