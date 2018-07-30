@@ -135,6 +135,7 @@ apps=(
     tldr
     hh
     fd
+    tmuxinator-completion
 )
 
 for app in ${apps[@]}; do
@@ -179,7 +180,6 @@ apps=(
     qlimagesize
     qlvideo
     webpquicklook
-    tmuxinator-completion
 )
 
 echo "${apps[@]}"
