@@ -49,4 +49,4 @@ windows:
       # synchronize: after
       panes:
         - ssh -t deploy@rd "cd /home/deploy/websites/dev.rivalry.gg/current ; exec \$SHELL -l"
-        - ssh -t ubuntu@rd "cd /home/deploy/websites/dev.rivalry.gg/current ; exec \$SHELL -l"
+        - ssh -t ubuntu@rd "cd /etc/nginx/sites-available ; exec \$SHELL -l"
