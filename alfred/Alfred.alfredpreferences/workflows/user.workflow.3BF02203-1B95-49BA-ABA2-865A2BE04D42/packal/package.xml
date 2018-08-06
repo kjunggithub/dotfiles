@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Genererate Passwords</name>
+  <version>0.1.0</version>
+  <bundle>tirol.basecamp.alfredworkflow.generate-passwords</bundle>
+  <updated>1532612458</updated>
+  <file>genererate_passwords.alfredworkflow</file>
+</workflow>

@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#5A595AFF",
+        "font" : "System",
+        "color" : "#9A999B66"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#555556FF",
+        "font" : "System",
+        "color" : "#FEFFFF66"
+      },
+      "backgroundSelected" : "#242425FF",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#545454FF",
+        "font" : "System",
+        "color" : "#4D4D4DD8"
+      },
+      "iconPaddingHorizontal" : 4,
+      "paddingVertical" : 3,
+      "iconSize" : 24
+    },
+    "search" : {
+      "paddingVertical" : 4,
+      "background" : "#FFFFFF00",
+      "spacing" : 4,
+      "text" : {
+        "size" : 34,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#828182FF"
+      },
+      "backgroundSelected" : "#BFF6ACFF"
+    },
+    "window" : {
+      "color" : "#000000D8",
+      "paddingHorizontal" : 0,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 15,
+      "roundness" : 3,
+      "paddingVertical" : 4
+    },
+    "credit" : "Loke Carlsson",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#6D6D6DFF",
+      "thickness" : 2
+    },
+    "name" : "Dark"
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Advanced Google and Apple Maps Search</name>
+  <version>2.0.2</version>
+  <bundle>com.stuartryan.alfred.advancedgooglemaps</bundle>
+  <updated>1518422596</updated>
+  <file>advanced_google_maps_search.alfredworkflow</file>
+</workflow>
