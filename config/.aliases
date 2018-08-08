@@ -103,11 +103,12 @@ function repeat()
 # git hubflow
 function gfs()
 {
-    toilet -f term -F border --gay "Creating branch feature/$1!"
+    CONVERT=$(echo $1 | tr -s ' ' | tr ' ' '_')
+    toilet -f term -F border --gay "Creating branch feature/$CONVERT!"
     if [[ -z $(git status -s) ]]
     then
-        git checkout -b feature/$1
-        git push -u origin feature/$1
+        git checkout -b feature/$CONVERT
+        git push -u origin feature/$CONVERT
     else
         git status
         echo "[rejected] Tree has changes, please clear tree and try again."
