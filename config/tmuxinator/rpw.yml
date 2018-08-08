@@ -43,10 +43,12 @@ startup_pane: 0
 
 windows:
   - rpw:
-      layout: even-vertical
+      layout: tiled
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
         - ssh -t pmmladmin@rpw1 "cd /etc/nginx/sites-available ; exec \$SHELL -l"
         - ssh -t pmmladmin@rpw2 "cd /etc/nginx/sites-available ; exec \$SHELL -l"
+        - ssh -t pmmladmin@rpw4 "cd /etc/nginx/sites-available ; exec \$SHELL -l"
+        - ssh -t pmmladmin@rpw5 "cd /etc/nginx/sites-available ; exec \$SHELL -l"
