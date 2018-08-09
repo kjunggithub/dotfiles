@@ -241,8 +241,10 @@ function gcbn { command $(git symbolic-ref --short HEAD | pbcopy) && echo $(pbpa
 function gcbsn { command $(git symbolic-ref --short HEAD | awk -F'feature/' '{print $2}' | pbcopy) && echo $(pbpaste) ;}
 
 # git branch
-alias gb="git branch"
-alias gbr="git branch -r"
+# alias gb="git branch"
+alias gb="git for-each-ref --sort=committerdate refs/heads/ --format='%(color: yellow)%(committerdate:short) %(color: white)%(refname:short)'"
+# alias gbr="git branch -r"
+alias gbr="git for-each-ref --sort=committerdate refs/remotes/ --format='%(color: yellow)%(committerdate:short) %(color: white)%(refname:short)'"
 
 # git add
 alias ga.="git add --all && git status"
