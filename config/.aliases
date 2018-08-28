@@ -340,8 +340,8 @@ function extract () {
 }
 
 function sentry {
-    # sentry v1.39.2
-    open https://sentry.io/pmml-corp/rivalry-api/?query=is%3Aunresolved+environment%3Aproduction+release%3A$1
+    # sentry production v1.39.2
+    open https://sentry.io/pmml-corp/rivalry-api/?query=is%3Aunresolved+environment%3A$1+release%3A$2
 }
 
 # open current git repo in github
