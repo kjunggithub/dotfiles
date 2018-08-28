@@ -339,6 +339,11 @@ function extract () {
     fi
 }
 
+function sentry {
+    # sentry v1.39.2
+    open https://sentry.io/pmml-corp/rivalry-api/?query=is%3Aunresolved+environment%3Aproduction+release%3A$1
+}
+
 # open current git repo in github
 function gitweb {
     if [ -d .git ]; then
