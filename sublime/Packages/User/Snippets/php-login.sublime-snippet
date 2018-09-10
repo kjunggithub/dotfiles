@@ -1,6 +1,8 @@
 <snippet>
 	<content><![CDATA[
-Auth::loginUsingId($1, true);
+// place this on TOP of the routes file
+// Illuminate\Support\Facades\Auth::loginUsingId($1, true);
+Illuminate\Support\Facades\Auth::loginUsingId(encodeUuid($1), true);
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
