@@ -281,7 +281,7 @@ alias wetter='curl -4 wttr.in/Toronto'
 alias wttr='curl -s wttr.in/Toronto | head -7 | tail -5'
 
 # vagrant
-alias vagrant='cd ~/vagrant && vagrant'
+# alias vagrant='cd ~/vagrant && vagrant'
 
 # convert unix timestamp to utc
 function cet () {
