@@ -412,9 +412,17 @@ function colourgrid()
 }
 
 function rfdb() {
-    mysql -h 192.168.33.10 -u root -proot -e "DROP DATABASE rivalry"
-    mysql -h 192.168.33.10 -u root -proot -e "CREATE DATABASE rivalry"
-    mysql -h 192.168.33.10 -u root -proot $1 < $2
+    # mysql -h 192.168.33.10 -u root -proot -e "DROP DATABASE rivalry"
+    # mysql -h 192.168.33.10 -u root -proot -e "CREATE DATABASE rivalry"
+    # mysql -h 192.168.33.10 -u root -proot $1 < $2
+    echo "Dropping database $1"
+    mysql -h 127.0.0.1 -u root -e "DROP DATABASE $1"
+
+    echo "Creating database $1"
+    mysql -h 127.0.0.1 -u root -e "CREATE DATABASE $1"
+
+    echo "Impoirting into $1"
+    mysql -h 127.0.0.1 -u root $1 < $2
 }
 
 function lsp {
