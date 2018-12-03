@@ -80,6 +80,9 @@ then
     tmux new-session -A -s main
 fi
 
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 # add this configuration to ~/.bashrc
 export HH_CONFIG=hicolor         # get more colors
 shopt -s histappend              # append new history items to .bash_history

@@ -419,10 +419,13 @@ function rfdb() {
     mysql -h 127.0.0.1 -u root -e "DROP DATABASE $1"
 
     echo "Creating database $1"
-    mysql -h 127.0.0.1 -u root -e "CREATE DATABASE $1"
-
+    mysql -h 127.0.0.1 -u root -e "CREATE DATABASE $1 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
     echo "Impoirting into $1"
     mysql -h 127.0.0.1 -u root $1 < $2
+}
+
+function edb() {
+    mysqldump --column-statistics=0 -h 127.0.0.1 -u root $1 > /Users/kjung/Desktop/$2.sql
 }
 
 function lsp {
