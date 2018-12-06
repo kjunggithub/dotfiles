@@ -1,12 +1,10 @@
 <snippet>
 	<content><![CDATA[
-// place this on TOP of the routes file
-// Illuminate\Support\Facades\Auth::loginUsingId('', true);
-Illuminate\Support\Facades\Auth::loginUsingId(encodeUuid('$1'), true);
+dd('$1');
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>login</tabTrigger>
+	<tabTrigger>dds</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>
