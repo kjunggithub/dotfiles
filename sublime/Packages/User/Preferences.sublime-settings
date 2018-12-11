@@ -158,6 +158,7 @@
 		"uuid",
 		"datetime",
 		"thunderdome",
+		"Thunderdome"
 	],
 	"tab_completion": true,
 	"tab_size": 4,
