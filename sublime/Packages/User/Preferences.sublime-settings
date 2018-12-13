@@ -121,6 +121,19 @@
 	[
 		"Markdown"
 	],
+	"ignored_words":
+	[
+		"middleware",
+		"auth",
+		"Auth",
+		"App",
+		"neighbourhood",
+		"neighbourhoods",
+		"uuid",
+		"datetime",
+		"thunderdome",
+		"Thunderdome"
+	],
 	"indent_guide_options":
 	[
 		"draw_normal",
@@ -148,18 +161,6 @@
 	"show_tab_close_buttons": true,
 	"spell_check": true,
 	"spelling_selector": "meta.string-contents.quoted.single.php, comment.line.double-slash.php, text.plain",
-	"ignored_words": [
-		"middleware",
-		"auth",
-		"Auth",
-		"App",
-		"neighbourhood",
-		"neighbourhoods",
-		"uuid",
-		"datetime",
-		"thunderdome",
-		"Thunderdome"
-	],
 	"tab_completion": true,
 	"tab_size": 4,
 	"tabs_small": true,
