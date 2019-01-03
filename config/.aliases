@@ -412,20 +412,19 @@ function colourgrid()
 }
 
 function rfdb() {
-    # mysql -h 192.168.33.10 -u root -proot -e "DROP DATABASE rivalry"
-    # mysql -h 192.168.33.10 -u root -proot -e "CREATE DATABASE rivalry"
-    # mysql -h 192.168.33.10 -u root -proot $1 < $2
     echo "Dropping database $1"
     mysql -h 127.0.0.1 -u root -e "DROP DATABASE $1"
 
     echo "Creating database $1"
     mysql -h 127.0.0.1 -u root -e "CREATE DATABASE $1 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
+
     echo "Impoirting into $1"
     mysql -h 127.0.0.1 -u root $1 < $2
 }
 
 function edb() {
-    mysqldump --column-statistics=0 -h 127.0.0.1 -u root $1 > /Users/kjung/Desktop/$2.sql
+    DATE=`date +%m-%d-%y`
+    mysqldump --column-statistics=0 -h 127.0.0.1 -u root $1 > /Users/kjung/Desktop/$1-$DATE.sql
 }
 
 function lsp {
