@@ -602,7 +602,8 @@
 				<key>settings</key>
 				<dict>
 					<key>background</key>
-					<string>#420E09</string>
+					<string>#c63935</string>
+					<!-- <string>#420E09</string> -->
 					<key>foreground</key>
 					<string>#F8F8F8</string>
 				</dict>

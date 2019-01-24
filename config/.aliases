@@ -3,6 +3,11 @@ function rab {
     open https://www.rivalry.gg/admin/bet/$1
 }
 
+
+function mm {
+    open https://mega.nz/$1
+}
+
 # tmux
 alias tm="tmux -2"
 alias tma="tmux attach $1"
