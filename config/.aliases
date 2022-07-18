@@ -1,12 +1,10 @@
-# temp
-function rab {
-    open https://www.rivalry.gg/admin/bet/$1
+function tkv {
+    # nvm install v12.16.2
+    tiktok-scraper video $1 --download --hd --noWaterMark
 }
 
 
-function mm {
-    open https://mega.nz/$1
-}
+alias randpass="openssl rand -base64 32"
 
 # tmux
 alias tm="tmux -2"
@@ -23,31 +21,36 @@ alias sudo="sudo "
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias crontab="export EDITOR=vim && crontab"
 alias art='php artisan'
+
+# brew install findutils // gnu find
+alias app='gfind `pwd` -maxdepth 1 -type f -executable | head -n 1 | xargs -I{} php {}'
+
 alias cdump='composer dumpautoload -o'
 alias hosts="sudo subl /etc/hosts"
 alias phpunit="phpunit --colors --testdox"
 alias pu="phpunit"
-alias cat="ccat"
+alias cat="bat"
 alias rmt="rmtrash"
 alias sl="subl $1"
-alias systemup="brew update && brew upgrade && brew cleanup && brew prune && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
+alias systemup="brew update && brew upgrade && brew cleanup && /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder && sudo gem update --system && sudo gem up && sudo rm -f /private/var/log/asl/*.asl && sudo purge"
 alias permrepair="sudo /usr/libexec/repair_packages --repair --standard-pkgs --volume /"
 alias rf='source ~/.bash_profile'
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias profile='subl ~/.bash_profile'
 alias gemup='sudo gem update --system && sudo gem up'
-alias brewup='brew update && brew upgrade && brew cleanup && brew prune'
+alias brewup='brew update && brew upgrade && brew cleanup'
 alias brewdoc='brew doctor'
 alias osxup='sudo softwareupdate -i -a'
 alias slowon='sudo ipfw pipe 1 config bw 50KByte/s && sudo ipfw add 1 pipe 1 src-port 80'
 alias slowoff='sudo ipfw delete 1'
-alias ff="open -a firefox $*"
+# alias ff="open -a firefox $*"
 alias c="clear"
 alias ping="ping -c 5"
 alias grep="grep --color=auto"
 alias stfu="osascript -e 'set volume output muted true'"
 alias yell="osascript -e 'set Volume 10'"
-alias wanip="curl ipecho.net/plain; echo"
+# alias wanip="curl ipecho.net/plain; echo"
+alias wanip="curl ifconfig.co"
 alias lanip="ipconfig getifaddr en0"
 alias ka="killall"
 alias q='exit'
@@ -56,8 +59,8 @@ alias fuck='sudo $(history -p \!\!)'
 alias startvpn="ssh -fqCND 9999 root@192.227.143.138"
 alias pywebserver='python -m SimpleHTTPServer 8000'
 alias rubywebserver="ruby -run -e httpd . -p 8000"
-alias ydl="youtube-dl"
-alias ydlb="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+alias ydl="youtube-dl --prefer-avconv"
+alias ydlb="youtube-dl --prefer-avconv -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias flushdns='dscacheutil -flushcache'
 alias terminalogs="sudo rm -f /private/var/log/asl/*.asl"
 alias ftm="whatmp3 --320 -c "`pwd`""
@@ -81,6 +84,17 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# tor
+alias tor?="curl -s https://check.torproject.org/ | cat | grep -m 1 Congratulations | xargs"
+alias toron="export ALL_PROXY=socks5h://localhost:9050"
+alias toroff="export http_proxy='';export https_proxy='';export ALL_PROXY=''"
+
+# docker
+function deb()
+{
+    exec docker exec -it $1 "/bin/bash"
+}
+
 # git standup
 alias gsua='git log --all --since="9:30am yesterday" --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
 alias gsu='git log --all --author=$USER --since="9:30am yesterday" --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=format:"%Y-%m-%d %H:%M:%S"'
@@ -102,12 +116,22 @@ alias gupm='git checkout master && git fetch --all && git pull --rebase --prune 
 # git pull
 alias gpr="git fetch --all && git pull --rebase --prune && git log -1 --pretty=%B"
 
+function cdf()
+{
+    cd "$1" && f
+}
+
+function repeatf()
+{
+    while sleep 1; do $1; done
+}
 
 function repeat()
 {
-    for ((n=0;n<$1;n++)); do
+    for ((n=0; n < $1; n++)); do
         $2
-     done
+        # sleep $[ ( $RANDOM % 10 )  + 1 ]s
+    done
 }
 
 # git hubflow
@@ -323,30 +347,29 @@ function htop {
 }
 
 # credit: http://nparikh.org/notes/zshrc.txt
-# Usage: extract <file>
+# Usage: xt <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
-function extract () {
-    if [ -f $1 ]; then
-        case $1 in
-            *.tar.bz2)  tar -jxvf $1                        ;;
-            *.tar.gz)   tar -zxvf $1                        ;;
-            *.bz2)      bunzip2 $1                          ;;
-            *.dmg)      hdiutil mount $1                    ;;
-            *.gz)       gunzip $1                           ;;
-            *.tar)      tar -xvf $1                         ;;
-            *.tbz2)     tar -jxvf $1                        ;;
-            *.tgz)      tar -zxvf $1                        ;;
-            *.zip)      unzip $1                            ;;
-            *.ZIP)      unzip $1                            ;;
-            *.pax)      cat $1 | pax -r                     ;;
-            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
-            *.Z)        uncompress $1                       ;;
-            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
+function xt () {
+    case $1 in
+        *.7z)       7za x "$1"                            ;;
+        *.tar.bz2)  tar -jxvf "$1"                        ;;
+        *.tar.gz)   tar -zxvf "$1"                        ;;
+        *.bz2)      bunzip2 "$1"                          ;;
+        *.dmg)      hdiutil mount "$1"                    ;;
+        *.gz)       gunzip "$1"                           ;;
+        *.tar)      tar -xvf "$1"                         ;;
+        *.tbz2)     tar -jxvf "$1"                        ;;
+        *.tgz)      tar -zxvf "$1"                        ;;
+        *.ZIP)      unzip "$1"                            ;;
+        *.zip)      unzip "$1"                            ;;
+        *.rar)      unrar x "$1"                          ;;
+        *.r00)      unrar x "$1"                          ;;
+        *.pax)      cat "$1" | pax -r                     ;;
+        *.pax.Z)    uncompress "$1" --stdout | pax -r     ;;
+        *.Z)        uncompress "$1"                       ;;
+        *)          echo "'$1' cannot be extracted/mounted via xt()" ;;
+    esac
 }
 
 function sentry {
@@ -451,4 +474,26 @@ function gcgrep() {
         echo $COUNT branches match the pattern "\"$1\""
         git branch -l | grep -e $1
     fi
+}
+
+function gpsgm {
+    CORD=`exiftool -c "%.6f" "$1" | grep 'GPS Position' | cut -d ":" -f2 | awk '{$1=$1};1'`
+
+    if [ -z "$CORD" ]
+    then
+        echo 'No GPS information found'
+    else
+        echo "Opening Google Maps for $CORD"
+        open "https://www.google.com/maps/place/$CORD"
+    fi
+}
+
+function pip_install_save() {
+    package_name=$1
+    requirements_file=$2
+    if [[ -z $requirements_file ]]
+    then
+        requirements_file='./requirements.txt'
+    fi
+    pip3 install $package_name && pip3 freeze | grep -i $package_name >> $requirements_file
 }

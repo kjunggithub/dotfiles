@@ -6,7 +6,7 @@ printf -- $'\033]6;1;bg;red;brightness;0\a\033]6;1;bg;green;brightness;0\a\033]6
 shopt -s cdspell;
 
 # paths and ps1
-PATH=$PATH:/usr/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.composer/vendor/bin/:$HOME/.dotfiles/plugins
+PATH=/opt/homebrew/sbin:/opt/homebrew/bin/:/usr/local/bin:/usr/local/sbin:/usr/bin:$HOME/.rvm/bin:$HOME/.composer/vendor/bin/:$HOME/.dotfiles/plugins:$PATH
 
 # ps1 colours
 BOLD="\[\033[1m\]"
@@ -28,9 +28,10 @@ ORANGE="\[\033[38;5;214m\]"
 
 # exports
 export PATH
-
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export PS1="$MAGENTA\$(fuzzyclock)$DEFAULT in:$LIGHT_BLUE \W\$(vcprompt -f '$DEFAULT on: $LIGHT_GREEN%b$PURPLE %m%u')\n$DEFAULT"
-export EDITOR='subl -nw'
+# export EDITOR='subl -nw'
+export EDITOR="code -w"
 export LSCOLORS=ExfxExdxbxegedabagacad
 export CLICOLOR=1
 export PROMPT_COMMAND='echo -ne "\033]0; \007"'
@@ -46,15 +47,10 @@ type shopt &> /dev/null && shopt -s histappend  # append to history, don't overw
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Don't record some commands
-export HISTIGNORE="&:[ ]*:exit:ls:bg:pwd:fg:history:clear"
+export HISTIGNORE="&:[ ]*:exit:ls:bg:pwd:fg:history:clear:ld*:lf*:ldo*:cdf*:ldbu:c:tmk:tm"
 
 # source rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# activate bash completion
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-    . $(brew --prefix)/share/bash-completion/bash_completion
- fi
 
 # activate z (brew install z)
 if [ -f $(brew --prefix)/etc/profile.d/z.sh ]; then
@@ -74,7 +70,7 @@ bind 'set completion-ignore-case on'
 # ctrl-E # move cursor to end of line
 # ctrl-A # move cursor to beginning of line
 
-# create or attach to tmux session
+# # create or attach to tmux session
 if [ -z "$TMUX" ] && [ ${UID} != 0 ]
 then
     tmux new-session -A -s main
@@ -94,3 +90,6 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file s
 # if this is interactive shell, then bind hh to Ctrl-r (for Vi mode check doc)
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh -- \C-j"'; fi
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
